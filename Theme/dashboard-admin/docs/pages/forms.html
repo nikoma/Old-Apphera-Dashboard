@@ -1,0 +1,45 @@
+<h1><i class="icon-pencil"></i> Forms</h1>
+
+
+
+<hr />
+
+
+
+
+<h3>Validation</h3>
+
+<p>For complete information about this plugin and how to get started view:</p>
+
+<a href="http://docs.jquery.com/Plugins/Validation" class="third-party-doc">jQuery Validation Documentation</a>
+
+
+<hr />
+
+
+<h3>Validation Example</h3>
+
+<p>In order to use the validation styles provided with this theme you need combine your written validation rules with the custom rules provided by this theme. An example is below:</p>
+
+<pre>
+var rules = {
+	rules: {
+		name: {
+			minlength: 2,
+			required: true
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		validateCheckbox: {
+			required: true,
+			minlength: 2	
+		}
+	}
+};
+	
+var validateObj = $.extend (rules, Theme.validationRules);
+    
+$('#myForm').validate(validateObj);
+</pre>

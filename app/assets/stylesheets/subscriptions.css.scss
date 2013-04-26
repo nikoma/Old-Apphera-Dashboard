@@ -1,0 +1,74 @@
+// Place all the styles related to the subscriptions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.width512 {
+  width: 512px !important;
+}
+
+.width800 {
+  width: 800px !important;
+}
+
+.stdtable {
+  border: 0;
+  border-spacing:0;
+  border-collapse:collapse;
+  width: 100%;
+  .wrap-content {
+    white-space: nowrap;
+  }
+  thead {
+    tr {
+      background: #FFF4DE;
+      th {
+        white-space: nowrap;
+        padding: 4px 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #2c2c2c;
+        text-align: left;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:hover {
+        background-color: #fafafa !important;
+      }
+      &:nth-child(even) {
+        background-color: rgb(245, 245, 245);
+      }
+      td {
+        padding: 4px 4px;
+        vertical-align: middle;
+        font-size: 0.8em;
+        text-align: left;
+        color: #2c2c2c;
+        &:last-child {
+          > span {
+            border-right: none;
+          }
+        }
+        > span {
+          display: inline-block;
+          width: 100%;
+          padding: 12px 0px;
+          vertical-align: middle;
+          border-right: 1px solid #b9b9b9;
+        }
+        input:not([type=checkbox]) {
+          width: 160px;
+          border-top: 2px solid;
+          border-right: 1px solid;
+          border-bottom: 1px solid;
+          border-left: 3px solid;
+          border-color: #ccc;
+          font-family: 'Lato', sans-serif;
+          padding: 6px 4px;
+        }
+      }
+    }
+  }
+}

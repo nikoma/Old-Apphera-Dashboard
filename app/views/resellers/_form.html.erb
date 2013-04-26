@@ -1,0 +1,19 @@
+<%= simple_form_for(@reseller) do |f| %>
+
+    <%= f.input :company %>
+    <%= f.input :first_name, :label => t(:firstname) %>
+    <%= f.input :name, :label => t(:lastname) %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :street, :label => t(:street) %>
+    <%= f.input :city, :label => t(:city) %>
+    <%= f.input :state, :label => t(:state) %>
+    <%= f.input :postalcode, :label => t(:postalcode) %>
+    <%= f.input :country_code_id, :as => :select,
+                :label => t(:country), :include_blank => false,
+                :collection => [["USA", 228], ["Deutschland", 56]] %>
+    <%= f.input :website %>
+    <%= f.input :twitter %>
+    <%= f.input :facebook %>
+    <%= f.button :submit, :caption => t(:save) %>
+<% end %>

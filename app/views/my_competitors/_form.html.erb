@@ -1,0 +1,18 @@
+<%= simple_form_for @new_organization do |f| %>
+
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :name, :label => t(:company_name) %>
+      <%= f.input :street, :label => t(:street) %>
+      <%= f.input :zipcode, :label => t(:postalcode) %>
+      <%= f.input :city, :label => t(:city) %>
+      <%= f.input :phone, :label => t(:phone) %>
+      <%= f.input :short_profile, :label => t(:short_description) %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit t(:add), :class => 'btn-primary' %>
+      <%= link_to t(:abort), organizations_path, :class => 'btn' %>
+    </div>
+<% end %>

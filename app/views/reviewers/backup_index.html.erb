@@ -1,0 +1,69 @@
+<h3>Wer bewertet Unternehmen in meiner Umgebung? </h3>
+
+<% unless @h.nil? %>
+    <div class="hero-unit">
+
+      <%= high_chart("bar", @h) do |c| %>
+          <%= "options.tooltip.formatter = function() { return 'Reviewer'+ this.series.name + '  ' + this.y +' reviews gespeichert';}" %>
+          <%= "options.xAxis.labels = ''" %>
+      <% end %>
+    </div>
+<% end %>
+<table class="table table-striped table-bordered">
+
+  <tr>
+    <th>Name</th>
+    <th>Reviews</th>
+    <th>Provider</th>
+  </tr>
+  <% if @reviewers %>
+      <% @reviewers.each do |reviewer| %>
+          <tr>
+
+            <td><a href="<%= reviewer.slug %>">
+              <% unless reviewer.imageurl.nil? %>
+                  <img src="<%= reviewer.imageurl %>" alt="<%= reviewer.name %>">
+              <% end %>
+
+              <%= reviewer.name %>
+            </a><a href="#" rel="popover" title="<%= reviewer.name %>" data-content="Anzahl Bewertungen: <%= reviewer.reviews.count || '0' %><p> Bewertungsdurchschnitt: <%= reviewer.reviews.average('rating') rescue nil %>
+					<p><hr />
+
+              <% reviewer.reviews.each do |r| %>
+							<%= r.organization.name %> <p> <%= "Bew. :" + r.rating.to_s + " am: " + r.review_date.to_s %>
+							<p><hr />
+
+              <% end %>"> <i class="icon-list icon-question-sign"></i></a></td>
+            <td><%= reviewer.reviews.count %></td>
+
+            <% provider = reviewer.content_provider.id %>
+            <% if provider == 10 %>
+                <td><img src="/assets/qype.png" alt="Qype.de"></img>
+                  Qype
+            <% end %></td>
+            <% if provider == 7 %>
+                <td><img src="/assets/trip.png" alt="Tripadvisor"></img>
+                  Tripadvisor
+            <% end %></td>
+            <% if provider == 12 %>
+                <td><img src="/assets/kennst.png" alt="KennstDuEinen.de"></img>
+                  Kennstdueinen
+            <% end %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
+<% unless @reviewers.nil? %>
+    <%= paginate @reviewers %>
+<% end %>
+
+<br/>
+<script type="text/javascript">
+    $("a[rel=popover]")
+            .popover()
+            .click(function (e) {
+                e.preventDefault()
+            })
+</script>
+
+

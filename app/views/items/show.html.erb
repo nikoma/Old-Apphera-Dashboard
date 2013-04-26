@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subject:</b>
+  <%= @item.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @item.body %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @item.rating %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @item.kind %>
+</p>
+
+<p>
+  <b>Folder:</b>
+  <%= @item.folder %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%= @item.visible %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @item.source %>
+</p>
+
+<p>
+  <b>Reminder:</b>
+  <%= @item.reminder %>
+</p>
+
+<p>
+  <b>New:</b>
+  <%= @item.new %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @item.organization_id %>
+</p>
+
+<p>
+  <b>Reviewer:</b>
+  <%= @item.reviewer_id %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%= @item.completed %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

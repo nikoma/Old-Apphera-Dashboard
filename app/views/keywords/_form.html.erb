@@ -1,0 +1,30 @@
+<%= form_for @keyword, :html => {:class => 'form-horizontal'} do |f| %>
+    <% if @keyword.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@keyword.errors.count, "error") %> prohibited this keyword from being saved:</h2>
+
+          <ul>
+            <% @keyword.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <fieldset>
+      <legend><%= t "please_add_keyword_text" %> (z.B. "<%= @org.category.name %> in <%= @org.city %>" oder
+        "<%= @org.category.name %> in der <%= @org.street.gsub!(/[0-9]/, '').strip
+      %>")
+      </legend>
+
+      <div class="control-group">
+        <%= t(:keyword) %>:
+        <div class="controlls">
+          <%= f.text_field :name, :class => 'text_field' %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= f.submit t("add"), :class => 'btn-primary' %>
+        <%= link_to t("cancel"), keywords_path, :class => 'btn' %>
+      </div>
+    </fieldset>
+<% end %>

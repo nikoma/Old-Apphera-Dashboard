@@ -1,0 +1,76 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h3>Google</h3>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+        <p>
+        <h4> <%= t(:keyword) %> </h4>
+
+              <table class="table table-striped table-bordered table-condensed">
+                <tr>
+                  <th>Rank</th>
+                  <th><%= t(:title) %></th>
+                  <th>Url</th>
+                </tr>
+                <% begin %>
+                <% @keyword.each do |ranking| %>
+                    <%= ranking['ranking']  %>
+                    <tr>
+
+                          <td><h5><%= ranking['ranking'] %></h5></td>
+
+                      <td><h5><%= ranking['link_text'] %></h5></td>
+
+
+                      <td><a href="<%= ranking['link'] %>" target="_blank"><%= ranking['link'][0..30] + "..." || str %></a>
+                      </td>
+
+                    </tr>
+                <% end %>
+              </table>
+               <% rescue %>
+                    <% end %>
+          <br/>
+          <%= link_to t(:back), keywords_path %>
+          </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

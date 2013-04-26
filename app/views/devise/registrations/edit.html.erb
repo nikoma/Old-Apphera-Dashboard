@@ -1,0 +1,107 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:method => :put, :class => 'form-vertical'}) do |f| %>
+            <%= f.error_notification %>
+            <%= f.input :name, :autofocus => true %>
+            <%= f.input :email, :required => true %>
+            <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+            <%= f.input :password_confirmation, :required => false %>
+            <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+            <%= f.button :submit, 'Update', :class => 'btn-primary',  :onclick => "page_loading()"  %>
+        <% end %>
+        <h3>Cancel my account</h3>
+
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => {:confirm => "Are you sure?"}, :method => :delete %>
+          .</p>
+        <%= link_to "Back", :back %>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="account-container register stacked">
+  <div class="content clearfix">
+
+    <%= devise_error_messages! %>
+    <div class="register">
+      <div class="row">
+        <div class="span6">
+          <h2></h2>
+          <p></p>
+
+        </div>
+
+        <div class="span6">
+          <div class="formy">
+            <h5>Reset password</h5>
+            <div class="form-reset-password">
+              <!-- Register form (not working)-->
+              <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post,:class => "form-horizontal" }) do |f| %>
+                  <div class="reset-password-content" style="width: 200px;">
+                    <label class="control-label"  for="email">Email</label>
+                    <div class="controls" style="margin-left: 50px;">
+                      <%= f.email_field :email,:class => "input-large" %>
+                    </div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="action-submit" >
+                    <!-- Buttons -->
+                    <button type="submit" class="btn button-reset" >Reset password</button>
+
+                  </div>
+
+                  <%= devise_error_messages! %>
+              <% end %>
+            </div>
+            <div class="login-extra back-login" >
+              Back to <%= link_to "Login", new_user_session_path %> Or <%= link_to "Sign Up", new_user_registration_path %>
+            </div> <!-- /login-extra -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+
+
+

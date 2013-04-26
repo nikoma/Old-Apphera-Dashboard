@@ -1,0 +1,1343 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard Admin 2.0 Documentation</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
+    
+    <!-- Styles -->
+    
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="./css/docs.css" rel="stylesheet">  
+    
+    <link href="./js/google-code-prettify/prettify.css" rel="stylesheet"> 
+	<script src="./js/google-code-prettify/prettify.js"></script>
+        
+    <!-- Javascript -->
+    
+	<script src="./js/jquery-1.7.2.min.js"></script>   
+	<script src="./js/bootstrap.js"></script>
+	
+	
+	<script src="./js/jquery.ba-bbq.min.js"></script>
+	<script src="./js/jquery.scrollTo-min.js"></script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  </head>
+
+<body>
+	
+	
+	
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#home">Dashboard Admin</a>
+         
+          <ul class="nav">
+	        <li><a href="javascript:;">Version 1.0</a></li>
+	      </ul>
+	      
+          <ul class="nav pull-right">
+	        <li><a href="http://jumpstartui.com" target="_blank">Jumpstart UI</a></li>
+	      </ul>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+<div id="wrapper">
+	
+	<div id="nav">
+		
+		<ul class="nav nav-list">
+			
+			<li class="misc"><a href="#home"><i class="icon-home"></i> Home</a></li>
+			<li class="misc"><a href="http://getbootstrap.com" class="external"><i class="icon-truck"></i> Bootstrap Home&nbsp;&nbsp; <i class="icon-external-link"></i></a></li>
+			
+			<li class="nav-header">
+			Styles
+			</li>
+			
+			<li><a href="#menu"><i class="icon-sitemap"></i> Menu</a></li>
+			<li><a href="#forms"><i class="icon-pencil"></i> Forms</a></li>
+			<li><a href="#ui"><i class="icon-beaker"></i> UI Elements</a></li>
+			<li><a href="#shortcuts"><i class="icon-bookmark"></i> Shortcuts</a></li>
+			<li><a href="#extra"><i class="icon-asterisk"></i> Extra Classes</a></li>
+			<li><a href="#cirque"><i class="icon-bolt"></i> Cirque Stat</a></li>
+		
+		
+			<li class="nav-header">
+			Pages
+			</li>
+				
+			<li><a href="#pricing"><i class="icon-money"></i> Pricing Plans</a></li>
+			<li><a href="#faq"><i class="icon-question-sign"></i> Faq</a></li>
+			<li><a href="#charts"><i class="icon-bar-chart"></i> Charts</a></li>
+			<li><a href="#gallery"><i class="icon-picture"></i> Gallery</a></li>
+		
+			
+			<li class="nav-header">
+			Customize
+			</li>
+				
+			<li><a href="#skins"><i class="icon-adjust"></i> Skins</a></li>			
+		</ul>
+		
+	</div> <!-- /nav -->
+	
+	
+	<div id="content">		
+
+
+<div id="buttons-content" class="content">
+
+<h1><i class="icon-hand-up"></i> Buttons</h1>
+
+
+<hr />
+
+<h3>Markup</h3>
+
+<pre>&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+	
+&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+
+&lt;input class="btn" type="button" value="Input"&gt;
+
+&lt;input class="btn" type="submit" value="Submit"&gt;
+</pre>
+
+<hr />
+
+
+
+<h3>Semantic Buttons</h3>
+
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Button</th>
+        <th style="width: 160px">class=""</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class="btn" href="#">Default</button></td>
+        <td><code>btn</code></td>
+        <td>Standard gray button with gradient</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-primary" href="#">Primary</button></td>
+        <td><code>btn btn-primary</code></td>
+        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-secondary" href="#">Secondary</button></td>
+        <td><code>btn btn-secondary</code></td>
+        <td>Provides extra visual weight and identifies the secondary action in a set of buttons</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-tertiary" href="#">Tertiary</button></td>
+        <td><code>btn btn-tertiary</code></td>
+        <td>Provides extra visual weight and identifies the tertiary action in a set of buttons</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-info" href="#">Info</button></td>
+        <td><code>btn btn-info</code></td>
+        <td>Used as an alternative to the default styles</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-success" href="#">Success</button></td>
+        <td><code>btn btn-success</code></td>
+        <td>Indicates a successful or positive action</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-warning" href="#">Warning</button></td>
+        <td><code>btn btn-warning</code></td>
+        <td>Indicates caution should be taken with this action</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-danger" href="#">Danger</button></td>
+        <td><code>btn btn-danger</code></td>
+        <td>Indicates a dangerous or potentially negative action</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-inverse" href="#">Inverse</button></td>
+        <td><code>btn btn-inverse</code></td>
+        <td>Alternate dark gray button, not tied to a semantic action or use</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+<hr />
+
+<h3>Button Sizes</h3>
+
+<ul class="list-class">
+	
+	<li><code>.btn-large</code></li>
+	<li><code>.btn</code></li>
+	<li><code>.btn-small</code></li>
+	<li><code>.btn-mini</code></li>
+	
+</ul>
+
+<hr />
+
+<h3>Disabled State</h3>
+
+<p>For disabled buttons, add the <code>.disabled</code> class to links and the <code>disabled</code> attribute for <code>&lt;button&gt;</code> elements.</p>
+
+
+
+<hr />
+
+
+<h3>Dropdown Markup</h3>
+
+<pre>&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+
+<hr />
+
+<h3>Split Button Markup</h3>
+
+<pre>&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<div id="calendar-content" class="content">
+
+<h1><i class="icon-calendar"></i> Calendar</h1>
+
+
+
+<hr />
+
+
+<h3>Documentation</h3>
+
+<a href="http://arshaw.com/fullcalendar/docs/" class="third-party-doc">Full Calendar Documentation</a>
+
+<hr />
+
+<h3>Includes</h3>
+
+<h4>Stylesheet</h4>
+
+<pre>&lt;link href="./js/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"&gt;</pre>
+
+<h4>Javascript</h4>
+
+<pre>&lt;script src="./js/plugins/fullcalendar/fullcalendar.min.js"&gt;&lt;/script&gt;</pre>
+
+
+<hr />
+
+<h3>Container</h3>
+
+<pre>&lt;div id="calendar-holder"&gt;&lt;/div&gt;</pre>
+
+
+<hr />
+
+<h3>Javascript</h3>
+
+<pre>$('#calendar-holder').fullCalendar({
+	header: {
+		left: 'prev, next',
+		center: 'title',
+		right: 'month,basicWeek,basicDay,'
+	}
+	, events: [
+		{
+			title: 'Long Event',
+			start: new Date(y, m, d-5),
+			end: new Date(y, m, d-2),
+			color: '#3C4049'
+		},
+		{
+			id: 999,
+			title: 'Repeating Event',
+			start: new Date(y, m, 19, 16, 0),
+			end: new Date (y, m, 22, 16, 0),
+			allDay: false,
+			color: '#3C4049'
+		}
+	]
+});
+</pre>
+</div>
+
+<div id="charts-content" class="content">
+
+<h1><i class="icon-bar-chart"></i> Charts</h1>
+
+
+
+<hr />
+
+<h3>Documentation</h3>
+
+<p><a href="http://www.flotcharts.org/" class="third-party-doc">jQuery Flot Documentation</a></p>
+
+
+<hr />
+
+<h3>Helper</h3>
+
+<p>Add the class <code>.chart-holder</code> to your div that is going to contain the chart. This helper class give the chart container a default height which it needs to display properly.</p>
+
+<pre>&lt;div id="bar-chart" class="chart-holder"&gt;&lt;/div&gt;</pre>
+
+
+
+<hr />
+
+
+<h3>Examples</h3>
+
+<p>You can find chart examples for line, pie, donut, vertical bar and horizontal bar charts in the <code>/js/demos/charts/</code> folder. The code is clean and organized and should be a great start in creating your own charts.
+</div>
+
+<div id="cirque-content" class="content">
+
+<h1><i class="icon-bolt"></i> Cirque Stat</h1>
+
+
+
+<hr  />
+
+
+<h3>Setup</h3>
+
+<p>Inlcude the following into your document: </p>
+
+<pre>
+&lt;link rel="stylesheet" href="./js/plugins/cirque/cirque.css"&gt;	
+&lt;script src="./js/plugins/cirque/cirque.js"&gt;&lt;/script&gt;	
+</pre>
+
+
+<p>Create an empty div element to hold your stat:</p>
+
+<pre>&lt;div class="my-stat"&gt;&lt;/div&gt;</pre>
+
+<p>Attach the Cirque stat widget to your html element: </p>
+
+<pre>
+$('.my-stat').cirque ({
+	value: 234,
+	total: 765,
+	arcColor: '#FF9900'	
+});
+</pre>
+
+<hr />
+
+<h3>Helper</h3>
+
+<p>To create a Cirque stat without using writing javascript add the following class to your container: <code>ui-cirque</code></p>
+	
+	<pre>&lt;div class="ui-cirque" data-value="84"&gt;&lt;/div&gt;</pre>
+	
+	<p>This will initialize your cirque stat widget with default parameters defined in <code>Theme.js</code></p>
+
+
+<hr />
+
+
+<h3>HTML5 Data Attributes</h3>
+
+<p>By setting HTML5 data attributes on a Cirque container you will override any default values previouly set. ALL values of a Cirque widget can be set via data attributes.</p>
+
+<pre>
+&lt;div class="ui-cirque" 
+	data-value="2875" 
+	data-total="3245" 
+	data-arc-color="#4074AA" 
+	data-radius="60" 
+	data-line-width="10" 
+	data-label="ratio"&gt;
+&lt;/div&gt;
+
+&lt;div class="ui-cirque" 
+	data-value="13" 
+	data-arc-color="#BBBBBB" 
+	data-radius="60" 
+	data-line-width="10"&gt;
+&lt;/div&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Options</h3>
+
+<table class="table table-bordered table-striped">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>value</td>
+			<td>0</td>
+			<td>Used to calculate the percentage to fill. The 'value' will be divided by the 'total' to derive the percentage. </td>
+		</tr>
+		<tr>
+			<td>total</td>
+			<td>100</td>
+			<td>Set the total value that will be used in the calculation to derive the percentage. </td>
+		</tr>
+		<tr>
+			<td>radius</td>
+			<td>60</td>
+			<td>Sets the radius of the circular stat. To get the total width of the canvas multiply the radius by 2.</td>
+		</tr>
+		<tr>
+			<td>label</td>
+			<td>percent</td>
+			<td>Set to <code>percent</code> to display the percentage in the stat. <br />
+				Set to <code>ratio</code> to display the actual ratio used to calculate the stat.
+			</td>
+		</tr>
+		<tr>
+			<td>lineWidth</td>
+			<td>10</td>
+			<td>Defines the thickness of the circle.</td>
+		</tr>
+		<tr>
+			<td>arcColor</td>
+			<td>#0066CC</td>
+			<td>Defines the fill color of the arc.</td>
+		</tr>
+		<tr>
+			<td>trackColor</td>
+			<td>#EEEEEE</td>
+			<td>Defines the color of the track.</td>
+		</tr>
+		<tr>
+			<td>trackFill</td>
+			<td>transparent</td>
+			<td>Defines the fill color of the track.</td>
+		</tr>
+		<tr>
+			<td>animate</td>
+			<td>true</td>
+			<td>Set to true/false depending on animation preference.</td>
+		</tr>
+		<tr>
+			<td>speed</td>
+			<td>20</td>
+			<td>Set the speed of the animation in milliseconds.</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+</div>
+
+<div id="error-content" class="content">
+
+<h1>Page Not Found</h1>
+</div>
+
+<div id="extra-content" class="content">
+
+<h1><i class="icon-asterisk"></i> Extra Classes</h1>
+
+
+
+<hr />
+
+
+
+<h3>Buttons</h3>
+
+<p>This theme provides a few extra classes of buttons on top of those provided by default: secondary & tertiary. </p>
+
+<p>
+
+<pre>
+&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="btn btn-tertiary"&gt;Tertiary Button&lt;/button&gt;
+</pre>
+
+<br />
+
+
+<h4>Button Classes</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.btn-primary</td>
+			<td>Primary</td>
+		</tr>
+		<tr>
+			<td>.btn-secondary</td>
+			<td>Secondary</td>
+		</tr>
+		<tr>
+			<td>.btn-tertiary</td>
+			<td>Tertiary</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+<hr />
+
+
+
+
+<h3>Progress Bars</h3>
+
+<p>This theme provides a few extra classes of progress bars on top of those provided by default: secondary & tertiary. </p>
+
+<p>
+
+<pre>
+&lt;div class="progress progress-primary"&gt;
+	&lt;div class="bar" style="width: 37%"&gt;&lt;/div&gt;			
+&lt;/div&gt;
+
+&lt;div class="progress progress-secondary"&gt;
+	&lt;div class="bar" style="width: 37%"&gt;&lt;/div&gt;		
+&lt;/div&gt;
+
+&lt;div class="progress progress-tertiary"&gt;
+	&lt;div class="bar" style="width: 37%"&gt;&lt;/div&gt;		
+&lt;/div&gt;
+</pre>
+
+<br />
+
+
+<h4>Progress Bar Classes</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.progress-primary</td>
+			<td>Primary</td>
+		</tr>
+		<tr>
+			<td>.progress-secondary</td>
+			<td>Secondary</td>
+		</tr>
+		<tr>
+			<td>.progress-tertiary</td>
+			<td>Tertiary</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+
+<br />
+
+
+<hr />
+
+
+
+
+<h3>Labels</h3>
+
+<p>This theme provides a few extra classes of labels on top of those provided by default: secondary & tertiary. </p>
+
+<p>
+
+<pre>
+&lt;span class="label label-primary"&gt;
+	Primary Label
+&lt;/span&gt;
+
+&lt;span class="label label-secondary"&gt;
+	Secondary Label
+&lt;/span&gt;
+
+&lt;span class="label label-tertiary"&gt;	
+	Tertiary Label
+&lt;/span&gt;
+</pre>
+
+<br />
+
+
+<h4>Label Classes</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.label-primary</td>
+			<td>Primary</td>
+		</tr>
+		<tr>
+			<td>.label-secondary</td>
+			<td>Secondary</td>
+		</tr>
+		<tr>
+			<td>.label-tertiary</td>
+			<td>Tertiary</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+
+<br />
+
+
+
+
+<hr />
+
+
+
+
+<h3>Badges</h3>
+
+<p>This theme provides a few extra classes of badges on top of those provided by default: secondary & tertiary. </p>
+
+<p>
+
+<pre>
+&lt;span class="badge badge-primary"&gt;
+	Primary Badge
+&lt;/span&gt;
+
+&lt;span class="badge badge-secondary"&gt;
+	Secondary Badge
+&lt;/span&gt;
+
+&lt;span class="badge badge-tertiary"&gt;	
+	Tertiary Badge
+&lt;/span&gt;
+</pre>
+
+<br />
+
+
+<h4>Badge Classes</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.badge-primary</td>
+			<td>Primary</td>
+		</tr>
+		<tr>
+			<td>.badge-secondary</td>
+			<td>Secondary</td>
+		</tr>
+		<tr>
+			<td>.badge-tertiary</td>
+			<td>Tertiary</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+
+<br />
+
+
+
+</div>
+
+<div id="faq-content" class="content">
+
+<h1><i class="icon-question-sign"></i> Faq</h1>
+
+
+
+<hr />
+
+<h3>Includes</h3>
+
+
+<h4>Javascript</h4>
+<pre>&lt;script src="./js/plugins/faq/faq.js"&gt;&lt;/script&gt;
+</pre>
+
+<hr />
+
+<h3>Markup</h3>
+
+<pre>&lt;ol class="faq-list"&gt;
+						
+	&lt;li&gt;		
+		&lt;h4&gt;How can I get my own domain name?&lt;/h4&gt;
+		&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate&lt;/p&gt;
+	&lt;/li&gt;
+	
+	...
+	
+&lt;/ol&gt;			
+			
+</pre>
+
+<hr />
+
+<h3>Javascript</h3>
+
+<pre>$('.faq-list').goFaq ({ 
+	enableSearch: true,
+	enableToc: true,
+	enableStyling: true
+});</pre>
+</div>
+
+<div id="forms-content" class="content">
+
+<h1><i class="icon-pencil"></i> Forms</h1>
+
+
+
+<hr />
+
+
+
+
+<h3>Validation</h3>
+
+<p>For complete information about this plugin and how to get started view:</p>
+
+<a href="http://docs.jquery.com/Plugins/Validation" class="third-party-doc">jQuery Validation Documentation</a>
+
+
+<hr />
+
+
+<h3>Validation Example</h3>
+
+<p>In order to use the validation styles provided with this theme you need combine your written validation rules with the custom rules provided by this theme. An example is below:</p>
+
+<pre>
+var rules = {
+	rules: {
+		name: {
+			minlength: 2,
+			required: true
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		validateCheckbox: {
+			required: true,
+			minlength: 2	
+		}
+	}
+};
+	
+var validateObj = $.extend (rules, Theme.validationRules);
+    
+$('#myForm').validate(validateObj);
+</pre>
+</div>
+
+<div id="gallery-content" class="content">
+
+<h1><i class="icon-picture"></i> Gallery</h1>
+
+
+
+<hr />
+
+
+<h3>Includes</h3>
+
+<p>Make sure to include the following javascript in your document when you use charts</p>
+
+<code>/js/demos/demo.gallery.js</code>
+
+
+<h3>Gallery Container</h3>
+
+<pre>&lt;ul class="gallery-container"&gt;
+	
+	--- GALLERY ITEMS GO HERE ---						
+	
+&lt;/ul&gt;
+</pre>
+
+<hr />
+
+<h3>Gallery Items</h3>
+
+<pre>&lt;li&gt;
+	&lt;a href="FULL_IMAGE_PATH" class="ui-lightbox"&gt;
+		&lt;img src="THUMBNAIL_IMAGE_PATH" /&gt;
+	&lt;/a&gt;
+	
+	&lt;a href="FULL_IMAGE_PATH" class="preview"&gt;&lt;/a&gt;
+&lt;/li&gt;
+</pre>
+
+
+</div>
+
+<div id="home-content" class="content">
+
+<h1>Dashboard Admin Documentation</h1>
+
+<p>Dashboard Admin is full featured admin template based on Twitter Bootstrap Framework. Dashboard comes packaged with many custom made widgets and plugins including pricing tables, faq plugin, growl messages, lightbox plugin, validation, and login styles.</p>
+
+<p>This documentation details components and widgets added by Jumpstart UI only. For information on how to use Twitter Bootstrap view their <a href="http://getbootstrap.com" target="_blank">documenation here</a>.
+
+<hr class="full" />
+
+
+<br />
+
+<div class="shortcuts">
+		
+</div> <!-- /shortcuts -->
+
+
+</div>
+
+<div id="menu-content" class="content">
+
+<h1><i class="icon-sitemap"></i> Menu</h1>
+
+
+
+<hr />
+
+
+
+
+
+<h3>Container</h3>
+
+<pre>
+&lt;ul id="main-nav" class="pull-right"&gt;
+	
+	-- ALL ITEMS GO HERE --
+	
+&lt;/ul&gt;
+</pre>
+
+
+
+
+
+<hr />
+
+<h3>Basic Item</h3>
+
+<pre>
+&lt;li&gt;
+	&lt;a href="javascript:;"&gt;
+		&lt;i class="icon-home"&gt;&lt;/i&gt;
+		&lt;span&gt;Home&lt;/span&gt;        					
+	&lt;/a&gt;
+&lt;/li&gt;
+</pre>
+
+
+
+
+
+<hr />
+
+<h3>Icon Only</h3>
+
+<p><strong>NOTE: Be sure to add the class <code>.nav-icon</code> to the top-level LI element and wrap your link text in a <code>span</code> tag so it's hidden.</strong></p>
+<pre>
+&lt;li class="nav-icon"&gt;
+	&lt;a href="javscript:;"&gt;
+		&lt;i class="icon-home"&gt;&lt;/i&gt;
+		&lt;span&gt;Home&lt;/span&gt;
+	&lt;/a&gt;	    				
+&lt;/li&gt;	
+</pre>
+
+
+
+
+<hr />
+
+<h3>Dropdown Menu</h3>
+
+<pre>
+&lt;li class="dropdown"&gt;					
+	&lt;a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"&gt;
+		&lt;span&gt;span>Dropdown&lt;/span&gt;
+		&lt;b class="caret"&gt;&lt;/b&gt;
+	&lt;/a&gt;	
+
+	&lt;ul class="dropdown-menu"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Dropdown 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Dropdown 2&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;    				
+&lt;/li&gt;	
+</pre>
+
+
+
+
+<hr />
+
+<h3>Multi-Level Dropdown Menu</h3>
+
+<pre>
+&lt;li class="dropdown"&gt;					
+	&lt;a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"&gt;
+		Multi-Level Dropdown
+		&lt;b class="caret"&gt;&lt;/b&gt;
+	&lt;/a&gt;	
+
+	&lt;ul class="dropdown-menu"&gt;							
+		&lt;li&gt;&lt;a href="javascript:;"&gt;Dropdown #1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="javascript:;"&gt;Dropdown #2&lt;/a&gt;&lt;/li&gt;
+		
+       	 	&lt;li class="dropdown-submenu"&gt;
+			&lt;a tabindex="-1" href="#"&gt;Dropdown menu&lt;/a&gt;
+				
+			&lt;ul class="dropdown-menu"&gt;
+				&lt;li&gt;
+				&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+				&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+				&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;        
+                
+	&lt;/ul&gt;    				
+&lt;/li&gt;	
+</pre>
+
+</div>
+
+<div id="pricing-content" class="content">
+
+<h1><i class="icon-money"></i> Pricing</h1>
+
+
+
+<hr />
+
+
+
+<h3>Container</h3>
+
+<pre>&lt;div class="pricing-plans plans-4"&gt;
+
+	--- Plans go here ---
+	
+&lt;/div&gt;
+</pre>
+
+<br />
+
+
+<h4>Number of Plans</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.plans-4</td>
+			<td>4 Plans Up</td>
+		</tr>
+		<tr>
+			<td>.plans-3</td>
+			<td>3 Plans Up</td>
+		</tr>
+		<tr>
+			<td>.plans-2</td>
+			<td>2 Plans Up</td>
+		</tr>
+		<tr>
+			<td>.plans-1</td>
+			<td>1 Plans Up</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+<hr />
+
+<h3>Plan Html</h3>
+
+<pre>&lt;div class="plan-container"&gt;
+
+    &lt;div class="plan"&gt;
+    
+        &lt;div class="plan-header"&gt;
+            
+        	&lt;div class="plan-title"&gt;
+        		Micro	        		
+    		&lt;/div&gt; &lt;!-- /plan-title --&gt;
+            
+    		&lt;div class="plan-price"&gt;
+    			&lt;span class="note"&gt;$&lt;/span&gt;15&lt;span class="term"&gt;Per Month&lt;/span&gt;
+		&lt;/div&gt; &lt;!-- /plan-price --&gt;
+			
+        &lt;/div&gt; &lt;!-- /plan-header --&gt;	        
+        
+        &lt;div class="plan-features"&gt;
+        
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Free&lt;/strong&gt; setup&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; Website&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;2&lt;/strong&gt; Projects&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;1GB&lt;/strong&gt; Storage&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;$0&lt;/strong&gt; Google Adwords Credit&lt;/li&gt;
+			&lt;/ul&gt;
+			
+		&lt;/div&gt; &lt;!-- /plan-features --&gt;
+		
+		&lt;div class="plan-actions"&gt;				
+			&lt;a href="javascript:;" class="btn"&gt;Purchase Now&lt;/a&gt;				
+		&lt;/div&gt; &lt;!-- /plan-actions --&gt;
+
+	&lt;/div&gt; &lt;!-- /plan --&gt;
+	
+&lt;/div&gt; &lt;!-- /plan-container --&gt;
+	
+		</pre>
+
+</div>
+
+<div id="shortcuts-content" class="content">
+
+<h1><i class="icon-bookmark"></i> Shortcuts</h1>
+
+
+<hr />
+
+
+<h3>Container</h3>
+
+<pre>&lt;div class="shortcuts cols-3"&gt;
+	
+	--- SHORTCUTS GO HERE ---
+	
+&lt;/div&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Shortcut Item</h3>
+
+<pre>&lt;a href="javascript:;" class="shortcut"&gt;
+	&lt;i class="shortcut-icon icon-list-alt"&gt;&lt;/i&gt;
+	&lt;span class="shortcut-label"&gt;Apps&lt;/span&gt;
+&lt;/a&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Columns</h3>
+
+<p>To modify the number of shortcuts that display in a row use the following classes below:</p>
+
+
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>.cols-3</td>
+			<td>3 in a row</td>
+		</tr>
+		<tr>
+			<td>.cols-2</td>
+			<td>2 in a row</td>
+		</tr>
+	</tbody>
+	
+</table>
+</div>
+
+<div id="skins-content" class="content">
+
+<h1><i class="icon-adjust"></i> Skins</h1>
+
+
+<hr />
+
+
+<h3>Pre-made Skins</h3>
+
+<p>To enable a pre-made skin, open the application.less file located in /less directory. Uncomment the skin that you would like to use.</p>
+
+
+<h4>Skins</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Name</th>
+			<th>File</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>Black & Orange</td>
+			<td>/css/application-black-orange.css</td>
+		</tr>
+		<tr>
+			<td>Ocean Breeze</td>
+			<td>/css/application-ocean-breeze.css</td>
+		</tr>
+		<tr>
+			<td>Mean Green</td>
+			<td>/css/application-mean-green.css</td>
+		</tr>
+		<tr>
+			<td>Fire Starter</td>
+			<td>/css/application-fire-starter.css</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+<hr />
+
+
+<h3>Chart Colors</h3>
+
+<p>You can modify the chart colors by opening the <code>/js/Theme.js</code> file and modifying the chartColors variable.</p>
+
+
+<pre>var chartColors = ["#FF9900", "#222222", "#555555", "#888888"];</pre>
+
+<h4>Color Arrays</h4>
+
+<p>To enable a color, navigate to Theme.js in the /js directory and comment the chartColors varialble you would like to use. Make sure to comment all other out.</p>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Name</th>
+			<th>Array</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>Black & Orange</td>
+			<td>["#FF9900", "#333", "#777", "#BBB", "#555", "#999", "#CCC"]</td>
+		</tr>
+		<tr>
+			<td>Ocean Breeze</td>
+			<td>['#2B4E72', '#94BA65', '#2790B0', '#777','#555','#999','#bbb','#ccc','#eee']</td>
+		</tr>
+		<tr>
+			<td>Mean Green</td>
+			<td>['#5F9B43', '#DB7D1F', '#BA4139', '#777','#555','#999','#bbb','#ccc','#eee']</td>
+		</tr>
+		<tr>
+			<td>Fire Starter</td>
+			<td>['#750000', '#F90', '#777', '#555','#002646','#999','#bbb','#ccc','#eee']</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+
+</div>
+
+<div id="ui-content" class="content">
+
+<h1><i class="icon-beaker"></i> UI Elements</h1>
+
+
+
+<hr class="full" />
+
+
+<h2>Icons</h2>
+
+<a href="http://fortawesome.github.com/Font-Awesome/" class="third-party-doc">Font Awesome Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+<hr class="full" />
+
+
+
+<h2>Lightbox</h2>
+
+<a href="./plugins/lightbox/" class="third-party-doc">Lightbox Evolution Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+<hr class="full" />
+
+
+
+
+<h2>Growl Messages</h2>
+
+<a href="./plugins/msgGrowl/" class="third-party-doc">MsgGrowl Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+
+
+<hr class="full" />
+
+
+
+<h2>MsgBox</h2>
+
+<a href="./plugins/msgbox/" class="third-party-doc">MsgBox Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+
+
+<hr class="full" />
+
+
+
+<h2>Sliders</h2>
+
+<a href="http://jqueryui.com/demos/slider/" class="third-party-doc">jQuery UI Slider Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+
+<hr class="full" />
+
+<h2>Date Picker</h2>
+
+<a href="http://jqueryui.com/demos/datepicker/" class="third-party-doc">jQuery UI Datepicker Documentation&nbsp;&nbsp;&nbsp;<i class="icon-external-link"></i></a>
+
+
+
+</div>
+
+
+</div> <!-- /content -->
+	
+	
+</div> <!-- /wrapper -->
+	
+<script src="./js/app.js"></script>
+	
+</body>
+
+</html>

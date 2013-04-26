@@ -1,0 +1,55 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2>Keywords</h2>
+
+        <p>How you will be found</p>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+        <table class="table table-striped">
+          <tr>
+            <th>Keyword</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <% @keywords.each do |keyword| %>
+              <tr>
+
+                <td><%= link_to keyword.name, keyword %></td>
+                <td><%= link_to t(:results), keyword %></td>
+                <td><%= link_to t(:remove), keyword, confirm: t(:are_you_sure), method: :delete %></td>
+              </tr>
+          <% end %>
+        </table>
+
+        <br/>
+
+        <%= link_to t(:add), new_keyword_path, :class => "btn" %>
+      </div>
+    </div>
+  </div>
+</div>

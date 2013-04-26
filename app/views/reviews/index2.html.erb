@@ -1,0 +1,182 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<div id="example" class="k-content">
+  <div id="grid"></div>
+
+  <script type="text/x-kendo-template" id="template">
+    <div class="tabstrip">
+      <ul>
+        <li class="k-state-active">
+          Erfahrungsberichte
+        </li>
+        <li>
+          Erfahrungsbericht
+        </li>
+      </ul>
+      <div>
+        <div class="reviews"></div>
+      </div>
+      <div>
+        <div class='employee-details'>
+          <ul>
+            <li><label>Bericht:</label>#= body #</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </script>
+
+  <script>
+      $(document).ready(function () {
+          var element = $("#grid").kendoGrid({
+              dataSource:{
+                  type:"json",
+                  transport:{
+                      read:"/reviews.json"
+                  },
+                  pageSize:10,
+                  serverPaging:false,
+                  serverSorting:false
+              },
+              height:650,
+              sortable:true,
+              pageable:true,
+              detailTemplate:kendo.template($("#template").html()),
+              detailInit:detailInit,
+              dataBound:function () {
+                  this.expandRow(this.tbody.find("tr.k-master-row").first());
+              },
+              columns:[
+                  {
+                      field:"review_date",
+                      title:"Vom",
+                      width:60
+
+                  },
+                  {
+                      title:"Nutzer",
+                      field:"reviewer.name"
+                  },
+
+                  {
+                      field:"rating",
+                      title:"*",
+                      width:30
+
+                  }
+              ]
+          });
+      });
+
+      function detailInit(e) {
+          var detailRow = e.detailRow;
+
+          detailRow.find(".tabstrip").kendoTabStrip({
+              animation:{
+                  open:{ effects:"fadeIn" }
+              }
+          });
+
+  </script>
+
+  <script>
+      $(document).ready(function () {
+          var element = $("#grid").kendoGrid({
+              dataSource:{
+                  type:"json",
+                  transport:{
+                      read:"/reviews.json"
+                  },
+                  pageSize:10,
+                  serverPaging:true,
+                  serverSorting:false
+              },
+              height:650,
+              sortable:true,
+              pageable:true,
+              detailTemplate:kendo.template($("#template").html()),
+              detailInit:detailInit,
+              dataBound:function () {
+                  this.expandRow(this.tbody.find("tr.k-master-row").first());
+              },
+              columns:[
+                  {
+                      field:"review_date",
+                      title:"Vom",
+                      width:60
+
+                  },
+                  {
+                      title:"Nutzer",
+                      field:"reviewer.name"
+                  },
+                  {
+                      title:"Titel",
+                      field:"title"
+                  },
+                  {
+                      field:"rating",
+                      title:"*",
+                      width:30
+
+                  }
+              ]
+          });
+      });
+
+      function detailInit(e) {
+          var detailRow = e.detailRow;
+
+          detailRow.find(".tabstrip").kendoTabStrip({
+              animation:{
+                  open:{ effects:"fadeIn" }
+              }
+          });
+
+          detailRow.find(".reviews").kendoGrid({
+              dataSource:{
+                  type:"json",
+                  transport:{
+                      read:"/reviews.json"
+                  },
+                  serverPaging:false,
+                  serverSorting:true,
+                  serverFiltering:true,
+                  pageSize:10,
+                  filter:{ field:"reviewer_id", operator:"eq", value:e.data.reviewer_id }
+              },
+              scrollable:false,
+              sortable:true,
+              pageable:true,
+              columns:[
+                  { field:"reviewer.name", width:70 },
+                  { field:"", title:"Ship Country", width:100 },
+
+              ]
+          });
+      }
+  </script>
+  <style scoped="scoped">
+      .employee-details ul {
+          list-style: none;
+          font-style: italic;
+          margin-bottom: 20px;
+      }
+
+      .employee-details label {
+          display: inline-block;
+          width: 90px;
+          font-style: normal;
+          font-weight: bold;
+      }
+  </style>
+</div>
+
+
+</body>
+</html>

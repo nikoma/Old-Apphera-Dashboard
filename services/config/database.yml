@@ -1,0 +1,5 @@
+adapter: "postgresql"
+database: "apphera_production"
+username: 'apphera'
+password: 'password'
+host: 'localhost'

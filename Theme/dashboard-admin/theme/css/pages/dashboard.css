@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+ 
+Layout: Dashboard
+
+------------------------------------------------------------------- */
+.stat-table td {
+  padding: 18px 0;
+  border: none;
+  border-bottom: 1px dotted #CCC;
+}
+.stat-table .value {
+  font-size: 21px;
+  font-weight: 600;
+}
+.stat-table .full {
+  color: #666;
+  font-size: 13px;
+}

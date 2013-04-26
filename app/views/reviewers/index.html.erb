@@ -1,0 +1,74 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><%= t(:reviewers) %></h2>
+
+        <p><%= t(:reviewers_header) %></p>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+        <br/>
+
+
+        <ul class="gallery-container">
+
+          <% if @reviewers %>
+              <% @reviewers.each do |reviewer| %>
+                  <li>
+                    <h3><a href="/reviewers/<%= reviewer.id rescue nil %>"><%= reviewer.name rescue nil %></a></h3><br/>
+                    <% unless reviewer.imageurl.nil? %>
+                        <img src="<%= reviewer.imageurl || reviewer.reviewer.imageurl %>" height="52" width="52" alt="<%= reviewer.name %>"/>
+                    <% end %>
+                    <hr/>
+
+                    <a href="/assets/gallery/lr1_large.png" class="preview"></a>
+                    <%= t(:reviews) %>: <%= reviewer.review_count || '0' %>
+                    <%= t(:review_average) %>: <%= reviewer.average_review rescue nil %>
+                  </li>
+
+              <% end %>
+          <% end %>
+          <% unless @reviewers.nil? %>
+              <%= paginate @reviewers %>
+          <% end %>
+        </ul>
+
+      </div>
+      <!-- /.span12 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#content -->
+
+</div> <!-- /#wrapper -->
+
+<script src="js/plugins/hoverIntent/jquery.hoverIntent.minified.js"></script>
+<script src="./js/plugins/lightbox/jquery.lightbox.js"></script>
+<script src="js/demos/demo.gallery.js"></script>

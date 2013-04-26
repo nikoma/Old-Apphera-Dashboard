@@ -1,0 +1,109 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><%= t(:reviews) %></h2>
+
+        <p><%= t(:what_people_say_about_you) %></p>
+      </div>
+      <!-- /.masthead-text -->
+
+
+    </div>
+    <!-- /#masthead -->
+    <!-- ><div class="well"> -->
+    <%= form_tag reviews_path, method: :get do %>
+        <div class="input-append">
+          <%= text_field_tag :query, params[:query] %>
+          <%= submit_tag "Search", :class => "btn primary-btn", :id => "appendedInputButton", :size => "12", name: nil %>
+        </div>
+    <% end %>
+  </div>
+
+</div> <!-- /.container -->
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+
+        <%= paginate @reviews %>
+        <style>
+            table th, table td {
+                overflow: hidden;
+            }
+        </style>
+
+        <table class="table table-striped table-bordered table-highlight">
+          <thead>
+          <tr>
+            <th>
+              <%= t(:location) %>
+            </th>
+            <th>
+              <%= t(:website) %>
+            </th>
+            <th>
+              <%= t(:reviewer) %>
+            </th>
+            <th>
+              <%= t(:review_date) %>
+            </th>
+            <th>
+              <%= t(:text) %>
+            </th>
+            <th>
+              <%= t(:rating) %>
+            </th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% unless @reviews.nil? %>
+              <% @reviews.each do |review| %>
+                  <tr>
+                    <td>
+                      <%= @org.name %>
+                    </td>
+                    <td>
+                      <img src="/assets/contentproviders/<%= @cps[review.content_provider_id.to_s.to_i].url %>.png" alt="<%= @cps[review.content_provider_id.to_s.to_i].name %>">
+                    </td>
+                    <td>
+                      <img src="<%= review.reviewer.imageurl || review.reviewer.reviewer.imageurl rescue '/assets/user_icon.png' %>" height="62" width="62" alt="<%= review.reviewer.reviewer.name rescue review.reviewer.name rescue nil %>">
+                      <br/>
+
+                      <a href="/reviewers/<%= review.reviewer.reviewer.id rescue review.reviewer.id rescue nil %>"><%= review.reviewer.reviewer.name rescue review.reviewer.name rescue nil %></a>
+                    </td>
+                    <td>
+                      <%= review.review_date rescue nil %>
+                    </td>
+                    <td>
+                      <%= review.body %>
+                    </td>
+                    <td>
+                      <%= review.rating %>
+                    </td>
+                  </tr>
+              <% end %>
+          <% end %>
+          </tbody>
+        </table>
+
+        <%= paginate @reviews %>
+
+        <p>
+          <br>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>

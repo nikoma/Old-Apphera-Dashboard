@@ -1,0 +1,76 @@
+<div class="account-container register stacked">
+  <div class="content clearfix">
+
+    <%= devise_error_messages! %>
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+        <!--   <h3>Presented by: <%= current_reseller.company %> -->
+        <!--
+       <div class="login-social">
+         <p>Sign in using social network:</p>
+
+         <div class="twitter">
+           <a href="#" class="btn_1">Login with Twitter</a>
+         </div>
+
+         <div class="fb">
+           <a href="#" class="btn_2">Login with Facebook</a>
+         </div>
+       </div> -->
+
+        <div class="login-fields">
+          <% if params[:reseller] %>
+              <%= f.hidden_field :is_reseller, :value => true %>
+              <h1> <%= t(:free_reseller_account) %></h1>
+          <% else %>
+              <h1><p><%= t(:create_free_account) %></p></h1>
+          <% end %>
+          <div class="field">
+            <%= f.hidden_field :referred_by, :value => params[:referred_by] || current_reseller.id %>
+            <%= f.hidden_field :reseller_id, :value => params[:partner_id] || current_reseller.id %>
+            <%= f.label :name %>
+            <%= f.text_field :name, placeholder: "Name", class: "login" %>
+          </div>
+          <!-- /field -->
+
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.text_field :email, placeholder: "Email", class: "login" %>
+          </div>
+          <!-- /field -->
+
+          <div class="field">
+            <%= f.label :password %>
+            <%= f.password_field :password, placeholder: "Password", class: "login" %>
+          </div>
+          <!-- /field -->
+
+          <div class="field">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "login" %>
+          </div>
+          <!-- /field -->
+
+        </div>
+        <!-- /login-fields -->
+
+        <div class="login-actions">
+          <!--
+         <span class="login-checkbox">
+           <input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+           <label class="choice" for="Field">I have read and agree with the Terms of Use.</label>
+         </span> -->
+          <%= f.submit "Register", class: "button btn btn-primary btn-large",  :onclick => "page_loading()" %>
+        </div>
+        <!-- .actions -->
+    <% end %>
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+<div class="login-extra">
+  Already have an account? <%= link_to "Login", new_user_session_path %>
+</div> <!-- /login-extra -->

@@ -1,0 +1,40 @@
+
+<% if @organization %>
+
+    <%= tag("div", :data => @cats) %>
+
+    <%= simple_form_for(@organization, html: {novalidate: false}, :remote => true) do |f| %>
+        <% if @organization.errors.any? %>
+            <div id="error_explanation">
+
+                <% @organization.errors.values.each do |msg| %>
+                  <%msg.each do  |m| %>
+                    <p><%= m %></p>
+                <% end %>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <%= f.input :name %>
+        <%= f.input :street, :label => t(:street) %>
+        <%= f.input :street2, :label => t(:street2) %>
+        <%= f.input :postalcode, :label => t(:postalcode) %>
+        <%= f.input :state, :label => t(:state) %>
+        <%= f.input :phone1, :label => t(:phone) %>
+        <%= f.input :phone2, :label => t(:mobile) %>
+        <label>Country</label>
+        <%= select_tag 'country_code_id', options_for_select(CountryCodes.select_countries, :selected => (CountryCodes.find_by_name("United States\\n").present? ? CountryCodes.find_by_name("United States\\n").id : nil) ), :class => "chzn-select" %>
+        <%= f.input :city, :label => t(:city) %>
+
+        <%= f.label t(:category) %>
+        <input id="organization_category" name="organization[category_id]" type="text" placeholder="Enter search category.."/>
+        <%= f.input :url, :type => "text", :label => "Web Url" %>
+
+        <%= f.input :facebook, :placeholder => 'i.e. www.facebook.com/Company', :label => "Facebook Page" %>
+        <%= f.input :twitter, :placeholder => 'i.e. twitter.com/myCompany', :label => "Twitter" %>
+        <%= f.button :submit,  :caption => t(:save), :id => "new_organization_save" %>
+    <% end %>
+<% end %>
+
+
+

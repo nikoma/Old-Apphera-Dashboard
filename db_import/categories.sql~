@@ -1,0 +1,63 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.10deb1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 06, 2013 at 02:12 PM
+-- Server version: 5.1.63
+-- PHP Version: 5.3.5-1ubuntu7.11
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `appheradash`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `catgroup` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_categories_on_country` (`country`),
+  KEY `index_categories_on_group` (`catgroup`),
+  KEY `index_categories_on_category_id` (`category_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=27 ;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`, `catgroup`, `category_id`, `country_id`) VALUES
+(10, 'Entertainment', '2013-02-04 07:31:01', '2013-02-04 07:31:01', NULL, NULL, 234),
+(11, 'Music', '2013-02-04 07:31:01', '2013-02-04 07:31:01', NULL, NULL, 234),
+(12, 'subject and continent', '2013-02-06 06:49:46', '2013-02-06 06:49:46',  NULL, NULL, 234),
+(13, 'Cultural studies', '2013-02-06 06:49:51', '2013-02-06 06:49:51',  NULL, NULL, 234),
+(14, 'Dam-related', '2013-02-06 06:49:57', '2013-02-06 06:49:57', NULL, NULL, 234),
+(15, 'Anti–death', '2013-02-06 06:50:00', '2013-02-06 06:50:00',  NULL, NULL, 234),
+(16, 'Development', '2013-02-06 06:50:06', '2013-02-06 06:50:06',  NULL, NULL, 234),
+(17, 'Emergency', '2013-02-06 06:50:11', '2013-02-06 06:50:11',  NULL, NULL, 234),
+(18, 'Energy', '2013-02-06 06:50:16', '2013-02-06 06:50:16', NULL, NULL, 234),
+(19, 'Engineering', '2013-02-06 06:50:21', '2013-02-06 06:50:21',  NULL, NULL, 234),
+(20, 'Entertainment', '2013-02-06 06:50:26', '2013-02-06 06:50:26',  NULL, NULL, 234),
+(21, 'Environmental', '2013-02-06 06:50:31', '2013-02-06 06:50:31',  NULL, NULL, 234),
+(22, 'A11', '2013-02-06 06:50:36', '2013-02-06 06:50:36', NULL, NULL, 234),
+(23, 'Feminist', '2013-02-06 06:50:41', '2013-02-06 06:50:41',  NULL, NULL, 234),
+(24, 'Fireworks', '2013-02-06 06:50:46', '2013-02-06 06:50:46',  NULL, NULL, 234),
+(25, 'Horticultural', '2013-02-06 06:50:50', '2013-02-06 06:50:50',  NULL, NULL, 234),
+(26, 'Housing rights', '2013-02-06 06:50:54', '2013-02-06 06:50:54',  NULL, NULL, 234);

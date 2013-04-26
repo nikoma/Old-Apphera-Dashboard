@@ -1,0 +1,46 @@
+<h3>Wer bewertet Unternehmen in meiner Umgebung? </h3>
+
+<div class="hero-unit">
+
+
+  <table class="table table-striped table-bordered table-highlight">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Reviews</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% if @reviewers %>
+        <% @reviewers.each do |reviewer| %>
+            <tr>
+
+              <td><a href="reviewers/<%= reviewer.id %>">
+                <% unless reviewer.imageurl.nil? %>
+                    <img src="<%= reviewer.imageurl || reviewer.reviewer.imageurl %>" height="52" width="52" alt="<%= reviewer.name %>"/>
+                <% end %>
+
+                <%= reviewer.name %>
+              </a><a href="#" rel="popover" title="<%= reviewer.name %>" data-content="Anzahl Bewertungen: <%= reviewer.review_count || '0' %><p> Bewertungsdurchschnitt: <%= reviewer.average_review rescue nil %>
+"> <i class="icon-list icon-question-sign"></i></a></td>
+              <td><%= reviewer.review_count %></td>
+
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+  <% unless @reviewers.nil? %>
+      <%= paginate @reviewers %>
+  <% end %>
+
+  <br/>
+  <script type="text/javascript">
+      $("a[rel=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              })
+  </script>
+
+

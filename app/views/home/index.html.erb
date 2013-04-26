@@ -1,0 +1,116 @@
+<div id="masthead">
+  <div class="container">
+    <div class="masthead-pad">
+      <div class="masthead-text">
+        <h2><%= t(:home_header) %></h2>
+
+        <% begin %>
+            <% if @org and current_user %>
+                <%= form_for @org, :url => setscope_path do |f| %>
+                    <div class="well">
+                      <div class="input-append">
+
+                        <%= f.collection_select :id, @myorgs.order(:name), :id, :name, include_blank: false %>
+
+                        <%= f.submit t(:chose_organization), :class => 'btn btn-primary' %>
+                <% end %>
+            <% end %>
+        <% rescue %>
+        <% end %>
+        </div>
+        <% if @org and current_user %>
+            <%= @org.name %>  <%= @org.street %> <%= @org.city %>
+            -<%= t(:user)%>: <%= current_user.name if current_user %>
+        <% end %>
+        </div>
+      </div>
+      <!-- /.masthead-text -->
+    </div>
+  </div>
+  <!-- /.container -->
+</div> <!-- /#masthead -->
+
+<div id="content">
+  <div class="container">
+    <div class="row">
+
+      <div class="span4">
+        <h3><%= t(:home) %></h3>
+
+        <p>Quick overview for <br/>
+          <% if @org and current_user %>
+            <h2>  <%= @org.name %>  <%= @org.street %> <%= @org.city %> </h2>
+        <% end %>
+
+        <table class="table stat-table">
+          <tbody>
+          <tr>
+            <td class="value"><%= @org.aggregate_results.last.reviews rescue nil %></td>
+            <td class="full"><%= t(:total_reviews) %></td>
+          </tr>
+
+          <tr>
+            <td class="value"><%= @org.aggregate_results.last.positive_reviews rescue nil %></td>
+            <td class="full"><%= t(:positive_reviews) %></td>
+          </tr>
+          <tr>
+            <td class="value"><%= @org.aggregate_results.last.negative_reviews rescue nil %></td>
+            <td class="full"><%= t(:negative_reviews) %></td>
+          </tr>
+          <tr>
+            <td class="value"><%= @org.aggregate_results.last.fs_checkins_count rescue nil %></td>
+            <td class="full"><%= t(:foursquare_checkins) %></td>
+          </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      <!-- /.span4 -->
+
+      <div class="span8">
+
+
+        <div id="home_activity_chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+      </div>
+      <!-- /.span8 -->
+
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+
+      <div class="span5">
+
+        <h3 class="title">
+          <% t(:reviews) %> </h3>
+
+        <div id="home_review_chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+      </div>
+      <!-- /.span5 -->
+
+
+      <div class="span7">
+
+        <h3 class="title"><%= t(:important_messages) %></h3>
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th><%= t(:label) %></th>
+            <th><%= t(:subject) %></th>
+            <th><%= t(:user) %></th>
+          </tr>
+          </thead>
+          No results as of yet. Please allow up to 48 hours for the system to run all tests.
+
+        </table>
+      </div>
+      <!-- /.span7 -->
+    </div>
+    <!-- /.row -->
+  </div>
+</div>
+

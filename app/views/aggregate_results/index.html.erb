@@ -1,0 +1,142 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><%= t(:overview) %></h2>
+
+
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+
+        <h3><%= t(:average_of_all_competitors) %> :<%= @avg_rating.to_s %></h3>
+        <% unless @aggregate_result.nil? %>
+            <h3><%= t(:your_review_average) %> :<%= @aggregate_result.review_avg %></h3>
+        <% end %>
+
+        <% unless @aggregate_results2.nil? %>
+            <div id="vertical-chart" class="chart-holder"></div>
+            <div id="chart-legend"></div>
+            <script type="text/javascript">
+                var data = [];
+
+                <% @aggregate_results2.each_with_index do |ar, i| %>
+                data.push({
+                    data:[
+                        [<%= i %>, <%= ar.review_avg %>]
+                    ],
+                    label:'<%= ar.organization.name %>',
+                    bars:{
+                        show:true,
+                        barWidth:0.5,
+                        align:'center'
+                    }
+                });
+                <% end %>
+
+                Charts.vertical('#vertical-chart', data);
+            </script>
+        <% end %>
+
+        <table class="table table-striped table-bordered table-highlight">
+          <thead>
+          <tr>
+            <th>Lokation</th>
+            <th>Reviews</th>
+            <th><%= t(:review_average) %></th>
+            <!-- <th>Tweets</th>
+     <th>Tweets neu</th>
+     <th>Followers<a href="#" rel="popover" title="Twitter Tip" data-content="Lorem ipsum"><i class="icon-list icon-question-sign"></i></a>	</th>
+     <th>Listed<a href="#" rel="popover" title="Twitter Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th>
+        <th>Fb gefällt mir<a href="#" rel="popover" title="Facebook Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th>
+        <th>Fb gefällt mir neu<a href="#" rel="popover" title="Facebook Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th> -->
+            <th>Foursquare Users</th>
+            <th>Foursquare Checkins</th>
+            <th>Foursquare
+              Tip<a href="#" rel="popover" title="Foursquare Tip" data-content="Foursquare allows to recommend locations as a 'Tip'."></i></a>                    
+            </th>
+            <!--&lt;!&ndash; <th>Mentions</th>-->
+            <!--  <th>Mentions neu</th>
+         <th>Blog Beiträge</th>
+         <th>Blog Beiträge neu</th> -->
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <% unless @aggregate_result.nil? %>
+                <td><%= @aggregate_result.organization.name %></td>
+                <td><%= @aggregate_result.reviews %></td>
+                <td><%= @aggregate_result.review_avg %></td>
+                <td><%= @aggregate_result.fs_users_count %>
+                <td><%= @aggregate_result.fs_checkins_count %>
+                <td><%= @aggregate_result.fs_tip_count %>
+            <% end %>
+          </tr>
+          </tbody>
+
+        </table>
+
+        <br/>
+      </div>
+      <h3><%= t(:competitor_results) %></h3>
+
+      <table class="table table-striped table-bordered table-highlight">
+        <thead>
+        <tr>
+          <th>Lokation</th>
+          <th>Reviews</th>
+          <th><%= t(:review_average) %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% unless @aggregate_results2.nil? %>
+            <% @aggregate_results2.each do |aggregate_result2| %>
+                <tr>
+                  <td>
+                    <a href="/reviews/<%= aggregate_result2.organization.id %>"><%= aggregate_result2.organization.name %></a>
+                  </td>
+                  <td><%= aggregate_result2.reviews %></td>
+                  <td><%= aggregate_result2.review_avg %></td>
+            <% end %>
+        <% end %>
+
+        </tr>
+        </tbody>
+      </table>
+
+
+      <br/>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      $("a[rel=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              })
+  </script>
+

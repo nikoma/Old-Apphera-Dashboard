@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="span2">
+
+      <!-- Docs nav
+      ================================================== -->
+      <div class="row">
+        <hr />
+        <div class="span2 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="<%= items_path %>"><i class="icon-chevron-right"></i> INBOX</a></li>
+            <li class = "drop"><a id="1" href="<%= items_path(folder:"1")%>"><i class="icon-chevron-right"></i> TODO</a></li>
+            <li class = "drop"><a id="2" href="<%= items_path(folder:"2")%>"><i class="icon-chevron-right"></i> Later</a></li>
+            <li class = "drop"><a id="3" href="<%= items_path(folder:"3")%>"><i class="icon-chevron-right"></i> Delegated</a></li>
+            <li class = "drop"><a id="4" href="<%= items_path(folder:"4")%>"><i class="icon-chevron-right"></i> Trashcan</a></li>
+            <li class = "drop"><a id="5" href="<%= items_path(folder:"5")%>"><i class="icon-chevron-right"></i> Reviews</a></li>
+
+          </ul>
+        </div>
+</div>        </div>
+
+  <div class="span11">
+    <form class="form-search">
+      <hr />
+      <input class="input-xxlarge" type="text" placeholder="Search">
+      <button type="submit" class="btn">Search</button>
+    </form>
+    <table class="table table-hover table-condensed .no-margin">
+      <% @items.each do |item| %>
+
+          
+          <tr class="item-data" id ="<%= item.id%>">
+      
+        <td>
+          <span width = "20px" class="drag" item-id="<%= item.id%>">            
+            <span class="icon-move">
+              &nbsp;&nbsp;&nbsp;
+            </span>
+          </span>
+
+          <% if item.new %>
+            <span id="span-<%= item.id%>" class ="bold">
+              <%= item.subject %>
+            </span>
+          <% else %>
+            <span>
+              <%= item.subject %>
+            </span>
+          <% end %>            
+        </td>
+        
+        <td><%= raw (item.body)[0,15] %>...</td>
+        <!--<td><%= item.rating %></td>-->
+        <!--<td><%= item.kind.name %></td>-->
+        <!--<td><%= item.folder %></td>-->
+        <!--<td><%= item.visible %></td>-->
+        <td><%= item.source %></td>
+        <td><%= item.reminder %></td>
+        <!--<td><%= item.new %></td>-->
+        <td><%= item.organization.name %></td>
+        <!--<td><%= item.reviewer.name %></td>-->
+        <!--<td><%= item.completed %></td>-->
+        <!--<td><%= link_to 'Show', item %></td>-->
+        <!--<td><%= link_to 'Edit', edit_item_path(item) %></td>-->
+        <!--<td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        </tr>
+        <tr class="item-detail item-detail-<%= item.id%>" >
+            <td width="60%">
+              <%= raw (item.body)%>
+            </td>
+            <td>
+
+
+              <%= link_to "Email","mailto:?subject=#{item.subject}&body=#{item.body}", :class=>"btn"%> &nbsp;
+
+              <%= link_to "Share","#", :'data-twitter-intent' => "https://twitter.com/intent/tweet?text=#{raw (ERB::Util.url_encode item.body)}&via=Apphera", :id=>"share-twitter",  :class=>"btn"%>
+            </td>
+              
+            <td>
+              
+            </td>
+              
+            <td>
+              
+            </td>
+            <td>            
+              <%= form_for item, :remote => true do |f| %>
+                <%= f.hidden_field :subject %>
+                <%= f.hidden_field :body %>
+                <%= f.hidden_field :source %>
+                <%= f.hidden_field :reminder %>
+                <%= f.hidden_field :folder %>
+                <%= f.hidden_field :new %>                
+              <% end %>
+            </td>
+        </tr>
+
+      <% end %>
+    </table>
+
+       </div>
+
+  </div>
+

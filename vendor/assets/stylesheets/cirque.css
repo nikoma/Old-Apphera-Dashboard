@@ -1,0 +1,35 @@
+.cirque-container {
+	position: relative;
+	
+	display: inline-block;
+}
+
+.cirque-track, .cirque-fill {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	z-index: 10;
+}
+
+.cirque-fill {
+	z-index: 20;
+}
+
+.cirque-label {
+	position: relative;
+	z-index: 30;
+	
+	color: #444;
+	
+	font-weight: bold;
+	text-align: center;	
+}
+
+.cirque-label.percent {	
+	font-size: 15px;
+}
+
+.cirque-label.ratio {
+	font-size: 13px;
+}

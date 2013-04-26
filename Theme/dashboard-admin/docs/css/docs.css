@@ -1,0 +1,269 @@
+@import url("./font-awesome.css");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
+
+/*------------------------------------------------------------------
+
+[Layout Stylesheet]
+
+	Project:		Adminia Admin
+	Version:		1.0
+	Last change:	05/11/2012
+	Assigned to:	Rod Howard (rh)
+
+
+[Table of contents]
+
+	1. Global
+	2. Navbar / .navbar
+	3. Main Nav / #main-nav
+	4. Content / #content
+	5. Footer / #footer
+	6. Widget / .widget
+	7. Miscellaneous
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+[1. Global]
+*/
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	padding-top: 50px;
+	margin: 25px 0;
+	
+	font: 13px/1.7em 'Open Sans', arial, sans-serif;
+	
+	background: #E9ECEE;
+}
+
+p {	
+	margin-bottom: 1.5em;
+	
+	font: 13px/1.7em 'Open Sans', arial, sans-serif;
+}
+
+h1 {
+	padding-bottom: .5em;
+	margin-bottom: .25em;
+	
+	font-size: 32px;
+	font-weight: 600;
+}
+
+	h1 i {
+		margin-right: .35em;
+	}
+
+h2 {
+	margin-bottom: .5em;
+	
+	color: #3C4049;
+}
+
+h3 {
+	padding-top: 65px;
+	margin-bottom: .75em;
+	
+	font-weight: 600;
+	color: #6D3D92;
+}
+
+h4, h5, h6 {
+	margin-bottom: 1.25em;
+	
+	color: #666;
+}
+
+hr {
+	clear: both;
+	
+	margin-top: 3em;
+	margin-bottom: -2.5em;
+	
+	border-top: 1px dotted #CCC;
+	
+}
+
+hr.full {
+	margin-bottom: 2em;
+}
+
+.navbar .brand {
+	position: relative;
+	top: 3px;
+	
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.toc {
+	margin-top: 1em;
+}
+
+.toc li {
+	margin-bottom: .75em;
+}
+
+.demo a {
+	color: #F90 !important;
+	
+	font-weight: 600;
+}
+
+.nav-list > li > a {
+	padding: 5px 15px;
+	
+	color: #444;
+	
+	border-radius: 5px;
+}
+
+.nav-list > li.active > a,
+.nav-list > li.active > a:hover {
+	background-color: #444;
+}
+
+.third-party-doc {
+	font-size: 16px;	
+}
+
+.list-class {
+	float: left;
+	
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.list-class li {
+	float: left;
+	
+	width: 32.5%;
+	margin-bottom: 1.5em;
+}
+
+.clear {
+	clear: boxh;
+}
+
+#wrapper {
+		position: relative;
+		
+		width: 940px;
+		margin: 0 auto;
+		
+		background: transparent;
+	}
+	
+	#nav {
+		position: relative;
+		
+		float: left;
+			
+		width: 205px;
+		padding: 20px 10px 20px 10px;
+		
+		font-size: 12px;
+		
+		background: #F2F7F9;
+		
+		border: 1px solid #CCC;
+		
+		box-shadow: 1px 1px 3px rgba(0,0,0,.15);
+		
+		border-radius: 5px;
+	}
+	
+	#content {
+		position: relative;
+		
+		float: right;
+		
+		width: 705px;
+		min-height: 800px;
+		padding: 40px 40px;
+		margin-bottom: 5em;
+		
+		background: #FFF;
+		
+		border: 1px solid #CCC;
+		
+		box-shadow: 1px 1px 3px rgba(0,0,0,.25);
+		
+		border-radius: 5px;
+	}
+	
+	#content .content {
+		display: none;
+	}
+	
+	
+	
+	
+.shortcuts {
+	text-align: left;	
+}
+
+.shortcuts .shortcut { 
+	width: 23.0%;
+	display: inline-block;
+	padding: 12px 0;
+	margin: 0 1% 1.5em;
+	vertical-align: top;	
+	
+	text-align: center;
+	text-decoration: none;
+	
+	background: #F3F3F3;
+	
+	border-radius: 5px;
+}
+
+.shortcuts .shortcut .shortcut-icon {
+	margin-top: .25em;
+	margin-bottom: .5em;
+	
+	font-size: 32px;
+	color: #3C4049;
+	
+	filter: alpha(opacity=85);
+	opacity: .85;
+}
+
+.shortcuts .shortcut:hover {	
+	background: #E8E8E8;
+}
+
+.shortcuts .shortcut-label {
+	display: block;
+	
+	font-weight: 400;
+	color: #3C4049;
+}
+
+
+
+
+#toTop {
+	width:100px;
+        border:1px solid #ccc;
+        background:#f7f7f7;
+        text-align:center;
+        padding:5px;
+        position:fixed; /* this is the magic */
+        bottom:10px; /* together with this to put the div at the bottom*/
+        right:10px;
+        cursor:pointer;
+        display:none;
+        color:#333;
+        font-family:verdana;
+        font-size:11px;
+}

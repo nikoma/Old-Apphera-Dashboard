@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------
+ 
+Layout: Pricing
+
+------------------------------------------------------------------- */
+#pricing-header {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+#pricing-header h1 {
+  margin-bottom: .65em;
+  font-size: 40px;
+  font-weight: 600;
+}
+#pricing-header h2 {
+  color: #777;
+  font-size: 24px;
+  font-weight: 400;
+}

@@ -1,0 +1,59 @@
+<%= simple_form_for(@account) do |f| %>
+    <% if @account.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+          <ul>
+            <% @account.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= f.full_error :token %>
+    <div class="field">
+      <%= t(:company) %>
+      <br/>
+      <%= f.text_field :name %>
+    </div>
+    <h3><%= t(:contact_person) %></h3>
+    <div class="field">
+      <%= t(:firstname) %>
+      <br/>
+      <%= f.text_field :firstname %>
+    </div>
+
+    <div class="field">
+      <%= t(:lastname) %>
+      <br/>
+      <%= f.text_field :lastname %>
+    </div>
+    <div class="field">
+      <%= t(:street) %>
+      <br/>
+      <%= f.text_field :street %>
+    </div>
+    <div class="field">
+      <%= t(:state) %>
+      <br/>
+      <%= f.text_field :state %>
+    </div>
+    <div class="field">
+      <%= t(:postalcode) %>
+      <br/>
+      <%= f.text_field :postalcode %>
+    </div>
+    <div class="field">
+      <label>Country</label>
+      <%= select_tag 'country_code_id', options_for_select(CountryCodes.select_countries, :selected => (CountryCodes.find_by_name("United States\n").present? ? CountryCodes.find_by_name("United States\n").id : nil)), :class => "chzn-select" %>
+
+    </div>
+    <div class="field">
+      <%= f.label :phone %>
+      <br/>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="actions">
+      <%= f.submit t(:save), :class => 'btn-primary', :id => "btn-save" %>
+    </div>
+<% end %>
+

@@ -1,0 +1,105 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2> <%= t(:review_for) %> <%= @comp_name %></h2>
+
+        <p><%= t(:competitors_reviews) %></p>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+
+        <%= link_to t(:back), organizations_path %>
+
+        <!--<div class="well">-->
+        <!--<%= form_tag reviews_path, method: :show do %>-->
+            <!--<div class="input-append">-->
+            <!--<%= text_field_tag :query, params[:query] %>-->
+            <!--<%= submit_tag "Search", :class => "btn primary-btn", :id => "appendedInputButton", :size => "12", name: nil %>-->
+            <!--</div>-->
+            <!--
+        <% end %>-->
+        <!--</div>-->
+        <%= paginate @reviews %>
+
+        <table class="table table">
+          <tr>
+            <th>
+              <%= t(:location) %>
+            </th>
+            <th>
+              <%= t(:reviewer) %>
+            </th>
+            <th>
+              <%= (:review_date) %>
+            </th>
+            <th>
+              <%= t(:text) %>
+            </th>
+            <th>
+              <%= t(:rating) %>
+            </th>
+          </tr>
+
+          <% unless @reviews.nil? %>
+              <% @reviews.each do |review| %>
+                  <tr>
+                    <td>
+                      <%= @comp_name %>
+                    </td>
+                    <!--	<td>
+	            <img src="/assets/contentproviders/<%= @cps[review.content_provider_id.to_s.to_i].url %>.png" alt="<%= @cps[review.content_provider_id.to_s.to_i].name %>">
+				</td> -->
+                    <td>
+                      <img src="<%= review.reviewer.imageurl rescue nil %>" alt="<%= review.reviewer.name rescue nil %>" height="62" witdh="62">
+                      <br/>
+                      <a href="/reviewers/<%= review.reviewer.id rescue nil %>"><%= review.reviewer.name rescue nil %></a>
+
+                    </td>
+                    <td>
+                      <%= review.review_date || review.created_at %>
+                    </td>
+                    <td>
+                      <%= review.body %>
+                    </td>
+                    <td>
+                      <%= review.rating %>
+                    </td>
+                  </tr>
+              <% end %>
+          <% end %>
+        </table>
+        <%= paginate @reviews %>
+
+        <p>
+          <br>
+
+        </p>
+        <%= link_to t(:back), organizations_path %>
+
+      </div>
+    </div>
+  </div>
+</div>

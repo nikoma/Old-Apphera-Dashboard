@@ -1,0 +1,49 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h3><%= t(:slugs) %></h3>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+<div id="content">
+
+  <div class="container">
+
+<h1>Provider Slugs - If you add a provider slug please always use the complete url including http://</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @provider_slugs.each do |provider_slug| %>
+<tr>
+	<td>
+	<%= provider_slug.slug %>
+	</tr>
+
+  <tr>
+    <td><%= link_to 'Show', provider_slug %></td>
+    <td><%= link_to 'Edit', edit_provider_slug_path(provider_slug) %></td>
+    <td><%= link_to 'Destroy', provider_slug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Provider slug', new_provider_slug_path %>

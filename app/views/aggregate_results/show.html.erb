@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Organization:</b>
+  <%= @aggregate_result.organization_id %>
+</p>
+
+<p>
+  <b>Reviews:</b>
+  <%= @aggregate_result.reviews %>
+</p>
+
+<p>
+  <b>Review avg:</b>
+  <%= @aggregate_result.review_avg %>
+</p>
+
+<p>
+  <b>Tweets:</b>
+  <%= @aggregate_result.tweets %>
+</p>
+
+<p>
+  <b>Tweets new:</b>
+  <%= @aggregate_result.tweets_new %>
+</p>
+
+<p>
+  <b>Fb likes:</b>
+  <%= @aggregate_result.fb_likes %>
+</p>
+
+<p>
+  <b>Fb likes new:</b>
+  <%= @aggregate_result.fb_likes_new %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_aggregate_result_path(@aggregate_result) %> |
+<%= link_to 'Back', aggregate_results_path %>

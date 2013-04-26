@@ -1,0 +1,22 @@
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :subject %>
+    <%= f.input :body %>
+    <%= f.input :rating %>
+    <%= f.input :kind_id %>
+    <%= f.input :folder %>
+    <%= f.input :visible %>
+    <%= f.input :source %>
+    <%= f.input :reminder %>
+    <%= f.input :new %>
+    <%= f.input :organization_id %>
+    <%= f.input :reviewer_id %>
+    <%= f.input :completed %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

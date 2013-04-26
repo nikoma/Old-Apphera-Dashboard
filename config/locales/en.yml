@@ -1,0 +1,257 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    user: "User"
+    common:
+      back_to: "Back To"
+      or: "Or"
+      login: "Login"
+      sign_up: "Sign up"
+      send: "Send"
+      save: "Save"
+    add: "Add"
+    cancel: "Cancel"
+    my_venues_locations: "My Venues or Locations"
+    add_venue_or_location: "Add a Venue or Location"
+    back: "Back"
+    your_reseller_link: "This is your reseller link. People signing up using this link will be registered as referred by you."
+    share_this_link: "You can share this link in emails, incorporate into signup buttons or use it in social networks."
+    my_venues: "My venues, branches"
+    upgrade_account: "Upgrade Account"
+    upgrade_to_pro: "Upgrade To Pro"
+    add_venues: "Add venues"
+    contact_person: "Contact person"
+    accounts_new_reseller: "Please complete your company information for your affiliate/reseller account"
+    free_reseller_account: "Create a free reseller account!"
+    create_free_account: "Create a free account!"
+    become_a_reseller: "Become a Reseller!"
+    home_header: "Dashboard"
+    are_you_sure: "Are you sure?"
+    chose_organization: "Chose organization"
+    copyright_apphera: "Copyright 2012 by Apphera, Inc. All rights reserved."
+    application_appheradashboard: "Open Source Social Media Monitoring"  
+    task_explanation: "Explanation"  
+    hello: "Hello world"
+    bunny_host: "Bunny Host (RabbitMQ)"
+    bunny_user: "Bunny Username"
+    bunny_password: "Bunny Password"
+    twitter_consumer_key: "Twitter Consumer Key"
+    twitter_consumer_secret: "Twitter Consumer Secret"
+    twitter_oauth_token: "Twitter oAuth Token"
+    twitter_oauth_token_secret: "Twitter oAuth Token Secret"
+    facebook_api_key: "Facebook API Key"
+    facebook_api_secret: "Facebook API Secret"
+    foursquare_client_id: "Foursquare Client ID"
+    foursquare_api_secret: "Foursquare API Secret"
+    bing_api_key: "Bing API Key"
+    google_api_key: "Google API Key"
+    bigproxy: "Bigproxy Key"
+    edit_form: "Edit"
+
+    please_add_location: "Please add a location."
+    please_add_keyword_text: "Please add a keyword. Please try to chose your keywords like a Internet user would search for you"
+    account_change_success: "You have changed the account successfully."
+    account_create_success: "Your account has been added successfully, please add locations now."
+    organization_create_success: "Your location has been successfully added. It can take up to 24 hours till the system will show the first results"
+    organization_update_success: "Your entry was editeded successfully"
+    unknown_keyword: "This keyword does not belong to this location"
+    keyword_create_success: "Keyword was successfully created."
+    accounts_new: "Please create a company account first. In the second step you can add multipe venues or branch offices."
+    # menues
+    customer_firma: "Customer"
+    menue_locations_and_venues: "Venues and Offices"
+    menue_customer_user_settings: "User Settings"
+    menue_customer_api_keys_and_settings: "API Keys and Settings"
+    application_home: "Home"
+    application_searchengines: "Search-Engines"
+    application_twitter_tracking: "Twitter Tracking"
+    application_reviews: "Reviews"
+    application_influencers: "Influencers"
+    application_tabelle: "Table"
+    application_map: "Map"
+    application_analysis: "Analysis"
+    application_comparison: "Comparison"
+    application_reviewtracking: "Reviewtracking"
+    application_keywords: "Keywords"
+    application_competitor: "Competitors"
+    application_competitors: "Competitors"
+    application_reviewers: "Reviewers"
+    application_competitor_maps: "Competitor Map"
+
+    # Forms
+
+    accounts_form_firma: "Company" 
+    accounts_form_contactperson: "Contact"
+    accounts_form_firstname: "First name"
+    accounts_form_lastname: "Last name"
+    form_save: "Save"
+    form_back: "Back"
+    form_show: "Show"
+    distance: "Distance"
+    remove: "Remove"
+
+
+    new_location_and_venue: "Add a venue"
+    name: "Name"
+    street: "Street"
+    street_and_number: "Street and Housenumber"
+    street_additions: "Street 2"
+    postalcode: "postal code"
+    city: "City"
+    phone: "Phone"
+    mobile_phone: "Mobile Phone"
+    category: "Category"
+    web_url: "Web Url"
+    fb_example: "i.e. http://twitter.com/apphera"
+    fb_page: "Facebook Site"
+    tw_example: "i.e. http://twitter.com/apphera"
+    tw_page: "Twitter Site"
+    save: "Save"
+
+
+
+    # organization
+    organization_created: "Creation is "
+    organization_delete: ""
+    organization_edit: "Edit Organization"
+
+    your_competitors_headline: "Your Competitors"
+    add_competitor: "Add Competitor"
+
+
+
+    reviewers_header: "Who is writing reviews in your area?"
+    my_account: "My Account"
+    company: "My Company"
+    firstname: "Firstname"
+    lastname: "Lastname"
+    phone: "Phone"
+    edit: "Edit"
+    my_locations_and_venues: "Organizations and Venues"
+    add_venue: "Add organizations and venues"
+
+    aggregate_results: "Results overview"
+
+
+
+
+    activerecord:
+      plan:
+        pro: "Update to Pro"
+        super_pro: "Update to Super Pro"
+      errors:
+        messages:
+          record_invalid: "The Form is invalid"
+        models:
+          account:
+            attributes:
+              name:
+                blank: "The Company name can't be empty"
+          user:
+            attributes:
+              email:
+                blank: " - Email field has to be filled"
+                taken: " - Please chose a different Email address"
+              password:
+                blank: " - Passwort has to be filled"
+                confirmation: " - The passwords have to match."
+          views:
+            pagination:
+                first: "Beginning"
+                last: "End"
+                previous: "&lt; Back"
+                next: "Forward &gt;"
+                truncate: "..."      
+
+    analysis_headline: "Analysis"   
+    average_competitor_reviews: "Average of all competitor reviews"  
+    competitor_analysis_explaination: "This chart shows the average review of your competitors. Your own average is :"
+    explanation_of_graphic: "Chart Explanation"  
+    your_review_average: "Your Review Average"   
+    location: "Location"
+    reviews: "Reviews"
+    review_average: "Review Average"   
+    foursquare_tip_text: "Foursquare encourages their users to recommend venues. Those reommendations are 'Foursquare Tips'. Many Foursquare users but a low amount of tips need to be analyzed."
+
+    organizations_map: "Competitor locations"  
+
+
+
+    home_dashboard_tests: "Test"
+    home_dashboard_name:	"Name"
+    home_dashboard_erklaerung: "Explanation"
+
+    test_not_tested: "Not yet tested"
+    test_not_complete: "Not completed"
+    test_already_notified: "Informed"
+    test_in_progress: "In progress"
+    test_completed: "Completed"
+
+    reviews_index_bewertungen: "Results"
+    reviews_index_lokation: "Location"
+    reviews_index_webseite: "Website"	
+    reviews_index_reviewer: "Reviewer"	
+    reviews_index_review_datum: "Date"
+    reviews_index_text: "Content"	
+    reviews_index_bewertung: "Result"
+
+    keywords_explanation: "Please add a new keyword. Keywords should be worded in a typical way a Internet user would search for your business."
+    keywords_index_keyword: "Keyword"	
+    or: "or"	
+    in_the: "in the"
+    keyword_results: "Keywords"
+    remove_the_keyword_confirmation: "Are you sure you would like to delete the keyword?"
+    save_keyword: "Add new keyword"
+    keyword_cant_be_saved: "Keyword can't be saved"
+    keyword: "Keyword/Search term"
+    add_keyword: "Add keyword"
+    abbort: "Abbort"
+    system_settings_header: "System API settings"
+
+    bewertungen_for: "Reviews for"
+    website: "Web Site"
+    reviewer: "Reviewer"	
+    review_date: "Review date"	 
+    review_text: "Content"
+    review_rating: "Review"
+
+    twitter_keywords: "Twitter Keywords"
+    twitter_keywords_index: "Twitter Keyword Index"		
+    editing_twitter_keyword: "edit keyword"
+    new_twitter_keyword: "Please add a new Twitter keyword"
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    twitter_keyword_name: "Keyword name"
+    confirm_delete: "Are you sure that you would like to delete this?"
+
+    account_edit: "edit account"
+    please_allow_24h: "Thank you very much! Please allow up to 24 hours to research the new competitor"
+
+
+
+    subscription:
+      title: "Upgrade Your Accounts"
+      credit_card: "Credit Card"
+      list_subscription: "Lists of Subscription"
+      plan_name: "Plan Name"
+      price: "Price"
+      status: "Status"
+      deactive: "Deactive"
+      active: "Active"
+      card_zip: "Card number"
+      card_cvc : "Card cvv (back of card)"
+      month_expiration: "Month expiration"
+      year_expiration: "Year expiration"
+      submit_payment: "Submit Payment"
+      user: "User"
+      no_plan: "Please add account and venue before upgrade"
+
+
+    reset_password:
+      reset_pass: "Rest Password"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Password Confirmation"
+    login_failed: "Login Failed!"

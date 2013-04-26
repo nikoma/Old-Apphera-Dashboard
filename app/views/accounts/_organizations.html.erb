@@ -1,0 +1,14 @@
+<%= div_for organization do %>
+    <span class="dateandoptions">
+        <%= link_to 'Delete', organization, confirm: 'Are you sure?', method: :delete, :class => "icon-remove" %>
+      <br/>
+  </span>
+    <p><b><%= organization.name %></b></p>
+    <address>
+      <%= organization.street %> <br/>
+      <%= organization.postalcode + " " + (organization.city) %>   <br/>
+      <%= organization.phone1 %>  <br/>
+    </address>
+    <a href="<%= organization.url %>"> <%= organization.url %> </a>   <br/>
+    <%= link_to 'Edit', edit_organization_path(organization), :class => "icon-edit" %>
+<% end %>

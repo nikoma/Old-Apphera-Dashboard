@@ -1,0 +1,142 @@
+<h1><i class="icon-bolt"></i> Cirque Stat</h1>
+
+
+
+<hr  />
+
+
+<h3>Setup</h3>
+
+<p>Inlcude the following into your document: </p>
+
+<pre>
+&lt;link rel="stylesheet" href="./js/plugins/cirque/cirque.css"&gt;	
+&lt;script src="./js/plugins/cirque/cirque.js"&gt;&lt;/script&gt;	
+</pre>
+
+
+<p>Create an empty div element to hold your stat:</p>
+
+<pre>&lt;div class="my-stat"&gt;&lt;/div&gt;</pre>
+
+<p>Attach the Cirque stat widget to your html element: </p>
+
+<pre>
+$('.my-stat').cirque ({
+	value: 234,
+	total: 765,
+	arcColor: '#FF9900'	
+});
+</pre>
+
+<hr />
+
+<h3>Helper</h3>
+
+<p>To create a Cirque stat without using writing javascript add the following class to your container: <code>ui-cirque</code></p>
+	
+	<pre>&lt;div class="ui-cirque" data-value="84"&gt;&lt;/div&gt;</pre>
+	
+	<p>This will initialize your cirque stat widget with default parameters defined in <code>Theme.js</code></p>
+
+
+<hr />
+
+
+<h3>HTML5 Data Attributes</h3>
+
+<p>By setting HTML5 data attributes on a Cirque container you will override any default values previouly set. ALL values of a Cirque widget can be set via data attributes.</p>
+
+<pre>
+&lt;div class="ui-cirque" 
+	data-value="2875" 
+	data-total="3245" 
+	data-arc-color="#4074AA" 
+	data-radius="60" 
+	data-line-width="10" 
+	data-label="ratio"&gt;
+&lt;/div&gt;
+
+&lt;div class="ui-cirque" 
+	data-value="13" 
+	data-arc-color="#BBBBBB" 
+	data-radius="60" 
+	data-line-width="10"&gt;
+&lt;/div&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Options</h3>
+
+<table class="table table-bordered table-striped">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>value</td>
+			<td>0</td>
+			<td>Used to calculate the percentage to fill. The 'value' will be divided by the 'total' to derive the percentage. </td>
+		</tr>
+		<tr>
+			<td>total</td>
+			<td>100</td>
+			<td>Set the total value that will be used in the calculation to derive the percentage. </td>
+		</tr>
+		<tr>
+			<td>radius</td>
+			<td>60</td>
+			<td>Sets the radius of the circular stat. To get the total width of the canvas multiply the radius by 2.</td>
+		</tr>
+		<tr>
+			<td>label</td>
+			<td>percent</td>
+			<td>Set to <code>percent</code> to display the percentage in the stat. <br />
+				Set to <code>ratio</code> to display the actual ratio used to calculate the stat.
+			</td>
+		</tr>
+		<tr>
+			<td>lineWidth</td>
+			<td>10</td>
+			<td>Defines the thickness of the circle.</td>
+		</tr>
+		<tr>
+			<td>arcColor</td>
+			<td>#0066CC</td>
+			<td>Defines the fill color of the arc.</td>
+		</tr>
+		<tr>
+			<td>trackColor</td>
+			<td>#EEEEEE</td>
+			<td>Defines the color of the track.</td>
+		</tr>
+		<tr>
+			<td>trackFill</td>
+			<td>transparent</td>
+			<td>Defines the fill color of the track.</td>
+		</tr>
+		<tr>
+			<td>animate</td>
+			<td>true</td>
+			<td>Set to true/false depending on animation preference.</td>
+		</tr>
+		<tr>
+			<td>speed</td>
+			<td>20</td>
+			<td>Set the speed of the animation in milliseconds.</td>
+		</tr>
+	</tbody>
+	
+</table>
+

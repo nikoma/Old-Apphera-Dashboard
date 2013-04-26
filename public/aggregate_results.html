@@ -1,0 +1,363 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns=""> <!--<![endif]-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appheradashboard</title>
+  <meta charset="utf-8">
+
+  <meta name="description" content="Appheradashboard">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="pk_live_pZP5stSjFjv4glVLDxt0KVcc" name="stripe-key" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+  <link href="/assets/application-c7cc1d08366d7a03f39604b8b3927da9.css" media="all" rel="stylesheet" type="text/css" />
+  
+  <script src="/assets/application-be0d549e0cc4d52b75a239a57a24920e.js" type="text/javascript"></script>
+  <script src="https://js.stripe.com/v1/" type="text/javascript"></script>
+  
+  <script> window.gon = window.gon || {} </script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="Lb5Pcnk74+etIInovrTVlNs99oUFsxY5O5DfsmvMQDU=" name="csrf-token" />
+  
+  <style type="text/css">
+      #header .brand {
+          position: relative;
+          top: 24px;
+          display: block;
+          overflow: hidden;
+          width: 280px;
+          height: 32px;
+          margin-right: .75em;
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 600;
+          background: url(/assets/apphera.png) no-repeat 0 0;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+  </style>
+
+
+</head>
+
+<body class="aggregate_results index">
+<div id="wrapper">
+  <div id="topbar">
+    <div class="container">
+      <a href="javascript:;" id="menu-trigger" class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+  <i class="icon-cog"></i>
+</a>
+
+<div id="top-nav">
+
+
+  <ul class="pull-right">
+        <li>
+          <a href="/subscriptions/new" style="padding: 8px 8px; background: white; color: black; text-transform: uppercase;">Upgrade To Pro</a>
+          </li>
+        <li>
+          <a href="javascript:;"><i class="icon-user"></i><span class="translation_missing" title="translation missing: en.logged_in_as">Logged In As</span>  <a href="/users/1">tester</a>
+          </a>
+        </li>
+        <!--  <li><a href="javascript:;"><span class="badge badge-primary">1</span><span class="translation_missing" title="translation missing: en.important_messages">Important Messages</span></a></li> -->
+        <li class="dropdown">
+          <a href="./pages/settings.html" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="translation_missing" title="translation missing: en.settings">Settings</span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu pull-right">
+
+            <li>
+              <a href="/users/edit"><span class="translation_missing" title="translation missing: en.edit_account">Edit Account</span></a>
+            </li>
+            <li>
+              <a href="/accounts"><span class="translation_missing" title="translation missing: en.my_accounts">My Accounts</span></a>
+            </li>
+			<li>
+              <a href="/provider_slugs"><span class="translation_missing" title="translation missing: en.slugs">Slugs</span></a>
+            </li>
+            <!--
+           <li class="dropdown-submenu">
+             <a tabindex="-1" href="#">Dropdown menu</a>
+             <ul class="dropdown-menu">
+               <li><a tabindex="-1" href="#">Second level link</a></li>
+               <li><a tabindex="-1" href="#">Second level link</a></li>
+               <li><a tabindex="-1" href="#">Second level link</a></li>
+             </ul>
+           </li> -->
+          </ul>
+        </li>
+
+        <li>
+          <a href="/users/sign_out" data-method="delete" rel="nofollow"><span class="translation_missing" title="translation missing: en.logout">Logout</span></a>
+        </li>
+
+  </ul>
+
+</div> <!-- /#top-nav -->
+
+
+
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#topbar -->
+
+  <div id="header">
+    <div class="container">
+          <a href="/" class="brand pull-right"><span class="translation_missing" title="translation missing: en.dashboard">Dashboard</span></a>
+
+<a href="javascript:;" class="btn-navbar " data-toggle="collapse" data-target=".nav-collapse">
+  <i class="icon-reorder"></i>
+</a>
+
+<div class="nav-collapse">
+  <ul id="main-nav" class="nav pull-left">
+        <li class="nav-icon active">
+          <a href="/home">
+            <i class="icon-home"></i>
+            <span><span class="translation_missing" title="translation missing: en.home">Home</span></span>
+          </a>
+        </li>
+       
+	        <li class="dropdown">
+	          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+	            <i class="icon-th"></i>
+	            <span><span class="translation_missing" title="translation missing: en.my_business">My Business</span></span>
+	            <b class="caret"></b>
+	          </a>
+
+	          <ul class="dropdown-menu">
+	            <li>
+	              <a href="/accounts">My Venues or Locations</a>
+	            </li>
+
+	            </ul>
+		
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-th"></i>
+            <span>Reviews</span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="/reviewers">Reviewers</a>
+            </li>
+            <li>
+              <a href="/organizations">Competitors</a>
+            </li>
+            <li>
+              <a href="/organizations/mapview">Competitor Map</a>
+            </li>
+
+           
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-th"></i>
+            <span><span class="translation_missing" title="translation missing: en.search">Search</span></span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/keywords">Keywords</a>
+            </li>
+
+           
+          </ul>
+        </li>
+
+     
+
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-copy"></i>
+            <span><span class="translation_missing" title="translation missing: en.reports">Reports</span></span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/misc"><span class="translation_missing" title="translation missing: en.found_links">Found Links</span></a>
+            </li>
+            <li>
+              <a href="/aggregate_results">Results overview</a>
+            </li>
+          </ul>
+        </li>
+        <!--
+    <li class="dropdown">
+      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="icon-external-link"></i>
+        <span><span class="translation_missing" title="translation missing: en.extras">Extras</span></span>
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="/users/sign_in"><span class="translation_missing" title="translation missing: en.login">Login</span></a>
+        </li>
+        <li>
+          <a href="/users/sign_up"><span class="translation_missing" title="translation missing: en.signup">Signup</span></a>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+      </ul>
+
+</div>
+
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#header -->
+
+  <div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><span class="translation_missing" title="translation missing: en.overview">Overview</span></h2>
+
+
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+
+        <h3><span class="translation_missing" title="translation missing: en.average_of_all_competitors">Average Of All Competitors</span> :0.00</h3>
+
+            <div id="vertical-chart" class="chart-holder"></div>
+            <div id="chart-legend"></div>
+            <script type="text/javascript">
+                var data = [];
+
+
+                Charts.vertical('#vertical-chart', data);
+            </script>
+
+        <table class="table table-striped table-bordered table-highlight">
+          <thead>
+          <tr>
+            <th>Lokation</th>
+            <th>Reviews</th>
+            <th>Review Average</th>
+            <!-- <th>Tweets</th>
+     <th>Tweets neu</th>
+     <th>Followers<a href="#" rel="popover" title="Twitter Tip" data-content="Lorem ipsum"><i class="icon-list icon-question-sign"></i></a>	</th>
+     <th>Listed<a href="#" rel="popover" title="Twitter Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th>
+        <th>Fb gefällt mir<a href="#" rel="popover" title="Facebook Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th>
+        <th>Fb gefällt mir neu<a href="#" rel="popover" title="Facebook Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th> -->
+            <th>Foursquare Users</th>
+            <th>Foursquare Checkins</th>
+            <th>Foursquare
+              Tip<a href="#" rel="popover" title="Foursquare Tip" data-content="Foursquare allows to recommend locations as a 'Tip'."></i></a>                    
+            </th>
+            <!--&lt;!&ndash; <th>Mentions</th>-->
+            <!--  <th>Mentions neu</th>
+         <th>Blog Beiträge</th>
+         <th>Blog Beiträge neu</th> -->
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+          </tr>
+          </tbody>
+
+        </table>
+
+        <br/>
+      </div>
+      <h3><span class="translation_missing" title="translation missing: en.competitor_results">Competitor Results</span></h3>
+
+      <table class="table table-striped table-bordered table-highlight">
+        <thead>
+        <tr>
+          <th>Lokation</th>
+          <th>Reviews</th>
+          <th>Review Average</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tr>
+        </tbody>
+      </table>
+
+
+      <br/>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      $("a[rel=popover]")
+              .popover()
+              .click(function (e) {
+                  e.preventDefault()
+              })
+  </script>
+
+
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        © 2012 <a href="http://www.apphera.com">Apphera, Inc.</a>, all rights reserved.
+      </div>
+      <!-- /span6 -->
+
+      <div id="builtby" class="span6">
+        <a href="http://www.apphera.com">Powered by Apphera.</a>
+      </div>
+      <!-- /.span6 -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /#footer -->
+
+
+</body>
+

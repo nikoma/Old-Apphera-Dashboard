@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>MsgGrowl - MadeByAmp</title>
+	
+<style type="text/css" media="screen">
+
+	
+* { padding: 0; margin: 0; }
+
+body
+{
+	background: #DDD;
+	font: 12px/1.7em arial, sans-serif;
+	margin: 0 auto 75px;
+}
+
+button { padding: 4px 8px; }
+
+
+</style>
+
+<link rel="stylesheet" href="./example_files/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="./css/msgGrowl.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/msgGrowl.js"></script>
+</head>
+
+<body id="">
+	
+<div id="wrapper">
+	
+<h1>MsgGrowl - MadeByAmp</h1>
+
+<p>MsgGrowl is a clean CSS3 notification system for alerting users to site information, errors, warnings, and successes.</p>
+ 
+<div class="screenshot">
+	<img src="./example_files/grab.png" />
+</div>
+
+<p>To get started with MsgGrowl, add the msgGrowl.css stylesheet to your document:</p>
+
+<pre>
+&lt;link rel="stylesheet" href="msgGrowl.css" type="text/css" charset="utf-8" /&gt;
+</pre>
+
+<p>Also add the MsgGrowl javascript file to your document:</p>
+
+<pre>
+&lt;script src="msgGrowl.js"&gt;&lt;/script&gt;
+</pre>
+<br />
+<p>Then add the images folder contained in this download to your project and make sure all the image paths in the msgGrowl.css file are correct.</p>
+
+<br />
+
+
+<p style="background: #FFC;">For support email the author through his Code Canyon author page <a href="http://codecanyon.net/user/MadeByAmp">http://codecanyon.net/user/MadeByAmp</a></p>
+
+	<br />
+	<hr />
+	
+	<br /><br />
+<h2>Example/Usage</h2>
+
+<h3>Basic</h3>
+	
+<pre>
+$.msgGrowl ({
+	title: 'Header' // Optional
+	, text: 'Lorem ipsum dolor sit amet, consectetur.'
+});
+</pre>	
+
+<button class="demo_basic">Basic</button>
+
+<script>
+$(function () {	
+	$('.demo_basic').live ('click', function (e) {
+		$.msgGrowl ({
+			title: 'Header'
+			, text: 'Lorem ipsum dolor sit amet, consectetur.'
+		});
+	});	
+});
+</script>
+	<br />
+	<br />
+	<hr />
+
+
+
+
+	
+<h3>Types</h3>
+	
+<pre>
+$.msgGrowl ({
+	type: 'info'
+	, title: 'Header'
+	, text: 'Lorem ipsum dolor sit amet, consectetur.'
+});
+</pre>	
+
+<button class="demo_type" rel="info">Info</button>
+<button class="demo_type" rel="success">Success</button>
+<button class="demo_type" rel="warning">Warning</button>
+<button class="demo_type" rel="error">Error</button>
+
+<script>
+$(function () {	
+	$('.demo_type').live ('click', function (e) {
+		$.msgGrowl ({
+			type: $(this).attr ('rel')
+			, title: 'Header'
+			, text: 'Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur.'
+		});
+	});	
+});
+</script>
+	<br />
+	<br />
+	<hr />
+
+
+
+
+
+<h3>Position</h3>
+	
+<pre>
+$.msgGrowl ({
+	title: 'Header'
+	, text: 'Lorem ipsum dolor sit amet, consectetur.'
+	, position: 'bottom-right'
+});
+</pre>	
+
+<button class="demo_position" rel="top-left">Top Left</button>
+<button class="demo_position" rel="top-center">Top Center</button>
+<button class="demo_position" rel="top-right">Top Right</button>
+<button class="demo_position" rel="bottom-left">Bottom Left</button>
+<button class="demo_position" rel="bottom-center">Bottom Center</button>
+<button class="demo_position" rel="bottom-right">Bottom Right</button>
+
+<script>
+$(function () {	
+	$('.demo_position').live ('click', function (e) {
+		$.msgGrowl ({
+			type: 'info'
+			, title: 'Header'
+			, text: 'Lorem ipsum dolor sit amet, consectetur  ipsum dolor sit amet, consectetur.'
+			, position: $(this).attr ('rel')
+		});
+	});	
+});
+</script>
+	<br />
+	<br />
+	<hr />	
+
+
+
+
+
+
+<h3>Sticky</h3>
+	
+<pre>
+$.msgGrowl ({
+	title: 'Header'
+	, text: 'Lorem ipsum dolor sit amet, consectetur.'
+	, sticky: true
+});
+</pre>	
+
+<button class="demo_sticky">Sticky</button>
+
+<script>
+$(function () {	
+	$('.demo_sticky').live ('click', function (e) {
+		$.msgGrowl ({
+			type: 'success'
+			, title: 'Header'
+			, text: 'Lorem ipsum dolor sit amet, consectetur  ipsum dolor sit amet, consectetur.'
+			, sticky: true
+		});
+	});	
+});
+</script>
+	<br />
+	<br />
+	<hr />
+
+
+	
+	
+	
+	
+	
+	
+<h3>Callback</h3>
+	
+<pre>
+$.msgGrowl ({
+	title: 'Header'
+	, text: 'Lorem ipsum dolor sit amet, consectetur.'
+	, onOpen: function () {
+		// Callback
+	}
+	, onClose: function () {
+		// Callback
+	}
+});
+</pre>	
+
+<button class="demo_callback">Callback</button>
+
+<script>
+$(function () {	
+	$('.demo_callback').live ('click', function (e) {
+		var $this = $(this);
+		
+		$.msgGrowl ({
+			title: 'Header'
+			, text: 'Lorem ipsum dolor sit amet, consectetur.'
+			, lifetime: 2500
+			, onOpen: function () {
+				$this.after ('<div style="color: #C00;">Open Callback</div>');
+			}
+			, onClose: function () {
+				$this.after ('<div style="color: #C00;">Close Callback</div>');
+			}
+		});
+	});	
+});
+</script>
+	<br />
+	<br />
+	<hr />
+	
+	
+	<br />
+	<br />
+
+<h2>Options</h2>
+
+<table border="0">
+    <tbody>
+        <tr>
+            <th width="130">Option Name</th>
+
+            <th width="130">Default Value</th>
+
+            <th>Explanation</th>
+        </tr>
+
+        <tr>
+            <td>type</td>
+
+            <td><em>empty string</em></td>
+
+            <td>Designates the type of notication being displayed. Options are an <em>empty string, info, success, error, warning.</em></td>
+        </tr>
+
+        <tr>
+            <td>title</td>
+
+            <td><em>empty string</em></td>
+
+            <td>Optional title which is displayed above the notification text.</td>
+        </tr>
+
+        <tr>
+            <td>text</td>
+
+            <td><em>empty string</em></td>
+
+            <td>Required text message for notification.</td>
+        </tr>
+
+        <tr>
+            <td>lifetime</td>
+
+            <td><em>6500</em></td>
+
+            <td>Time in milliseconds a non-sticky notification will stay on the screen.</td>
+        </tr>
+
+        <tr>
+            <td>sticky</td>
+
+            <td><em>false</td>
+
+            <td><em>True/false</em>. When set to true the notification will stay on the screen until closed by the user.</td>
+        </tr>
+
+        <tr>
+            <td>position</td>
+
+            <td><em>bottom-right</em></td>
+
+            <td>Designates the region notifications will display in. Options are <em>top-left, top-center, top-right, bottom-left, bottom-center, bottom-right.</em></td>
+        </tr>
+
+        <tr>
+            <td>closeTrigger</td>
+
+            <td><em>true</em></td>
+
+            <td><em>True/false</em>. When set to true the notification will display a small x in the corner allowing the user to manually close the notification.</td>
+        </tr>
+
+        <tr>
+            <td>onOpen</td>
+
+            <td><em>function () {}</em></td>
+
+            <td>Callback function before the notification is opened.</td>
+        </tr>
+
+        <tr>
+            <td>onClose</td>
+
+            <td><em>function () {}</em></td>
+
+            <td>Callback funciton after the notication has been removed.</td>
+        </tr>
+
+    </tbody>
+</table>
+	
+</div> <!-- #wrapper -->
+
+</body>
+
+</html>

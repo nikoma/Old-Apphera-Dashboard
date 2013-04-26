@@ -1,0 +1,59 @@
+
+<div class="account-container register stacked">
+  <div class="content clearfix">
+
+    <%= devise_error_messages! %>
+    <div class="register-form">
+      <div class="row">
+
+
+        <div class="span6">
+          <div class="formy">
+            <h5><%= t('reset_password.reset_pass') %></h5>
+            <div class="form-reset-password">
+              <!-- Register form (not working)-->
+              <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put,:class => "form-inline"  }) do |f| %>
+                  <div class="reset-password-content" style="width: 200px;">
+                    <div class="controls" style="margin-left: 50px; margin-top: 5px;">
+                      <%= f.hidden_field :reset_password_token %>
+                    </div>
+                    <div class="controls" style="margin-left: 50px; margin-top: 5px;">
+                      <%= f.password_field :password,:class => "input-large", :placeholder => t('reset_password.password') %>
+                    </div>
+                    <div class="controls" style="margin-left: 50px; margin-top: 5px;">
+                      <%= f.password_field :password_confirmation, :class => "input-large",:placeholder => t('reset_password.password_confirm')%>
+                    </div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="action-submit" >
+                    <!-- Buttons -->
+                    <%= f.submit t('common.save'), :class => "btn button-save-reset", :onclick => "page_loading()" %>
+
+                  </div>
+
+              <% end %>
+            </div>
+            <div class="login-extra back-login" >
+              <%= t('common.back_to')  %> <%= link_to t('common.login'), new_user_session_path %> <%= t('common.or')  %> <%= link_to t('common.sign_up'), new_user_registration_path %>
+            </div> <!-- /login-extra -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+
+
+
+
+
+
+
+

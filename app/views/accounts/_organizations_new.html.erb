@@ -1,0 +1,45 @@
+<div id="md-organization" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Add Venue</h3>
+  </div>
+  <div class="modal-body" style="padding: 16px 24px">
+    <div id="flash-notice" class="alert alert-error hide">
+
+    </div>
+    <%= simple_form_for(Organization.new, html: {novalidate: false}, :remote => true) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :street, :label => t(:street) %>
+        <%= f.input :street2, :label => t(:street2) %>
+        <%= f.input :postalcode, :label => t(:postalcode) %>
+        <%= f.input :state, :label => t(:state) %>
+        <%= f.input :phone1, :label => t(:phone) %>
+        <%= f.input :phone2, :label => t(:mobile) %>
+        <label>Country</label>
+        <%= select_tag 'country_code_id', options_for_select(CountryCodes.select_countries, :selected => (CountryCodes.find_by_name("United States\n").present? ? CountryCodes.find_by_name("United States\n").id : nil) ), :class => "chzn-select" %>
+
+        <%#= f.input :country_code_id, :as => :select,
+                    :label => t(:country_code_id), :include_blank => false,
+                    :collection => CountryCodes.select_codes %>
+        <%= f.label t(:category) %>
+
+        <input id="organization_category" name="organization[category_id]" type="text" placeholder="Enter search category.."/>
+        <%= f.input :url, :type => "text", :label => "Web Url" %>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <%= f.submit "Save", class: "btn btn-primary btn-save" %>
+	    <!--<button class="btn btn-primary btn-save">Save changes</button>-->
+	  </div>
+    <% end %>
+
+</div>
+    </div>
+<script type="application/javascript">
+	$(document).ajaxStart(function() {
+  		//$( ".log" ).text( "Triggered ajaxStart handler." );
+  		page_loading();
+	});
+	$(document).ajaxStop(function(){
+		$("#overlay").remove();
+	});
+</script>

@@ -1,0 +1,18 @@
+development:
+ adapter: postgresql
+ encoding: utf8
+ database: apphera_production
+ pool: 25
+ username: apphera
+ password: password
+ host: 127.0.0.1
+
+production:
+ adapter: postgresql
+ encoding: utf8
+ database: apphera_production
+ pool: 25
+ username: apphera
+ password: password
+ host: 127.0.0.1 
+

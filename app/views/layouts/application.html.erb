@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns=""> <!--<![endif]-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Appheradashboard" %></title>
+  <meta charset="utf-8">
+
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Appheradashboard" %>">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <%= tag :meta, :name => "stripe-key", :content => Rails.configuration.stripe[:publishable_key] %>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "https://js.stripe.com/v1/" %>
+  <%= include_gon %>
+  <script> window.gon = window.gon || {} </script>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+  <style type="text/css">
+      #header .brand {
+          position: relative;
+          top: 24px;
+          display: block;
+          overflow: hidden;
+          width: 280px;
+          height: 32px;
+          margin-right: .75em;
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 600;
+          background: url(/assets/<%= current_reseller.nil? ? 'logo' : current_reseller.logo  %>) no-repeat 0 0;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+  </style>
+
+
+</head>
+
+<body class="<%= controller_name %> <%= action_name %>">
+<div id="wrapper">
+  <div id="topbar">
+    <div class="container">
+      <%= render 'layouts/navigation' %>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#topbar -->
+
+  <div id="header">
+    <div class="container">
+      <% if user_signed_in? %>
+          <%= render 'layouts/panel' %>
+      <% else %>
+          <%= render 'layouts/panel_logged_out' %>
+      <% end %>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#header -->
+
+  <%= yield %>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        © 2012 <a href="http://www.apphera.com">Apphera, Inc.</a>, all rights reserved.
+      </div>
+      <!-- /span6 -->
+
+      <div id="builtby" class="span6">
+        <a href="http://www.apphera.com">Powered by Apphera.</a>
+      </div>
+      <!-- /.span6 -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /#footer -->
+<%= yield :scripts %>
+
+</body>
+

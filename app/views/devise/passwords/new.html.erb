@@ -1,0 +1,54 @@
+
+
+<div class="account-container register stacked">
+  <div class="content clearfix">
+
+    <%= devise_error_messages! %>
+    <div class="register">
+      <div class="row">
+        <div class="span6">
+          <h2></h2>
+          <p></p>
+
+        </div>
+
+        <div class="span6">
+          <div class="formy">
+            <h5><% t('reset_password.reset_pass') %></h5>
+            <div class="form-reset-password">
+              <!-- Register form (not working)-->
+              <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post,:class => "form-horizontal" }) do |f| %>
+                  <div class="reset-password-content" style="width: 200px;">
+                    <label class="control-label"  for="email"><%= t('reset_password.email') %></label>
+                    <div class="controls" style="margin-left: 50px;">
+                      <%= f.email_field :email,:class => "input-large" %>
+                    </div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="reset-actions" >
+                    <!-- Buttons -->
+                    <%= f.submit t('common.send'), class: "button btn btn-primary btn-large btn-fix", :onclick => "page_loading()" %>
+
+                  </div>
+
+              <% end %>
+            </div>
+            <div class="login-extra back-login" >
+              <%= t('common.back_to')  %> <%= link_to t('common.login'), new_user_session_path %> <%= t('common.or')  %> <%= link_to t('common.sign_up'), new_user_registration_path %>
+            </div> <!-- /login-extra -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+
+
+

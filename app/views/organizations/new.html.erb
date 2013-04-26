@@ -1,0 +1,38 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h3><%= t(:new_venue) %></h3>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+  <div class="container">
+    <div id="flash-notice" class="alert alert-error hide">
+
+    </div>
+    <div class="row">
+
+      <div class="span12">
+
+        <div class="hero-unit">
+          <%= render 'form' %>
+        </div>
+        <%= link_to t(:back), organizations_path %>
+      </div>
+    </div>
+  </div>
+</div>

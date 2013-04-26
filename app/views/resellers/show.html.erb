@@ -1,0 +1,71 @@
+<div class="account-container register stacked">
+  <div class="content clearfix">
+    <%= form_for(@user) do |f| %>
+
+        <h1><%= t(:add_user_account) %></h1>
+
+        <h3>Presented by: <%= @reseller.company %>
+          <!--
+         <div class="login-social">
+           <p>Sign in using social network:</p>
+
+           <div class="twitter">
+             <a href="#" class="btn_1">Login with Twitter</a>
+           </div>
+
+           <div class="fb">
+             <a href="#" class="btn_2">Login with Facebook</a>
+           </div>
+         </div> -->
+
+          <div class="login-fields">
+
+            <div class="field">
+              <%= f.hidden_field :reseller_id, :value => @reseller.id %>
+              <%= f.label :name %>
+              <%= f.text_field :name, placeholder: t(:name), class: "login" %>
+            </div>
+            <!-- /field -->
+
+            <div class="field">
+              <%= f.label :email %>
+              <%= f.text_field :email, placeholder: t(:email), class: "login" %>
+            </div>
+            <!-- /field -->
+
+            <div class="field">
+              <%= f.label :password %>
+              <%= f.password_field :password, placeholder: t(:password), class: "login" %>
+            </div>
+            <!-- /field -->
+
+            <div class="field">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, placeholder: t(:confirm_password), class: "login" %>
+            </div>
+            <!-- /field -->
+
+          </div>
+          <!-- /login-fields -->
+
+          <div class="login-actions">
+            <!--
+           <span class="login-checkbox">
+             <input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+             <label class="choice" for="Field">I have read and agree with the Terms of Use.</label>
+           </span> -->
+
+            <%= f.submit t(:register), class: "button btn btn-primary btn-large" %>
+
+          </div>
+          <!-- .actions -->
+
+    <% end %>
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+

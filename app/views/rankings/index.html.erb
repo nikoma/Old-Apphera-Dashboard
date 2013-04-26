@@ -1,0 +1,33 @@
+<h1>Listing rankings</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Rank</th>
+    <th>Content Provider</th>
+    <th>Keyword</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% unless @rankings.nil? %>
+      <% @rankings.each do |ranking| %>
+          <tr>
+            <td><%= ranking.rank %></td>
+            <td><%= ranking.content_provider.name %></td>
+            <td><%= ranking.name %></td>
+            <td><%= ranking.keyword.name %></td>
+            <td><%= ranking.url %></td>
+            <td><%= link_to t(:show), ranking %></td>
+            <td><%= link_to t(:edit), edit_ranking_path(ranking) %></td>
+            <td><%= link_to t(:remove), ranking, confirm: t(:are_you_sure), method: :delete %></td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>

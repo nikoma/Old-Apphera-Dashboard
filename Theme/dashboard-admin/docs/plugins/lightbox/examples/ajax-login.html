@@ -1,0 +1,16 @@
+<div style="text-align:right;">
+  <form id="loginform" action="ajax_login.php" method="post" autocomplete="off">
+    <label><em>Username : </em><input type="text"     id="username"  name="username" class="input"/></label>
+    <label><em>Password : </em><input type="password" id="password" name="password" class="input"/></label>
+    <input type="submit" class="button alignright" name="submit" id="submit" value="Login" style="margin:0"/>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $("#loginform").submit(function(ev) {
+    if ($("#username").val() == "" | $("#password").val() == "") {
+      $.lightbox().shake();
+      ev.preventDefault();
+    }
+  });
+</script>

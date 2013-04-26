@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Lightbox Evolution</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.ie6.css" />
+  <![endif]-->
+  <script type="text/javascript" src="js/lightbox/jquery.lightbox.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $('.lightbox').lightbox();
+    });
+  </script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+  
+    <h1 class="big">jQuery Lightbox Evolution</h1>
+    <h1 class="big">Documentation</h1>
+    <h2 class="big">By aeroalquimia</h2>
+    
+    <div class="alert">
+      <p>If you have any question that are beyond the scope of this help file, please feel free to <a href="http://codecanyon.net/forums/topic/codecanyon/65">join the discussion</a> or <a href="http://codecanyon.net/user/aeroalquimia">email me via my user page contact form</a>. Thanks so much!</p>
+    </div>
+    
+    <h1>Table of <strong>Contents</strong></h1>
+    <h6><a href="#help1">Installation</a></h6>
+    <h6><a href="#help2">Support</a></h6>
+    <h6><a href="#help5">Frequently Asked Questions</a></h6>
+    <h6><a href="#help8">Changelog</a></h6>
+    <h6><a href="#help9">Support Notes</a></h6>
+
+    
+    
+    
+    <h2 id="help1">Installation <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>First, make sure you are using valid <a href="http://www.alistapart.com/articles/doctype/" rel="nofollow">DOCTYPE</a></li>
+
+      <li>Include the jQuery library, the lightbox CSS file and the lightbox javascript in the head of the page(s) where you want to use the Lightbox.
+<pre>
+&lt;script type="text/javascript" src="js/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="js/lightbox/themes/<strong>default</strong>/jquery.lightbox.css" /&gt;
+&lt;!--[if IE 6]&gt;
+&lt;link rel="stylesheet" type="text/css" href="js/lightbox/themes/<strong>default</strong>/jquery.lightbox.ie6.css" /&gt;
+&lt;![endif]--&gt;
+
+&lt;script type="text/javascript" src="js/lightbox/jquery.lightbox.min.js"&gt;&lt;/script&gt;
+</pre>
+      <p>Where <strong>default</strong> is the design that you have chosen, and can be:</p>
+        <ul>
+          <li>default</li>
+          <li>white-green</li>
+          <li>carbono</li>
+          <li>facebook</li>
+          <li>minimalist</li>
+          <li>minimalist-dark</li>
+          <li>classic</li>
+          <li>classic-dark</li>
+          <li>evolution</li>
+          <li>evolution-dark</li>
+        </ul>
+      
+      </li>
+      
+      <li>Then, initialize the plugin. Put the following code before the closing tag of your body
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($){
+    $('.lightbox').lightbox();
+  });
+&lt;/script&gt;
+</pre>
+      </li>
+      
+      <li>Next you need to tell which links you want it to open. The simplest way to do this 
+          is through your HTML markup. If you're going to take this route, at the very least 
+          you must add a class="lightbox" attribute to each link. For example, say you have 
+          this link to an image on your page:
+<pre>
+&lt;a href=&quot;image.jpg&quot;&gt;My Image&lt;/a&gt;
+</pre>
+        <p>In order to set up this link for use with Lightbox, simply change it to this:</p>
+<pre>
+&lt;a href=&quot;image.jpg&quot; <strong>class=&quot;lightbox&quot;</strong>&gt;My Image&lt;/a&gt;
+</pre>
+        <p>That's it! Clicking on this link should now open up the image in Lightbox.</li>
+      </li>
+      
+      <li>If you would like to display a title for your image, simply add a title attribute to the link.
+      </li>
+      
+    </ol>
+    
+    
+    
+    
+    
+    
+    
+
+    <h2 id="help2">Support <a href="#wrapper" class="top">Back to top</a></h2>
+    <p>This plugin supports the following browsers:</p>
+    <ul>
+      <li>Internet Explorer 6+</li>
+      <li>Firefox 2 +</li>
+      <li>Safari 3 +</li>
+      <li>Chrome 3 +</li>
+      <li>Opera 9 +</li>
+    </ul>
+
+    <p>Quirks mode is not supported in any browser, but that doesn't necessarily mean that it won't work. This means that you need to use either a strict or transitional DOCTYPE in order to use Lightbox.</p>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 id="help5">Frequently Asked Questions <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>
+        <strong>Can I use this script on my client's website?</strong>
+        <p>Yes. Your license includes the rights to use the script on any one website at a time. If you'd like to use the script as part of a service, please consider purchasing an Extended License.</p>
+      </li>
+      
+      
+      
+      <li>
+        <strong>Can I make modifications to this script?</strong>
+        <p>Feel free to make any modifications you need. Also feel free to blog and show it to your friends, but please do not redistribute the script with your changes. </p>
+      </li>
+      
+      
+      
+      
+      <li>
+        <strong>Why the script doesn't work?</strong>
+        <p>Make sure you don't have multiple versions of jquery in your page. Look at the source view in your browser to see what jscripts you are loading.</p>
+        <p>For example:</p>
+<pre>
+&lt;script src="crazy_path/<strong>jquery.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="crazy_path/<strong>jquery.min.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/<strong>jquery.min.js</strong>"&gt;&lt;/script&gt;
+</pre>
+        <p><strong>jquery.js</strong> and <strong>jquery.min.js</strong> are the same script. Delete the last one if you can. Keep only one.</p>
+      </li>
+
+
+
+      <li>
+        <strong>The shadow overlay doesn't stretch to cover full browser window.</strong>
+        <p> Remove the default margin and padding from the body tag. Add body{ margin: 0; padding: 0; } to your stylesheet.</p>
+      </li>
+
+
+
+
+      <li>
+        <strong>How to automatically start Lightbox on page load?</strong>
+        <p>Simply add the following code:</p>
+      </li>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($){
+  
+    $.lightbox("image.jpg");
+
+  });
+&lt;/script&gt;
+</pre>
+
+
+
+
+
+      <li>
+        <strong>Why Flash objects appear through overlay?</strong>
+        <p>By default Flash will overlay any HTML content. This can be prevented by setting the 'wmode' param and embed attribute to 'transparent'.</p>
+        <p>For more information from <a href="http://kb2.adobe.com/cps/155/tn_15523.html">Adobe Support</a></p>
+<pre>
+AC_FL_RunContent( 'codebase', 'http...', 'pluginspage', 'http...',  <strong>'wmode', 'transparent'</strong>, 'width', '99', 'height', '99', 'src', 'images/home', 'quality', 'high' );
+</pre>
+
+<pre>
+var so = new SWFObject("home.swf", "home", "99", "99", "9", "#222222");
+so.addParam("allowfullscreen", "true");
+so.addParam("allowScriptAccess", "always");
+<strong>so.addParam("wmode","transparent");</strong>
+</pre>
+
+<pre>
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http..." width="999" height="999"&gt;
+  &lt;param name="movie"   value="images/home.swf" /&gt;
+  &lt;param name="quality" value="high" /&gt;
+  <strong>&lt;param name="wmode"   value="transparent" /&gt;</strong>
+  &lt;embed src="images/home.swf" <strong>wmode="transparent"</strong> width="999" height="999" quality="high" pluginspage="http..." type="application/x-shockwave-flash"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</pre>
+
+      </li>
+
+
+
+
+      <li>
+        <strong>Lightbox is positioned incorrectly or behaving strangely in Internet Explorer</strong>
+        <p>This is likely a doctype issue. This plugin requires a valid doctype and rendering in quirks mode is not supported.
+         Make sure you are using the full doctype declaration to insure rendering in standards mode.</p>
+         
+         <p>This abbreviated doctype renders the document in quirks mode for Internet Explorer:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+</pre>
+       <p>The doctype with URI renders in standards mode for all browsers:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+</pre>
+      </li>
+      
+      
+      <li>
+        <strong>How can I open Lightbox from inside a Flash movie?</strong>
+        <p>In your Flash movie you need to use getURL to call your custom callback function, like so:</p>
+
+<pre>
+getURL("javascript:jQuery.lightbox('image.jpg')");
+</pre>
+
+      </li>
+
+      <li>
+        <strong>How can I open Lightbox in parent window from inside an iframe?</strong>
+        <p>First thing you need to do is install the script in your parent window, but don't initialize it. Don't use jQuery(document).ready, instead, add the code below:</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+  function frameload(iframe) {
+    var doc = iframe.contentWindow || iframe.contentDocument;
+    if (doc.document) { doc = doc.document; };
+    
+    jQuery('.lightbox', doc.body).lightbox();
+  };
+&lt;/script&gt;
+</pre>
+        <p>Insert <strong>onload="frameload(this);"</strong> in your iframe markup.</p>
+
+<pre>
+&lt;<strong>iframe</strong> src="iframe_child.html" <strong>onload="frameload(this);"</strong> width="500" height="500"&gt;&lt;/iframe&gt;     
+</pre>
+        <p>When you click an image in the child page, the lightbox will be displayed in your parent page. Remember to remove the script in your child page to avoid any problem.</p>
+        
+      </li>
+
+      <li>
+        <strong>Any plans for making it available for Wordpress?</strong>
+        <p><a href="http://codecanyon.net/item/lightbox-evolution-for-wordpress/119478">Click !</a></p>
+      </li>
+      
+      <li>
+        <strong>How I can use JW Player to play MP4 files?</strong>
+      <p>Use this code:</p>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($) {
+    $('<strong>.videobox</strong>').live('click', function(ev) {
+      
+      var video = $(this).attr('href');
+      
+      $.lightbox('http://www.yourdomain.com/player.swf', {
+        force: 'flash',
+        flashvars: 'file='+video+'&amp;autostart=true&amp;stretching=fill'
+      });
+      
+      ev.preventDefault();
+    
+    });
+  });
+&lt;/script&gt;
+</pre>
+      <p>Use the class "videobox" and point the link to the mp4 file:</p>
+<pre>
+&lt;a href="http://content.bitsontherun.com/videos/uMp5r6eZ-380099.mp4" class="<strong>videobox</strong>"&gt;OPEN VIDEO&lt;/a&gt;
+</pre>
+      </li>
+    </ol>
+
+
+
+
+
+    <h2 id="help8">Changelog <a href="#wrapper" class="top">Back to top</a></h2>
+<pre>
+1.6.5 (May 28 2012)
+* Fixed bug on custom buttons.
+
+1.6.4 (May 20 2012)
+* Fixed Dual script calling on Chrome 9+.
+* Changed context of onOpen event.
+* Critical: Changed the name of some properties.
+
+1.6.3 (Apr 29 2012)
+* Fixed scrollbars bug with Right-To-Left text.
+
+1.6.2 (Apr 17 2012)
+* Fixed IE9 Iframe 'feature' AKA Bug.
+
+1.6.1 (Apr 06 2012)
+* Added youtu.be detection.
+* Fixed youtube videos don't play on iOS.
+
+1.6.0 (Apr 01 2012)
+* Fixed calculation of the size on iOS.
+* Added better events on iOS.
+
+1.5.8 (Feb 04 2012)
+* Fixed 'evolution' and 'evolution-dark' theme.
+* Fixed Maximize bug on IE.
+* Fixed Calculate function.
+
+1.5.7 (Jan 27 2012)
+* Added a better mobile device detection.
+* Fixed gallery bug.
+* Removed Megavideo embed code.
+
+1.5.6 (Dec 21 2011)
+* Fixed 'evolution' and 'evolution-dark' theme.
+* Fixed New Google Maps detection.
+
+1.5.5 (Oct 14 2011)
+* Fixed iPhone/iPad window height bug.
+* Added iPhone/iPad rotation event.
+* Turned off animations for iPhone/iPad.
+* Removed logo from youtube videos.
+* Added 'carbono' theme.
+* Added 'minimalist-dark' theme.
+* Added 'facebook' theme.
+* Images can now be downloaded.
+* All CSS files were changed.
+* Fixed gallery mode with force=image param.
+
+1.5.4 (Oct 07 2011)
+* Show loading icon on HTML mode. CSS files were changed.
+* Fixed a gallery problem with brackets rel="a[1]".
+
+1.5.3 (Oct 01 2011)
+* Fixed gallery bug.
+
+1.5.2 (Sep 28 2011)
+* Fixed IE6/7/8 Bug.
+
+1.5.1 (Sep 27 2011)
+* Bug fixed wrong overflow with animations on IE6.
+* Added allowTransparency="true" to iframes.
+* Fixed Black Screen of Death on Youtube and IE8.
+
+1.5.0 (Sep 14 2011)
+* Gallery bug fixed.
+* Updated jQuery version to 1.6.4.
+
+1.4.9 (Sep 12 2011)
+* Gallery mode fixed when you open the lightbox in a parent window from an iframe.
+* Added support to HTML code created "on the fly".
+* Google Maps fixed.
+
+1.4.8 (Jun 30 2011)
+* New Google Maps version.
+
+1.4.7 (Jun 16 2011)
+* Fixed custom buttons bug.
+* Trigger onOpen event with images.
+
+1.4.6 (Jun 12 2011)
+* Fixed custom buttons bug.
+* Removed isEmptyObject function.
+* The size for loading image doesn't change in the gallery mode anymore.
+
+1.4.5 (May 12 2011)
+* Added compatibility with Cuf&oacute;n.
+* OnOpen and OnClose events.
+* Use "animate" function instead of "morph" on jQuery 1.6
+* New CollegeHumor embed code.
+
+1.4.4 (Apr 17 2011)
+* Fixed a gallery problem with brackets rel="[1]".
+* Removed the loading image when the image is loaded.
+* Removed margin and padding for flash objects.
+* Upgraded to jQuery 1.5.2
+
+1.4.3 (Mar 09 2011)
+* Changed Youtube and Vimeo videos to iframe.
+* Added Vzaar.com video support.
+
+1.4.2 (Jan 04 2011)
+* Now you can navigate the gallery using the left and right arrows on the keyboard.
+* Now the Gallery mode is only available with images.
+
+1.4.1 (Dic 28 2010)
+* Fixed compatibility issue with jQuery 1.4.1
+
+1.4.0 (Dic 25 2010)
+* Added transition options.
+* Added "move" param.
+* Added "flashvars" param.
+* You can use % in width and height.
+* Fixed bug with flash in Chrome 7 and 8.
+* Fixed zIndex in Default and White-Green themes.
+* Fixed bug in 'minimalist' theme.
+* Added 'evolution' theme.
+* Added 'evolution-dark' theme.
+
+1.3.6 (Oct 30 2010)
+* Fixed IE8 bug
+* Fixed bug with GIF images.
+* The "resize" function doesn't reload the content anymore.
+
+1.3.5 (Oct 26 2010)
+* Fixed IE8 bug.
+
+1.3.4 (Oct 09 2010)
+* Fixed empty title bug.
+
+1.3.2 (Sep 18 2010)
+* Added videopress.com video support.
+* Fixed IE7 Bug.
+
+1.3.1 (Sep 06 2010)
+* Fixed compatibility issue with jQuery 1.3
+
+1.2.5 (Ago 26 2010)
+* Fixed Safari line-height bug.
+
+1.2.4 (Ago 21 2010)
+* Fixed bug scrollbars in iframes and videos.
+
+1.2.3 (Ago 19 2010)
+* Fixed bug sometimes closing lightbox doesn't hide the background.
+* Added jQuery version detection.
+* Added 'classic-dark' theme.
+
+1.2.2 (Ago 16 2010)
+* Restore 'maximize' button when you click on gallery buttons.
+* Added 'minimalist' theme.
+
+1.2.1 (Ago 10 2010)
+* Fixed 'shake' function.
+* Added 'classic' theme.
+
+1.2 (Ago 02 2010)
+* Added megavideo.com video support.
+* Added gametrailers.com video support.
+* Added collegehumor.com video support.
+* Added ustream.tv video support.
+* Added twitvid.com video support.
+* Fixed bug in Overlay when the lightbox closes.
+* Show hidden inline content.
+* Fixed slow animation with Internet Explorer.
+* Added compatibility to .tiff images.
+* Added iframe support.
+* Added Google Maps and Bing Maps support.
+
+1.1 (Jul 28 2010)
+* Keyboard events are now handled.
+* Overflow bug in html content fixed.
+
+1.0 (Jul 11 2010)
+* First release.
+</pre>
+
+
+    <h2 id="help9">Support Notes <a href="#wrapper" class="top">Back to top</a></h2>
+
+    <p>To be able to help solve a problem quickly, please read the entries below. I will do my best to assist you. I provide a full range of technical support except:</p>
+    <ol>
+      <li>I don't support 3rd-party code (external plugins, javascripts, flash players, etc.). In those cases you have to contact the authors.</li>
+      <li>I don't support errors provoked by the strong modification of the original packages.</li>
+      <li>I don't customize the packages in personal way.</li>
+      <li>If you sure that your improvement ideas will be helpful to others, please don't hesitate to share it with me. Most likely that it will became a free package update.</li>
+    </ol>
+    <p>If you have a more general question relating to scripts on CodeCanyon, you might consider visiting the <a href="http://codecanyon.net/forums/topic/codecanyon/65">forums</a> and asking your question in the "Item Discussion" section. Once again, thank you so much for purchasing this plugin.</p>
+
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Jul 2010</p>
+    </div>
+    
+  </div><!--/wrapper-->
+</body>
+</html>

@@ -1,0 +1,110 @@
+<a href="/" class="brand pull-right"><%= t(:dashboard) %></a>
+
+<a href="javascript:;" class="btn-navbar " data-toggle="collapse" data-target=".nav-collapse">
+  <i class="icon-reorder"></i>
+</a>
+
+<div class="nav-collapse">
+  <ul id="main-nav" class="nav pull-left">
+    <% unless current_user.affiliate? %>
+        <li class="nav-icon active">
+          <a href="/home">
+            <i class="icon-home"></i>
+            <span><%= t(:home) %></span>
+          </a>
+        </li>
+       
+	        <li class="dropdown">
+	          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+	            <i class="icon-th"></i>
+	            <span><%= t(:my_business) %></span>
+	            <b class="caret"></b>
+	          </a>
+
+	          <ul class="dropdown-menu">
+	            <li>
+	              <%= link_to t(:my_venues_locations), accounts_path %>
+	            </li>
+
+	            </ul>
+		
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-th"></i>
+            <span><%= t(:reviews) %></span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to t(:application_reviews), reviews_path %>
+            </li>
+            <li>
+              <%= link_to t(:application_reviewers), reviewers_path %>
+            </li>
+            <li>
+              <%= link_to t(:application_competitors), organizations_path %>
+            </li>
+            <li>
+              <%= link_to t(:application_competitor_maps), "/organizations/mapview" %>
+            </li>
+
+           
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-th"></i>
+            <span><%= t(:search) %></span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to t(:application_keywords), keywords_path %>
+            </li>
+
+           
+          </ul>
+        </li>
+
+     
+
+        <li class="dropdown">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-copy"></i>
+            <span><%= t (:reports) %></span>
+            <b class="caret"></b>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to t(:found_links), '/misc' %>
+            </li>
+            <li>
+              <%= link_to t(:aggregate_results), '/aggregate_results' %>
+            </li>
+          </ul>
+        </li>
+        <!--
+    <li class="dropdown">
+      <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="icon-external-link"></i>
+        <span><%= t(:extras) %></span>
+        <b class="caret"></b>
+      </a>
+      <% end %>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to t(:login), new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to t(:signup), new_user_registration_path %>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+      </ul>
+
+</div>

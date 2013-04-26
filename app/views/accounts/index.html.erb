@@ -1,0 +1,106 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h3><%= t(:my_account) %></h3>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+        <div class="well">
+
+          <address>
+            <p>
+              <b><%= t(:company) %></b>
+              <%= @account.name %>
+            </p>
+
+            <p>
+              <b><%= t(:firstname) %></b>
+              <%= @account.firstname %>
+            </p>
+
+            <p>
+              <b><%= t(:lastname) %></b>
+              <%= @account.lastname %>
+            </p>
+
+            <p>
+              <b><%= t(:phone) %></b>
+              <%= @account.phone %>
+            </p>
+          </address>
+          <%= link_to t(:edit), edit_account_path(@account), :class => "btn" %>
+        </div>
+        <a href="#md-organization" role="button" class="btn" data-toggle="modal" style="padding: 8px 12px"><%= t(:add_venues)%></a>
+        <% if current_user.is_reseller? %>
+            <h3><%= t(:your_reseller_link) %></h3>
+
+            <h3> This link leads directly to the signup form. Use this if your customer does not need any additional
+              information. You receive a 30% commission on every sale.</h3>
+
+            <div class="well">
+              <h2> https://dashboard.apphera.com/users/sign_up?partner_id=<%= current_user.id.to_s %></h2></div>
+            <br/>
+
+            <!-- <h3>Alternatively you can use this link which leads to the Apphera homepage and ads your reseller ID to the
+                          signup button.</h3><br/>
+
+                        <div class="well">
+                          <h2> https://www.apphera.com/?partner_id=<%= current_user.id.to_s %></h2></div>
+                        <br/> -->
+            
+            <h3><%= t(:share_this_link) %></h3>
+            <hr/>
+            <h2><%= t(:refer_reseller) %></h2><br/>
+
+            <h3>If you refer a reseller who obtains his own co-branding solution you will receive a $300
+              commission.</h3>
+
+            <div class="well">
+              <h2>https://dashboard.apphera.com/users/sign_up?reseller=yes&referred_by=<%= current_user.id.to_s %>
+              </h2>
+            </div>
+        <% else %>
+            <div>
+                <h4><%= t(:my_venues) %></h4>
+                <div id="list-venues">
+                    <% @organizations.each do |organization| %>
+                        <%= render :partial => 'organizations/organization', :locals => {:organization => organization} %>
+                    <% end %>
+                </div>
+                <br/>
+                <%= render :partial => 'organizations_new' %>
+            </div>
+      <% end %>
+            <br/>
+            <br/>
+            <br/>
+            <% if @account.organizations.present? %>
+            <h4><%= t(:upgrade_account) %></h4>
+            <%= link_to t(:upgrade_to_pro), '/subscriptions/new', :class => "btn" %>
+            <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

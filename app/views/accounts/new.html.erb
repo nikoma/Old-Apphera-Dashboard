@@ -1,0 +1,73 @@
+<script type="text/javascript">
+    Stripe.setPublishableKey('<%= Rails.configuration.stripe[:publishable_key] %>');
+    $(document).ready(function() {
+        $('#btn-save').click(function() {
+            var form = $(this).closest('form');
+            form.validate({
+                errorLabelContainer: $('#flash-notice'),
+                errorElement: "p",
+                rules: {
+                    'account[name]': {
+                        required: true
+                    }
+                },
+                messages: {
+                    'account[name]': {
+                        required: "Field Company Name is required."
+                    }
+                }
+            })
+            if (form.valid())
+                $('#flash-notice').empty();
+            else
+                return false;
+        })
+    });
+</script>
+
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <% if current_user.affiliate? %>
+            <h3><%= t(:accounts_new_reseller) %></h3>
+        <% else %>
+            <h3><%= t(:accounts_new) %></h3>
+        <% end %>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+    <div id="flash-notice" class="alert alert-error hide">
+
+    </div>
+
+    <div class="row">
+
+      <div class="span12">
+
+
+        <%= render 'form' %>
+
+        <%= link_to t(:back), accounts_path %>
+      </div>
+    </div>
+  </div>
+</div>
+

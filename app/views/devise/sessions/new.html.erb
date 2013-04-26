@@ -1,0 +1,86 @@
+<div class="account-container login stacked">
+  <div class="content clearfix">
+
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+        <h1>Sign In</h1>
+        <div class="login-fields">
+          <p>Sign in using your registered account:</p>
+          <%= devise_error_messages! %>
+          <% flash.each do |name, msg| %>
+              <%= content_tag :section, msg, :id => "flash_#{name}", :class => "flash" %>
+          <% end %>
+
+
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.text_field :email, placeholder: "Email", class: "login" %>
+          </div>
+          <!-- /field -->
+
+          <div class="field">
+            <%= f.label :password %>
+            <%= f.password_field :password, placeholder: "Password", class: "login" %>
+          </div>
+          <!-- /password -->
+
+        </div>
+        <!-- /login-fields -->
+
+        <div class="login-actions">
+          <div style="width: 200px; float: left;">
+            <%= f.check_box :remember_me %>
+            <label class="choice" for="Field">Keep me signed in</label>
+          </div>
+
+
+          <div class="foot-sign-in" style="float: right;">
+            <%= f.submit "Sign In", class: "button btn btn-primary btn-large btn-fix", :onclick => "page_loading()" %>
+          </div>
+
+
+        </div>
+
+
+       <div class="login-social" style="width: 100%;">
+
+         <%- if devise_mapping.omniauthable? %>
+             <p>Sign in using social network:</p>
+
+             <div class="social">
+               <a href="/users/auth/twitter" class="tw_login">
+                 <i class="icon-tw"></i>
+                 <label>Twitter</label>
+               </a>
+             </div>
+
+             <div class="social">
+               <a href="/users/auth/facebook" class="tw_login">
+                 <i class="icon-fb"></i>
+                 <label>Facebook</label>
+               </a>
+             </div>
+
+             <div class="social">
+               <a href="/users/auth/google_oauth2" class="tw_login">
+                 <i class="icon-gp"></i>
+                 <label>Google</label>
+               </a>
+             </div>
+       <% end -%>
+
+       </div>
+    <% end %>
+
+  </div>
+  <!-- /content -->
+
+</div> <!-- /account-container -->
+
+
+<!-- Text Under Box -->
+<div class="login-extra">
+  Don't have an account? <%= link_to "Sign Up", new_user_registration_path %>
+  <br/>
+  Forgot <%= link_to "Password", new_user_password_path %>
+</div> <!-- /login-extra -->

@@ -1,0 +1,698 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Bootstrap Elements | Dashboard Admin</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+
+	<link rel="stylesheet" href="./css/ui-lightness/jquery-ui-1.8.21.custom.css">	
+	
+	<link rel="stylesheet" href="css/application.css">
+
+	<script src="js/libs/modernizr-2.5.3.min.js"></script>
+
+</head>
+
+<body>
+	
+<div id="wrapper">
+	
+<div id="topbar">
+	
+	<div class="container">
+		
+		<a href="javascript:;" id="menu-trigger" class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+			<i class="icon-cog"></i>
+		</a>
+	
+		<div id="top-nav">
+			
+			<ul>
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						View Your Site				
+						<b class="caret"></b>
+					</a>
+					
+					<ul class="dropdown-menu pull-right">
+						<li><a href="javascript:;">View Site #1</a></li>
+						<li><a href="javascript:;">View Site #2</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="javascript:;">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul> 
+				</li>
+			</ul>
+			
+			<ul class="pull-right">
+				<li><a href="javascript:;"><i class="icon-user"></i> Logged in as John Doe</a></li>
+				<li><a href="javascript:;"><span class="badge badge-primary">1</span> New Message</a></li>
+				<li class="dropdown">
+					<a href="./pages/settings.html" class="dropdown-toggle" data-toggle="dropdown">
+						Settings						
+						<b class="caret"></b>
+					</a>
+					
+					<ul class="dropdown-menu pull-right">
+						<li><a href="javascript:;">Settings #1</a></li>
+						<li><a href="javascript:;">Settings #2</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="javascript:;">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul> 
+				</li>
+				<li><a href="login.html">Logout</a></li>
+			</ul>
+			
+		</div> <!-- /#top-nav -->
+		
+	</div> <!-- /.container -->
+	
+</div> <!-- /#topbar -->
+
+
+	
+	
+<div id="header">
+	
+	<div class="container">
+		
+		<a href="./index.html" class="brand">Dashboard Admin</a>
+		
+		<a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        	<i class="icon-reorder"></i>
+      	</a>
+	
+		<div class="nav-collapse">
+			<ul id="main-nav" class="nav pull-right">
+				<li class="nav-icon">
+					<a href="./index.html">
+						<i class="icon-home"></i>
+						<span>Home</span>        					
+					</a>
+				</li>
+				
+				<li class="dropdown active">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-th"></i>
+						<span>Components</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="./elements.html">Elements</a></li>
+						<li><a href="./validation.html">Validation</a></li>
+						<li><a href="./jqueryui.html">jQuery UI</a></li>
+						<li><a href="./charts.html">Charts</a></li>
+						<li><a href="./bonus.html">Bonus Elements</a></li>
+						<li class="dropdown-submenu">
+		                  <a tabindex="-1" href="javascript:;">Dropdown menu</a>
+		                  <ul class="dropdown-menu">
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+		                  </ul>
+		                </li>
+					</ul>    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-copy"></i>
+						<span>Sample Pages</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="./faq.html">FAQ</a></li>
+						<li><a href="./gallery.html">Image Gallery</a></li>
+						<li><a href="./pricing.html">Pricing Plans</a></li>
+						<li><a href="./reports.html">Reports</a></li>
+						<li><a href="./settings.html">Settings</a></li>
+					</ul>    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-external-link"></i>
+						<span>Extras</span> 
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">							
+						<li><a href="./login.html">Login</a></li>
+						<li><a href="./signup.html">Signup</a></li>
+						<li><a href="./error.html">Error</a></li>
+						<li><a href="./skins.html">Skins</a></li>
+						<li><a href="./sticky.html">Sticky Footer</a></li>
+					</ul>    				
+				</li>
+			</ul>
+			
+		</div> <!-- /.nav-collapse -->
+
+	</div> <!-- /.container -->
+	
+</div> <!-- /#header -->
+
+
+
+
+<div id="masthead">
+	
+	<div class="container">
+		
+		<div class="masthead-pad">
+			
+			<div class="masthead-text">
+				<h2>Bootstrap Elements</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div> <!-- /.masthead-text -->
+			
+		</div>
+		
+	</div> <!-- /.container -->	
+	
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+	<div class="container">		
+		
+		<div class="row">
+		
+			
+			
+			<div class="span12">
+				
+				
+				
+				
+				
+				
+				<section id="buttons">
+					<h2>Buttons</h2>
+					
+					<a href="javascript:;" class="btn btn-large btn-primary">Primary Button</a>&nbsp;&nbsp;
+					<a href="javascript:;" class="btn btn-large btn-secondary">Secondary Button</a>&nbsp;&nbsp;
+					<a href="javascript:;" class="btn btn-large btn-tertiary">Tertiary Button</a>&nbsp;&nbsp;
+					<a href="javascript:;" class="btn btn-large">Action Button</a>
+						      
+						</section>
+				
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				
+				
+				<section id="accordions">
+				    <h2>Accordion</h2>
+			          
+					
+					<div class="accordion" id="basic-accordion">
+			            <div class="accordion-group">
+			              <div class="accordion-heading">
+			                <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic-accordion" href="#collapseOne">
+			                  Collapsible Group Item #1
+			                </a>
+			              </div>
+			              <div id="collapseOne" class="accordion-body in collapse">
+			                <div class="accordion-inner">
+			                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt.</p>
+			                  
+			                  <p>Vivamus ac velit eget turpis pharetra placerat bibendum at risus. Vestibulum a sodales mauris. Curabitur et nibh nunc.</p>
+			                </div>
+			              </div>
+			            </div>
+			            <div class="accordion-group">
+			              <div class="accordion-heading">
+			                <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic-accordion" href="#collapseTwo">
+			                  Collapsible Group Item #2
+			                </a>
+			              </div>
+			              <div id="collapseTwo" class="accordion-body collapse">
+			                <div class="accordion-inner">
+			                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqu.</p>
+			                  
+			                  <p>Vivamus ac velit eget turpis pharetra placerat bibendum at risus. Vestibulum a sodales mauris. Curabitur et nibh nunc.</p>
+			                </div>
+			              </div>
+			            </div>
+			            <div class="accordion-group">
+			              <div class="accordion-heading">
+			                <a class="accordion-toggle" data-toggle="collapse" data-parent="#basic-accordion" href="#collapseThree">
+			                  Collapsible Group Item #3
+			                </a>
+			              </div>
+			              <div id="collapseThree" class="accordion-body collapse">
+			                <div class="accordion-inner">
+			                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3.</p>
+			                  
+			                  <p>Vivamus ac velit eget turpis pharetra placerat bibendum at risus. Vestibulum a sodales mauris. Curabitur et nibh nunc.</p>
+			                  
+			                </div>
+			              </div>
+			            </div>
+			          </div>
+						      
+						</section>
+
+
+				<br />
+				<br />
+				<br />
+				
+				
+				
+				
+				
+				<section id="progress-bars">
+					<h2>Progress Bars</h2>
+					
+					<br />
+					
+					<h5>Progress</h5>
+					
+					<div class="progress">
+						<div class="bar" style="width: 12%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<div class="progress progress-striped active">
+						<div class="bar" style="width: 25%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<br />
+					
+					<h5>Primary Progress</h5>
+					
+					<div class="progress progress-primary">
+						<div class="bar" style="width: 12%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<div class="progress progress-primary progress-striped active">
+						<div class="bar" style="width: 25%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<br />
+					
+					<h5>Secondary Progress</h5>
+					
+					<div class="progress progress-secondary">
+						<div class="bar" style="width: 37%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<div class="progress progress-secondary progress-striped active">
+						<div class="bar" style="width: 50%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<br />
+					
+					<h5>Tertiary Progress</h5>
+					
+					<div class="progress progress-tertiary">
+						<div class="bar" style="width: 63%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+					<div class="progress progress-tertiary progress-striped active">
+						<div class="bar" style="width: 75%"></div> <!-- /.bar -->				
+					</div> <!-- /.progress -->
+					
+				</section>
+				
+				
+				<br />
+				<br />
+				<br />
+				
+				
+				
+				
+				<section id="nav-pills">
+					<h2>Pills</h2>
+					
+					<div class="tabbable">
+						
+						<ul id="myTab" class="nav nav-pills">
+				            <li class="active"><a href="#tab1" data-toggle="tab">Home</a></li>
+				            <li class=""><a href="#tab2" data-toggle="tab">Profile</a></li>
+				            <li class="dropdown">
+				              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+				              <ul class="dropdown-menu">
+				                <li><a href="#tab3" data-toggle="tab">@fat</a></li>
+				                <li><a href="#tab4" data-toggle="tab">@mdo</a></li>
+				              </ul>
+				            </li>
+				          </ul>
+			          
+				         <div id="myTabContent" class="tab-content">
+				            <div class="tab-pane fade active in" id="tab1">
+				              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+				              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+				            </div>
+				            <div class="tab-pane fade" id="tab2">
+				              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+				              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+				            </div>
+				            <div class="tab-pane fade" id="tab3">
+				              <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+				              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+				            </div>
+				            <div class="tab-pane fade" id="tab4">
+				              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+				              <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+				            </div>
+				          </div>
+				          
+				    </div> <!-- /.tabble -->
+						      
+						</section>
+			    
+			    
+			    <br />
+			    <br />
+			    <br />
+			    
+				
+				
+				
+			    
+				<section id="dropdowns">
+				    <h2>Dropdowns</h2>
+				    
+				    
+				    
+				    <div class="dropdown clearfix">
+	              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+	                <li><a tabindex="-1" href="javascript:;"><i class="icon-star"></i> Action</a></li>
+	                <li><a tabindex="-1" href="javascript:;"><i class="icon-asterisk"></i> Another action</a></li>
+	                <li><a tabindex="-1" href="javascript:;"><i class="icon-bookmark"></i> Something else here</a></li>
+	                <li class="divider"></li>
+	                <li class="dropdown-submenu">
+	                  <a tabindex="-1" href="javascript:;">More options</a>
+	                  <ul class="dropdown-menu">
+	                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+	                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+	                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+	                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+	                    <li><a tabindex="-1" href="javascript:;">Second level link</a></li>
+	                  </ul>
+	                </li>
+	              </ul>
+	            </div>
+						      
+						</section>
+				
+				
+				
+				
+				
+				
+			    <br />
+			    <br />
+			    <br />
+			    
+			    
+			    
+			    
+				
+			    
+			    
+				
+				
+				
+				<section id="modals">
+					<h2>Modal</h2>
+					
+					<a class="btn" data-toggle="modal" href="#myModal" >Launch Modal</a>
+						      
+						</section>
+				
+
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				
+				
+				
+				<section id="paginations">
+					<h2>Pagination</h2>
+					
+					<div class="pagination">
+					  <ul>
+					    <li><a href="javascript:;">Prev</a></li>
+					    <li class="active">
+					      <a href="javascript:;">1</a>
+					    </li>
+					    <li><a href="javascript:;">2</a></li>
+					    <li><a href="javascript:;">3</a></li>
+					    <li><a href="javascript:;">4</a></li>
+					    <li><a href="javascript:;">Next</a></li>
+					  </ul>
+					</div>
+						      
+						</section>
+
+				<br />
+				<br />
+				<br />
+				
+				
+				<section id="labels-badges">
+					<h2>Labels & Badges</h2>
+					<br />
+					
+					<span class="label label-primary">Primary</span>&nbsp;&nbsp;
+					<span class="label label-secondary">Secondary</span>&nbsp;&nbsp;
+					<span class="label label-tertiary">Tertiary</span>&nbsp;&nbsp;
+					
+					<br />
+					<br />
+					<br />
+					
+					<span class="badge badge-primary">1</span>&nbsp;&nbsp;
+					<span class="badge badge-secondary">2</span>&nbsp;&nbsp;
+					<span class="badge badge-tertiary">3</span>&nbsp;&nbsp;
+						      
+						</section>
+					
+				
+				<br />
+				<br />
+				<br />
+				<br />
+				
+				
+				
+				
+				
+				
+				
+				<section id="tables">
+					<h2>Tables</h2>
+					
+					
+					
+					<table class="table table-bordered table-striped table-highlight">
+						        <thead>
+						          <tr>
+						            <th>#</th>
+						            <th>First Name</th>
+						            <th>Last Name</th>
+						            <th>Username</th>
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						            <td>1</td>
+						            <td>Michael</td>
+						            <td>Jordan</td>
+						            <td>@mjordan</td>
+						          </tr>
+						          <tr>
+						            <td>2</td>
+						            <td>Magic</td>
+						            <td>Johnson</td>
+						            <td>@mjohnson</td>
+						          </tr>
+						          <tr>
+						            <td>3</td>
+						            <td>Larry</td>
+						            <td>the Bird</td>
+						            <td>@twitter</td>
+						          </tr>
+						          <tr>
+						            <td>4</td>
+						            <td>Charles</td>
+						            <td>Barkley</td>
+						            <td>@cbark</td>
+						          </tr>
+						          <tr>
+						            <td>5</td>
+						            <td>Karl</td>
+						            <td>Malone</td>
+						            <td>@kmalone</td>
+						          </tr>
+						        </tbody>
+						      </table>
+						      
+						      
+						      <br />
+						      
+						      
+					<table class="table table-bordered table-striped">
+						        <thead>
+						          <tr>
+						            <th>#</th>
+						            <th>First Name</th>
+						            <th>Last Name</th>
+						            <th>Username</th>
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						            <td>1</td>
+						            <td>Michael</td>
+						            <td>Jordan</td>
+						            <td>@mjordan</td>
+						          </tr>
+						          <tr>
+						            <td>2</td>
+						            <td>Magic</td>
+						            <td>Johnson</td>
+						            <td>@mjohnson</td>
+						          </tr>
+						          <tr>
+						            <td>3</td>
+						            <td>Larry</td>
+						            <td>the Bird</td>
+						            <td>@twitter</td>
+						          </tr>
+						          <tr>
+						            <td>4</td>
+						            <td>Charles</td>
+						            <td>Barkley</td>
+						            <td>@cbark</td>
+						          </tr>
+						          <tr>
+						            <td>5</td>
+						            <td>Karl</td>
+						            <td>Malone</td>
+						            <td>@kmalone</td>
+						          </tr>
+						        </tbody>
+						      </table>
+						      
+						      
+						      
+						<br />
+						
+						
+						      
+						</section>
+					      
+					      
+					      
+				
+				
+			</div> <!-- /.span12 -->
+			
+		</div> <!-- /.row -->
+		
+	</div> <!-- /.container -->
+
+</div> <!-- /#content -->
+
+</div> <!-- /#wrapper -->
+
+
+
+
+<div id="footer">
+		
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span6">
+				© 2012 <a href="http://jumpstartui.com">Jumpstart UI</a>, all rights reserved.
+			</div> <!-- /span6 -->
+			
+			<div id="builtby" class="span6">
+				<a href="http://jumpstartui.com">Built by Jumpstart.</a>				
+			</div> <!-- /.span6 -->
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /#footer -->
+
+
+
+<div class="modal fade hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="javascript:;" class="btn" data-dismiss="modal">Close</a>
+    <a href="javascript:;" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+
+
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="js/libs/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/libs/jquery.ui.touch-punch.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/Theme.js"></script>
+
+<script>
+
+$(function () {
+	
+	Theme.init ();
+	
+});
+
+</script>
+
+</body>
+</html>

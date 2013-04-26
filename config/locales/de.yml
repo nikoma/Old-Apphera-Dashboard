@@ -1,0 +1,232 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  common:
+      back_to: "Retour an"
+      or: "oder"
+      login: "Einloggen"
+      sign_up: "Einschreiben"
+      send: "Senden"
+      save: "sparen"
+
+  reviewers_header: "Bewerter ihrer Branche in ihrer Gegend."    
+  become_a_reseller: "Wiederverkäufer werden!"    
+  sign_up: "Anmelden"    
+  the_team: "Das Team"
+  resellers: "Wiederverkäufer"
+  about_us: "Über uns"
+  features: "Vorteile"    
+  chose_organization: "Organisation auswählen"  
+  edit_account: "Account editieren"
+  reports: "Reporte"
+  settings: "Einstellungen"    
+  logged_in_as: "Eingeloggt als"   
+  logout: "Ausloggen" 
+  important_messages: "Wichtige Meldungen"
+  what_people_say_about_you: "Was Leute über Sie sagen."    
+  rating: "Bewertung"    
+  search: "Suchmaschinen"    
+  login: "Einloggen"
+  signup: "Anmelden"        
+  copyright_apphera: "Copyright 2012 by Apphera, Inc. All rights reserved."
+  application_appheradashboard: "Open Source Social Media Monitoring"  
+  task_explanation: "Erklärung"  
+  home_header: "Dashboard"
+  bunny_host: "Bunny Host (RabbitMQ)"
+  bunny_user: "Bunny Username"
+  bunny_password: "Bunny Passwort"
+  twitter_consumer_key: "Twitter Consumer Key"
+  twitter_consumer_secret: "Twitter Consumer Secret"
+  twitter_oauth_token: "Twitter oAuth Token"
+  twitter_oauth_token_secret: "Twitter oAuth Token Secret"
+  facebook_api_key: "Facebook API Key"
+  facebook_api_secret: "Facebook API Secret"
+  foursquare_client_id: "Foursquare Client ID"
+  foursquare_api_secret: "Foursquare API Secret"
+  bing_api_key: "Bing API Key"
+  google_api_key: "Google API Key"
+  bigproxy: "Bigproxy Key"
+  edit_form: "Bearbeiten"
+  please_add_location: "Bitte fuegen Sie eine Niederlassung oder Filiale hinzu."
+  account_change_success: "Ihr Account wurde erfolgreich geändert."
+  account_create_success: "Account erfolgreich eingerichtet - Bitte fuegen Sie jetzt Filialen hinzu."
+  organization_create_success: "Ihre Filiale oder Niederlassung wurde erfolgreich hinzugefügt - Es kann bis zu 48 Stunden dauern bis das System die ersten Daten anzeigt."
+  organization_update_success: "Ihre Niederlassung wurde erfolgreich geaendert."
+  please_add_keyword_text: "Bitte fügen Sie einen neuen Suchbegriff (Keyword) hinzu. Suchbegriffe sollten so formuliert werden, wie Internet Nutzer nach ihnen suchen würden."
+  unknown_keyword: "Dieses Keyword gehört zu einer anderen Niederlassung"
+  keyword_create_success: "Keyword erfolgreich hinzugefügt"
+  accounts_new: "Bitte erstellen sie ein Firmen Account. Im nächsten Schritt können sie dann ihre Filialen oder Niederlassungen hinzufügen"
+  # menues
+  customer_firma: "Kunde"
+  menue_locations_and_venues: "Zweigstellen und Niederlassungen"
+  menue_customer_user_settings: "User Einstellungen"
+  menue_customer_api_keys_and_settings: "API Keys und Settings"
+  application_home: "Home"
+  application_searchengines: "Suchmaschinen"
+  application_twitter_tracking: "Twitter Tracking"
+  application_reviews: "Bewertungen"
+  application_influencers: "Beeinflusser"
+  application_tabelle: "Tabelle"
+  application_map: "Karte"
+  application_analysis: "Auswertungen"
+  application_comparison: "Vergleiche"
+  application_reviewtracking: "Bewertungstracking"
+  application_keywords: "Keywords"
+  application_competitors: "Mitbewerber"
+  application_reviewers: "Bewerter"
+  application_competitor_maps: "Mitbewerber Karte"
+  
+ 
+  # Forms
+ 
+  accounts_form_firma: "Firma" 
+  accounts_form_contactperson: "Ansprechpartner"
+  accounts_form_firstname: "Vorname"
+  accounts_form_lastname: "Lastname"
+  form_save: "Speichern"
+  form_back: "Zurück"
+  form_show: "Anzeigen"
+  distance: "Entfernung"
+  remove: "Entfernen"
+  
+  
+  new_location_and_venue: "Neue Niederlassung hinzufügen"
+  name: "Name"
+  street: "Strasse"
+  street_and_number: "Strasse und Hausnummer"
+  street_additions: "Strassen Zusätze"
+  postalcode: "Postleitzahl"
+  city: "City"
+  phone: "Telefon"
+  mobile_phone: "Mobil Telefon"
+  category: "Kategorie"
+  web_url: "Web Url"
+  fb_example: "z.B. http://twitter.com/apphera"
+  fb_page: "Facebook Seite"
+  tw_example: "z.B. http://twitter.com/apphera"
+  tw_page: "Twitter Seite"
+  save: "Speichern"
+  
+  
+  
+  # organization
+  organization_created: "Erstellung ist "
+  organization_delete: ""
+  organization_edit: "Organisation bearbeiten"
+  
+  your_competitors_headline: "Ihre Mitbewerber"
+  add_competitor: "Mitbewerber hinzufügen"
+  
+  
+  
+  
+  my_account: "Mein Account"
+  company: "Meine Firma"
+  firstname: "Vorname"
+  lastname: "Nachnahme"
+  phone: "Telefon"
+  edit: "Bearbeiten"
+  my_locations_and_venues: "Niederlassungen und Filialen"
+  add_venue: "Niederlassung oder Filiale hinzufuegen"
+  
+  aggregate_results: "Ergebniss Übersicht"
+  
+  
+  
+  
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Das Form ist ungültig"
+      models:
+        account:
+          attributes:
+            name:
+              blank: "Der Firmen Name kann nicht leer bleiben"
+        user:
+          attributes:
+            email:
+              blank: " - Email Feld muss ausgefuellt werden"
+              taken: " - Bitte waehlen Sie eine andere Email Addresse"
+            password:
+              blank: " - Passwort muss ausgefuellt werden"
+              confirmation: " - Die beiden Passwörter müssen übereinstimmen."
+        views:
+          pagination:
+              first: "Anfang"
+              last: "Ende"
+              previous: "&lt; Zurück"
+              next: "Weiter &gt;"
+              truncate: "..."      
+
+  analysis_headline: "Auswertungen"   
+  average_competitor_reviews: "Durchschnitt aller Mitbewerber Bewertungen"  
+  competitor_analysis_explaination: "Diese Grafik zeigt Ihnen die durschnittliche Reviewbewertung Ihrer Mitbewerber. Ihr eigener Durschnitt ist:"
+  explanation_of_graphic: "Erklärung der Grafik"  
+  your_review_average: "Ihr Bewertungs-Durchschnitt"   
+  location: "Lokation"
+  reviews: "Bewertungen"
+  review_average: "Bewertungs Durchschnitt"   
+  foursquare_tip_text: "Foursquare ermöglicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'. Wenn Sie viele Foursquare Nutzer in ihrer Lokation haben aber nicht als Tip gelistet sind, empfehlen wir Reviews genauer auszuwerten um herauszufinden warum die Nutzer ihre Lokation nicht empfehlen."
+   
+  organizations_map: "Mitbewerber Lokationen"  
+  
+  
+  
+  home_dashboard_tests: "Test"
+  home_dashboard_name:	"Name"
+  home_dashboard_erklaerung: "Erklärung"
+  
+  test_not_tested: "Noch nicht getestet"
+  test_not_complete: "Nicht komplett"
+  test_already_notified: "Benachrichtigt"
+  test_in_progress: "In Bearbeitung"
+  test_completed: "Komplett"
+  
+  reviews_index_bewertungen: "Bewertungen"
+  reviews_index_lokation: "Lokation"
+  reviews_index_webseite: "Webseite"	
+  reviews_index_reviewer: "Reviewer"	
+  reviews_index_review_datum: "Datum"
+  reviews_index_text: "Inhalt"	
+  reviews_index_bewertung: "Bewertung"
+  
+  keywords_explanation: "Bitte fügen Sie einen neuen Suchbegriff (Keyword) hinzu. Suchbegriffe sollten so formuliert werden, wie Internet Nutzer nach ihnen suchen würden."
+  keywords_index_keyword: "Keyword"	
+  or: "oder"	
+  in_the: "in der"
+  keyword_results: "Keywords"
+  remove_the_keyword_confirmation: "Sind Sie sicher das Sie den Suchbegriff entfernen möchten?"
+  save_keyword: "Neues Keyword hinzufügen"
+  keyword_cant_be_saved: "Keyword kann nicht gespeichert werden"
+  keyword: "Suchbegriff"
+  add_keyword: "Keyword hinzufügen"
+  abbort: "Abbrechen"
+  system_settings_header: "System API Einstellungen"
+  
+  bewertungen_for: "Bewertungen für"
+  website: "Web Seite"
+  reviewer: "Reviewer"	
+  review_date: "Bewertungs Datum"	 
+  review_text: "Inhalt"
+  review_rating: "Bewertung"
+  
+  twitter_keywords: "Twitter Keywords"
+  twitter_keywords_index: "Twitter Keyword Index"		
+  editing_twitter_keyword: "Keyword bearbeiten"
+  new_twitter_keyword: "Fügen Sie ein neues Twitter Keyword hinzu"
+  edit: "Bearbeiten"
+  show: "Anzeigen"
+  delete: "Löschen"
+  twitter_keyword_name: "Keyword Name"
+  confirm_delete: "Sind Sie sicher das sie es löschen möchten?"
+  
+  account_edit: "Account bearbeiten"
+  please_allow_24h: "Vielen Dank! Bitte erlauben Sie bis zu 24 Stunden bis wir den Mitbewerber eingepflegt haben"
+  
+  reset_password:
+        reset_pass: "Passwort zurücksetzen"
+        email: "Email"
+        password: "Password"
+        password_confirm: "Password Confirmation"

@@ -1,0 +1,109 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2> <%= t(:reviews_by_user) %>: <%= @reviewer.name %> </h2>
+
+
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12" style="text-align: center">
+
+
+        <h4><%= t(:reviews_by_user) %>: <%= @reviewer.name %></h4>
+        <hr/>
+        <img src="<%= @reviewer.imageurl rescue nil %>" height="62" width="62" alt="<%= @reviewer.name rescue nil %>">
+        <hr/>
+        <a href="<%= @reviewer.slug rescue nil %>">
+          <h4><%= t(:this_link_leads_to_personal_reviewer_site) %>: <%= @reviewer.name rescue nil %></h4></a>
+
+        <table class="table table-striped table-bordered table-highlight">
+          <thead>
+          <tr>
+            <th>
+              <%= t(:location) %>
+            </th>
+            <th>
+              <%= t(:review_date) %>
+            </th>
+            <th>
+              <%= t(:text) %>
+            </th>
+            <th>
+              <%= t(:rating) %>
+            </th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% unless @reviews.nil? %>
+              <% @reviews.each do |review| %>
+                  <tr>
+                    <td>
+                      <h5>  <%= review.organization.name rescue nil %> </h5>
+                    </td>
+                    <td>
+                      <%= review.review_date %>
+                    </td>
+                    <td>
+                      <%= review.body %>
+                    </td>
+                    <td>
+                      <%= review.rating %>
+                    </td>
+                  </tr>
+              <% end %>
+          <% end %>
+          </tbody>
+        </table>
+        <%= link_to t(:back), :back %>
+
+
+        <p>
+          <br>
+
+        </p>
+
+
+      </div>
+      <!-- /.span12 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#content -->
+
+</div> <!-- /#wrapper -->
+
+
+
+
+
+
+
+</body>
+</html>

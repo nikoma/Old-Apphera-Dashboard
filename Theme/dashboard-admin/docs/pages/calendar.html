@@ -1,0 +1,59 @@
+<h1><i class="icon-calendar"></i> Calendar</h1>
+
+
+
+<hr />
+
+
+<h3>Documentation</h3>
+
+<a href="http://arshaw.com/fullcalendar/docs/" class="third-party-doc">Full Calendar Documentation</a>
+
+<hr />
+
+<h3>Includes</h3>
+
+<h4>Stylesheet</h4>
+
+<pre>&lt;link href="./js/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"&gt;</pre>
+
+<h4>Javascript</h4>
+
+<pre>&lt;script src="./js/plugins/fullcalendar/fullcalendar.min.js"&gt;&lt;/script&gt;</pre>
+
+
+<hr />
+
+<h3>Container</h3>
+
+<pre>&lt;div id="calendar-holder"&gt;&lt;/div&gt;</pre>
+
+
+<hr />
+
+<h3>Javascript</h3>
+
+<pre>$('#calendar-holder').fullCalendar({
+	header: {
+		left: 'prev, next',
+		center: 'title',
+		right: 'month,basicWeek,basicDay,'
+	}
+	, events: [
+		{
+			title: 'Long Event',
+			start: new Date(y, m, d-5),
+			end: new Date(y, m, d-2),
+			color: '#3C4049'
+		},
+		{
+			id: 999,
+			title: 'Repeating Event',
+			start: new Date(y, m, 19, 16, 0),
+			end: new Date (y, m, 22, 16, 0),
+			allDay: false,
+			color: '#3C4049'
+		}
+	]
+});
+</pre>

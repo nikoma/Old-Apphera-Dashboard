@@ -1,0 +1,1 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1366763908.0719078:@value"Í[I"À$(function(){jQuery.support.placeholder=!1,test=document.createElement("input"),"placeholder"in test&&(jQuery.support.placeholder=!0),$.support.placeholder||$(".field").find("label").show()});:ET

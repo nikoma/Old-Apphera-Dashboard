@@ -1,0 +1,66 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><%= t(:found_links) %></h2>
+
+        <p><%= t(:search_engine_results) %></p>
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="span12">
+
+        <style>
+            table {
+                table-layout: fixed;
+            }
+
+            table th, table td {
+                overflow: hidden;
+            }
+        </style>
+
+        <table class="table table-striped table-bordered table-highlight">
+          <thead>
+          <tr>
+            <th>Titel</th>
+            <th>Link</th>
+            <th><%= t(:description) %></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @links.each do |link| %>
+              <tr>
+                <td><%= link.title %></td>
+                <td><%= link.url %></td>
+                <td><%= link.description %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+        <br/>
+      </div>
+    </div>
+  </div>

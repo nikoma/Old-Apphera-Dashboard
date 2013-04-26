@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bewertungen</title>
+</head>
+<body>
+<h4>Bewertungen für <%= @org.name %></h4>
+
+<div id="example" class="k-content">
+  <div id="grid"></div>
+  <script>
+      $(document).ready(function () {
+          $("#grid").kendoGrid({
+              dataSource:{
+                  type:"json",
+                  transport:{
+                      read:"/reviews.json"
+                  },
+                  schema:{
+                      model:{
+                          fields:{
+                              review_date:{ type:"string" },
+
+                              body:{ type:"string" },
+                              reviewer:{name:{type:"string"}},
+                              rating:{ type:"string"}
+                          }
+                      }
+                  },
+                  pageSize:10,
+                  serverPaging:false,
+                  serverFiltering:true,
+                  serverSorting:true
+              },
+              height:850,
+              filterable:true,
+              sortable:true,
+              pageable:true,
+              columns:[
+                  {
+                      field:"review_date".toString(),
+                      width:60,
+                      title:"Vom:"
+                  },
+                  { field:"reviewer.name",
+                      width:100,
+                      title:"Name"}
+                  ,
+                  {
+                      field:"body",
+                      filterable:true,
+                      title:"Bewertungstext"
+                  },
+                  { field:"rating",
+                      filterable:false,
+                      width:30,
+                      title:"*"}
+              ]
+          });
+      });
+  </script>
+</div>
+
+
+</body>
+</html>

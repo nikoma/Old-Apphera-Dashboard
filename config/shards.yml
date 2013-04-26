@@ -1,0 +1,12 @@
+#octopus:
+#     fully_replicated: true
+#     environments:
+#       - production
+
+#     production:
+#       slave1:
+#         adapter: postgresql
+#         host: 
+#         database: apphera_production
+#         username: 
+#         password: 

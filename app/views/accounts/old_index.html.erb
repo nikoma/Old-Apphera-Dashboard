@@ -1,0 +1,69 @@
+<div class="well">
+  <h3>Mein Account</h3>
+  <address>
+    <p>
+      <b>Firma:</b>
+      <%= @account.name %>
+    </p>
+
+    <p>
+      <b>Vorname:</b>
+      <%= @account.firstname %>
+    </p>
+
+    <p>
+      <b>Nachname:</b>
+      <%= @account.lastname %>
+    </p>
+
+    <p>
+      <b>Telefon:</b>
+      <%= @account.phone %>
+    </p>
+  </address>
+  <%= link_to 'Edit', edit_account_path(@account), :class => "btn" %>
+</div>
+
+
+<h4>Meine Niederlassungen/Filialen</h4>
+<table class="table table-striped table-bordered table-highlight">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Strasse</th>
+    <th>Stadt</th>
+    <th>Postleitzahl</th>
+    <th>Bewertungen</th>
+    <th>Durchschnitt</th>
+
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @organizations.each do |org| %>
+      <tr>
+        <td><%= org.name %>
+        <td><%= org.street %></td>
+        <td><%= org.city %></td>
+        <td><%= org.postalcode %></td>
+        <td><%= org.reviews.count %></td>
+        <td><%= org.aggregate_results.last.review_avg rescue nil %></td>
+        <td><%= link_to '', edit_organization_path(org), :class => "icon-edit" %></td>
+        <td><%= link_to '', org, confirm: 'Are you sure?', method: :remove, :class => "icon-remove" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+<%= link_to 'Filiale hinzufügen', new_organization_path, :class => "btn" %>
+<script type="text/javascript">
+    $("a[rel=popover]")
+            .popover()
+            .click(function (e) {
+                e.preventDefault()
+            })
+</script>

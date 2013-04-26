@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Lightbox Evolution</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.ie6.css" />
+  <![endif]-->
+  <!--<script type="text/javascript" src="src/jquery.lightbox.js"></script>-->
+  <script type="text/javascript" src="js/lightbox/jquery.lightbox.min.js"></script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $('.lightbox').lightbox();
+    });
+  </script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+  
+    <h1 class="big">jQuery Lightbox Evolution</h1>
+    <h1 class="big">Examples</h1>
+    <h2 class="big">By aeroalquimia</h2>
+    
+    <div class="alert">
+      <p>If you have any question that are beyond the scope of this help file, please feel free to <a href="http://codecanyon.net/forums/topic/codecanyon/65">join the discussion</a> or <a href="http://codecanyon.net/user/aeroalquimia">email me via my user page contact form</a>. Thanks so much!</p>
+    </div>
+    
+    <h1>Table of <strong>Contents</strong></h1>
+    <h6><a href="#help1">Images</a></h6>
+    <ol>
+      <li><a href="#help10">Single Image</a></li>
+      <li><a href="#help11">Image Gallery</a></li>
+      <li><a href="#help12">Big Images</a></li>
+      <li><a href="#help13">Advanced Examples</a></li>
+    </ol>
+    <h6><a href="#help2">HTML</a></h6>
+    <ol>
+      <li><a href="#help20">Inline Content</a></li>
+      <li><a href="#help21">Ajax</a></li>
+      <li><a href="#help22">Flash / SWF</a></li>
+      <li><a href="#help24">Iframe</a></li>
+      <li><a href="#help23">Advanced Examples</a></li>
+    </ol>
+    <h6><a href="#help4">Videos</a></h6>
+    <ol>
+      <li><a href="#help41">Simple Usage</a></li>
+      <li><a href="#help42">Advanced Examples</a></li>
+    </ol>
+    <h6><a href="#help43">Maps</a></h6>
+    <ol>
+      <li><a href="#help44">Simple Usage</a></li>
+    </ol>
+    <h6><a href="#help3">Advanced Examples</a></h6>
+    <ol>
+      <li><a href="#help30">Custom Buttons</a></li>
+      <li><a href="#help31">Shake Effect</a></li>
+      <li><a href="#help32">Login Box</a></li>
+      <li><a href="#help33">Open Lightbox via Javascript</a></li>
+      <li><a href="#help34">Events</a></li>
+      <li><a href="#help35">Show HTML via javascript</a></li>
+    </ol>
+    <h6><a href="#help5">Frequently Asked Questions</a></h6>
+    <h6><a href="#help9">Support Notes</a></h6>
+
+    
+    
+    
+    
+
+    <h2 id="help1">Images <a href="#wrapper" class="top">Back to top</a></h2>
+    <h3 id="help10">Single Image</h3>
+    <p>
+    <a href="assets/1.jpg" class="lightbox"><img src="assets/m1.jpg" alt=""/></a>
+    <a href="assets/2.jpg" class="lightbox"><img src="assets/m2.jpg" alt=""/></a>
+    <a href="assets/7.jpg" title="Image Description" class="lightbox"><img src="assets/m7.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;a href="assets/1.jpg" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m1.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/2.jpg" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m2.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/7.jpg" title="Image Description" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m7.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+    <h3 id="help11">Image Gallery</h3>
+    <p>Galleries are created from elements who have the same "rel" tag.</p>
+    <p>
+    <a href="assets/5.jpg" class="lightbox" rel="group1"><img src="assets/m5.jpg" alt=""/></a>
+    <a href="assets/6.jpg" class="lightbox" rel="group1"><img src="assets/m6.jpg" alt=""/></a>
+    <a href="assets/9.jpg" class="lightbox" rel="group1" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim ipsum nec sem scelerisque quis faucibus quam scelerisque. Sed quis arcu purus. Donec at lacus nec leo laoreet viverra at ac risus. Vivamus ipsum orci, interdum ut commodo sodales, ullamcorper a felis. "><img src="assets/m9.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;a href="assets/5.jpg" <strong>class="lightbox" rel="group1"</strong>&gt;&lt;img src="assets/m5.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/9.jpg" <strong>class="lightbox" rel="group1"</strong>&gt;&lt;img src="assets/m9.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/6.jpg" <strong>class="lightbox" rel="group1"</strong> title="Lorem ipsum dolor sit amet..."&gt;&lt;img src="assets/m6.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+
+    <h3 id="help12">Big Images</h3>
+    <p>Big images are resized to be completely visible</p>
+    <p>
+    <a href="assets/4.jpg" class="lightbox"><img src="assets/m4.jpg" alt=""/></a>
+    <a href="assets/8.jpg" class="lightbox"><img src="assets/m8.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="assets/4.jpg" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m4.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/8.jpg" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m8.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+    <h3 id="help13">Advanced Examples</h3>
+
+    <h5>Force Size</h5>
+    <p>
+    <a href="assets/3.jpg?lightbox[width]=400&amp;lightbox[height]=200" class="lightbox"><img src="assets/m3.jpg" alt=""/></a>
+    <a href="assets/6.jpg?lightbox[width]=300&amp;lightbox[height]=200" class="lightbox"><img src="assets/m6.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="assets/3.jpg?<strong>lightbox[width]</strong>=400&amp;<strong>lightbox[height]</strong>=200" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m3.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/6.jpg?<strong>lightbox[width]</strong>=300&amp;<strong>lightbox[height]</strong>=200" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m6.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+    <h5>Relative Size</h5>
+    <p>
+    <a href="assets/5.jpg?lightbox[width]=50p&amp;lightbox[height]=50p" class="lightbox"><img src="assets/m5.jpg" alt=""/></a>
+    <a href="assets/2.jpg?lightbox[width]=100p&amp;lightbox[height]=100p" class="lightbox"><img src="assets/m2.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="assets/5.jpg?<strong>lightbox[width]</strong>=50p&amp;<strong>lightbox[height]</strong>=50p" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m5.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/2.jpg?<strong>lightbox[width]</strong>=100p&amp;<strong>lightbox[height]</strong>=100p" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m2.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+
+    <h5>Disable AutoResize</h5>
+    <p>
+    <a href="assets/9.jpg?lightbox[autoresize]=false" class="lightbox"><img src="assets/m9.jpg" alt=""/></a>
+    <a href="assets/4.jpg?lightbox[autoresize]=false" class="lightbox"><img src="assets/m4.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="assets/9.jpg?<strong>lightbox[autoresize]</strong>=false" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m9.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/4.jpg?<strong>lightbox[autoresize]</strong>=false" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m4.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+    <h5>Open in Modal</h5>
+    <p>Toggle if clicking the overlay shouldn't close Lightbox.</p>
+    <p>
+    <a href="assets/5.jpg?lightbox[modal]=true" class="lightbox"><img src="assets/m5.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="assets/5.jpg?<strong>lightbox[modal]</strong>=true" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m5.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <h2 id="help2">HTML <a href="#wrapper" class="top">Back to top</a></h2>
+    <h3 id="help20">Inline Content</h3>
+
+    <p id="loremipsum" style="width:500px; border:2px solid #ececec; padding:10px; margin-right:auto;margin-left:auto;">
+    <strong>id="loremipsum"</strong> Nullam varius congue fringilla. Curabitur auctor dapibus molestie. Cras malesuada vestibulum lectus, vel ullamcorper nibh tempus lobortis. Donec ipsum magna, malesuada et fringilla eget, placerat ut arcu. Donec aliquet, mauris ut pellentesque tincidunt, massa dolor tempor urna, ac interdum massa nisl id tellus. Maecenas eu nunc varius lorem porttitor faucibus. Suspendisse potenti. Donec ullamcorper vehicula pretium. In aliquam adipiscing mi, rhoncus eleifend felis auctor eu. Aenean et mi vitae ante ultricies pulvinar a vel neque.
+    </p>
+    <p><a href="#loremipsum" class="lightbox">Open LoremIpsum</a> | <a href="?lightbox[width]=524&amp;lightbox[height]=178#loremipsum" class="lightbox">Open LoremIpsum with fixed size (524x178)</a></p>
+<pre>
+&lt;a href="<strong>#loremipsum</strong>" <strong>class="lightbox"</strong>&gt;Open LoremIpsum&lt;/a&gt;
+&lt;a href="?<strong>lightbox[width]</strong>=524&amp;<strong>lightbox[height]</strong>=178<strong>#loremipsum</strong>" <strong>class="lightbox"</strong>&gt;Open LoremIpsum with fixed size (500x250)&lt;/a&gt;
+</pre>
+
+    
+    
+    <h3 id="help21">Ajax</h3>
+    <p><a href="examples/ajax-html.html?lightbox[width]=350&amp;lightbox[height]=170" class="lightbox">Open Ajax with fixed size (350x170)</a> | <a href="examples/ajax-html.html?lightbox[width]=75p&amp;lightbox[height]=50p" class="lightbox">Open Ajax with relative size (75% x 50%)</a> | <a href="examples/ajax-video.html?lightbox[width]=610&amp;lightbox[height]=360&amp;lightbox[modal]=true" class="lightbox">Open Video in Modal</a></p>
+<pre>
+&lt;a href="examples/ajax-html.html?<strong>lightbox[width]</strong>=350&amp;<strong>lightbox[height]</strong>=170" <strong>class="lightbox"</strong>&gt;Open Ajax with fixed size (350x170)&lt;/a&gt;
+&lt;a href="examples/ajax-html.html?<strong>lightbox[width]</strong>=75p&amp;<strong>lightbox[height]</strong>=50p" <strong>class="lightbox"</strong>&gt;Open Ajax with relative size (75% x 50%)&lt;/a&gt;
+&lt;a href="examples/ajax-video.html?<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360&amp;<strong>lightbox[modal]</strong>=true" <strong>class="lightbox"</strong>&gt;Open Video in Modal&lt;/a&gt;
+</pre>
+
+
+    
+    
+    <h3 id="help22">Flash / SWF</h3>
+    <p>
+    <a href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf" class="lightbox"><img src="assets/m11.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;a href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf" <strong>class="lightbox"</strong>&gt;flash&lt;/a&gt;
+</pre>    
+
+
+
+    <h3 id="help24">Iframe</h3>
+    <p>
+    <a href="http://codecanyon.net/?lightbox[iframe]=true&amp;lightbox[width]=770&amp;lightbox[height]=460" class="lightbox">Open CodeCanyon</a> | 
+    <a href="examples/iframe-html.html?lightbox[iframe]=true&amp;lightbox[width]=350&amp;lightbox[height]=170" class="lightbox">Open Localhost Iframe</a>
+    </p>
+    
+<pre>
+&lt;a href="http://codecanyon.net/?<strong>lightbox[iframe]</strong>=true&amp;<strong>lightbox[width]</strong>=770&amp;<strong>lightbox[height]</strong>=460" <strong>class="lightbox"</strong>&gt;Open Google&lt;/a&gt;
+&lt;a href="examples/iframe-html.html?<strong>lightbox[iframe]</strong>=true&amp;<strong>lightbox[width]</strong>=350&amp;<strong>lightbox[height]</strong>=170" <strong>class="lightbox"</strong>&gt;Open Localhost Iframe&lt;/a&gt;
+</pre>    
+
+    
+    <h3 id="help23">Advanced Examples</h3>
+
+    <h5>Open flash in fixed size</h5>
+    <p>
+    <a href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf?lightbox[width]=700&amp;lightbox[height]=400" class="lightbox"><img src="assets/m11.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf?<strong>lightbox[width]</strong>=700&amp;lightbox<strong>[height]</strong>=400" <strong>class="lightbox"</strong>&gt;flash&lt;/a&gt;
+</pre>
+    
+
+    <h5>Ajax with button to close the lightbox</h5>
+    <p><a href="examples/ajax-license.html?lightbox[width]=450&amp;lightbox[height]=300&amp;lightbox[modal]=true" class="lightbox">Software license agreement</a></p>
+<pre>
+&lt;a href="examples/ajax-license.html?<strong>lightbox[width]</strong>=450&amp;<strong>lightbox[height]</strong>=300&amp;<strong>lightbox[modal]</strong>=true" <strong>class="lightbox"</strong>&gt;Software license agreement&lt;/a&gt;
+</pre>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 id="help4">Videos <a href="#wrapper" class="top">Back to top</a></h2>
+    <h3 id="help41">Simple Usage</h3>
+    
+    <p>
+    <a href="http://www.youtube.com/watch?v=TsUD1za9TA4" class="lightbox"><img src="assets/m12.jpg" alt=""/></a>
+    <a href="http://www.vimeo.com/12421175" class="lightbox"><img src="assets/m13.jpg" alt=""/></a>
+    <a href="http://www.metacafe.com/watch/yt-nn096G5jek0/coldplay_speed_of_sound_acoustic/" class="lightbox"><img src="assets/m14.jpg" alt=""/></a>
+    <a href="http://www.dailymotion.com/video/x53dvz_fragma-toca-s-miracle-2008_music" class="lightbox"><img src="assets/m15.jpg" alt=""/></a>
+    <a href="http://video.google.com/videoplay?docid=-8618166999532839788" class="lightbox"><img src="assets/m16.jpg" alt=""/></a>
+    <a href="http://www.gametrailers.com/video/zombies-trailer-scott-pilgrim/702661" class="lightbox"><img src="assets/m22.jpg" alt=""/></a>
+    <a href="http://www.twitvid.com/8H9D2" class="lightbox"><img src="assets/m24.jpg" alt=""/></a>
+    <a href="http://www.collegehumor.com/video:1927354" class="lightbox"><img src="assets/m23.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;a href="http://www.youtube.com/watch?v=TsUD1za9TA4" <strong>class="lightbox"</strong>&gt;youtube&lt;/a&gt;
+&lt;a href="http://www.vimeo.com/12421175" <strong>class="lightbox"</strong>&gt;&lt;img src="assets/m13.jpg" alt=""/&gt;vimeo&lt;/a&gt;
+&lt;a href="http://www.metacafe.com/watch/yt-nn096G5jek0/coldplay_speed_of_sound_acoustic/" <strong>class="lightbox"</strong>&gt;metacafe&lt;/a&gt;
+&lt;a href="http://www.dailymotion.com/video/x53dvz_fragma-toca-s-miracle-2008_music" <strong>class="lightbox"</strong>&gt;dailymotion&lt;/a&gt;
+&lt;a href="http://video.google.com/videoplay?docid=-8618166999532839788" <strong>class="lightbox"</strong>&gt;google video&lt;/a&gt;
+</pre>    
+
+    <h3 id="help42">Advanced Examples</h3>
+
+    <h5>Open video in fixed size and modal</h5>
+    <p>
+    <a href="http://video.google.com/videoplay?docid=1299927595688205543&amp;lightbox[width]=610&amp;lightbox[height]=360" class="lightbox"><img src="assets/m16.jpg" alt=""/></a>
+    <a href="http://www.youtube.com/watch?v=Mq0j2Ot1NHo&amp;lightbox[width]=610&amp;lightbox[height]=360&amp;lightbox[modal]=true" class="lightbox"><img src="assets/m12.jpg" alt=""/></a>
+    </p>
+<pre>
+&lt;a href="http://video.google.com/videoplay?docid=1299927595688205543&amp;<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360" <strong>class="lightbox"</strong>&gt;google video&lt;/a&gt;
+&lt;a href="http://www.youtube.com/watch?v=Mq0j2Ot1NHo&amp;<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360&amp;<strong>lightbox[modal]</strong>=true" <strong>class="lightbox"</strong>&gt;youtube&lt;/a&gt;
+</pre>    
+
+
+
+
+
+
+    
+    <h2 id="help43">Maps <a href="#wrapper" class="top">Back to top</a></h2>
+    <h3 id="help44">Simple Usage</h3>
+
+    <p>
+    <a href="http://maps.google.com/maps?q=paris+eiffel&hl=en&ll=48.855623,2.301292&spn=0.011831,0.033023&sll=48.855623,2.301292&sspn=0.011831,0.033023&vpsrc=6&t=h&radius=0.9&z=16&amp;lightbox[width]=610&amp;lightbox[height]=360" class="lightbox"><img src="assets/m19.jpg" alt=""/></a> |
+    <a href="http://maps.google.com/maps?q=paris+eiffel&hl=en&ll=48.855849,2.297945&spn=0.047211,0.132093&sll=37.0625,-95.677068&sspn=57.379893,135.263672&z=14&layer=c&cbll=48.856139,2.297599&panoid=9esL9yoOIlyEvOmPjCw9rg&cbp=12,328.32,,0,-17.08&amp;lightbox[width]=610&amp;lightbox[height]=360" class="lightbox"><img src="assets/m20.jpg" alt=""/></a> |
+    <a href="http://www.bing.com/maps/?v=2&amp;cp=41.89774457054518~12.471384108066559&amp;lvl=15&amp;sty=r&amp;where1=Rome%2C%20Laz.%2C%20Italy&amp;lightbox[width]=610&amp;lightbox[height]=360" class="lightbox"><img src="assets/m21.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=+paris+eiffel&amp;ie=UTF8&amp;hq=eiffel&amp;hnear=Paris,+Ile-de-France,+France&amp;ll=48.855708,2.300434&amp;spn=0.013243,0.042272&amp;z=15&amp;<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360" <strong>class="lightbox"</strong>&gt;Google Maps&lt;/a&gt;
+&lt;a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=+paris+eiffel&amp;ie=UTF8&amp;hq=eiffel&amp;hnear=Paris,+Ile-de-France,+France&amp;ll=48.856075,2.312021&amp;spn=0.02626,0.084543&amp;z=14&amp;layer=c&amp;cbll=48.85738,2.294552&amp;panoid=CpyaiHG57nbMr8YogDfa0Q&amp;cbp=12,34.51,,0,-2.58&amp;<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360" <strong>class="lightbox"</strong>&gt;Street View&lt;/a&gt;
+&lt;a href="http://www.bing.com/maps/?v=2&amp;cp=41.89774457054518~12.471384108066559&amp;lvl=15&amp;sty=r&amp;where1=Rome%2C%20Laz.%2C%20Italy&amp;<strong>lightbox[width]</strong>=610&amp;<strong>lightbox[height]</strong>=360" <strong>class="lightbox"</strong>&gt;Bing Maps&lt;/a&gt;
+</pre>    
+
+
+
+
+
+
+    
+    
+
+    <h2 id="help3">Advanced Examples <a href="#wrapper" class="top">Back to top</a></h2>
+    <h3 id="help30">Custom Buttons</h3>
+
+
+    <style type="text/css">
+    .jquery-lightbox-buttons .jquery-lightbox-button-openurl
+    {
+      background: url(assets/lightbox-new-window.png) no-repeat left top;
+      width:30px;
+      height:39px;
+      float:left;
+      display:inline;
+      padding:0;
+    }
+
+    .jquery-lightbox-buttons .jquery-lightbox-button-openurl:hover
+    {
+      background: url(assets/lightbox-new-window.png) no-repeat right top;
+    }
+    </style>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        $("a.customlightbox").lightbox({
+          buttons: [
+            {
+              'class'     : 'jquery-lightbox-button-openurl',
+              'html'      : '<span>open in new window</span>',
+              'callback'  : function(url, object) {
+                window.location.href = url;
+              }
+            }
+          ]
+        });
+      });
+    </script>
+
+    <p>
+    <a href="assets/1.jpg" class="customlightbox"><img src="assets/m1.jpg" alt=""/></a>
+    <a href="assets/7.jpg" class="customlightbox"><img src="assets/m7.jpg" alt=""/></a>
+    <a href="assets/9.jpg" class="customlightbox" rel="group2"><img src="assets/m9.jpg" alt=""/></a>
+    <a href="assets/3.jpg" class="customlightbox" rel="group2"><img src="assets/m3.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;style type="text/css"&gt;
+  .jquery-lightbox-buttons <strong>.jquery-lightbox-button-openurl</strong>
+  {
+    background: url(assets/lightbox-new-window.png) no-repeat left top;
+    width:30px;
+    height:39px;
+    float:left;
+    display:inline;
+    padding:0;
+  }
+
+  .jquery-lightbox-buttons <strong>.jquery-lightbox-button-openurl</strong>:hover
+  {
+    background: url(assets/lightbox-new-window.png) no-repeat right top;
+  }
+&lt;/style&gt;
+</pre>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($){
+
+    $("a.<strong>customlightbox</strong>").lightbox({
+      buttons: [
+        {
+          'class'     : <strong>'jquery-lightbox-button-openurl'</strong>,
+          'html'      : '&lt;span&gt;open in new window&lt;/span&gt;',
+          'callback'  : function(url, object) {
+            window.location.href = url;
+          }
+        }
+      ]
+    });
+
+  });
+&lt;/script&gt;
+</pre>
+
+<pre>
+&lt;a href="assets/1.jpg" class="<strong>customlightbox</strong>"&gt;&lt;img src="assets/m1.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/7.jpg" class="<strong>customlightbox</strong>"&gt;&lt;img src="assets/m7.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/9.jpg" class="<strong>customlightbox</strong>" rel="<strong>group2</strong>"&gt;&lt;img src="assets/m9.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/6.jpg" class="<strong>customlightbox</strong>" rel="<strong>group2</strong>"&gt;&lt;img src="assets/m6.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+
+
+
+    <h3>Custom Buttons - ThemeForest example</h3>
+
+    <style type="text/css">
+    .jquery-lightbox-buttons .button-themeforest
+    {
+      font-size:12px;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    .jquery-lightbox-buttons .button-themeforest:hover
+    {
+      text-decoration:underline;
+    }
+    </style>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        jQuery("a.themeforest").lightbox({
+          buttons: [
+            {
+              'class'     : 'button-themeforest',
+              'html'      : 'Live Preview',
+              'callback'  : function(url, object, anchor) {
+                title = jQuery(anchor).attr('alt').split('|');
+                window.location.href = title[0];
+              }
+            },
+            {
+              'class'     : 'button-themeforest',
+              'html'      : 'Buy this theme',
+              'callback'  : function(url, object, anchor) {
+                title = jQuery(anchor).attr('alt').split('|');
+                window.location.href = title[1];
+              }
+            }
+          ]
+        });
+      });
+    </script>
+
+    <p>
+    <a href="assets/17.jpg" class="themeforest" rel="group3" alt="http://themeforest.net/item/freshface-html-css/full_screen_preview/109603|http://themeforest.net/item/freshface-html-css/109603"><img src="assets/m17.jpg" alt=""/></a>
+    <a href="assets/18.jpg" class="themeforest" rel="group3" alt="http://themeforest.net/item/perfect-box-wordpress/full_screen_preview/101974|http://themeforest.net/item/perfect-box-wordpress/101974"><img src="assets/m18.jpg" alt=""/></a>
+    </p>
+
+<pre>
+&lt;style type="text/css"&gt;
+  .jquery-lightbox-buttons <strong>.button-themeforest</strong>
+  {
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  .jquery-lightbox-buttons <strong>.button-themeforest</strong>:hover
+  {
+    text-decoration:underline;
+  }
+&lt;/style&gt;
+</pre>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($){
+    $("a.<strong>themeforest</strong>").lightbox({
+      buttons: [
+        {
+          'class'     : 'button-themeforest',
+          'html'      : <strong>'Live Preview'</strong>,
+          'callback'  : function(url, object, anchor) {
+            title = $(anchor).attr('alt').split('|');
+            window.location.href = title[0];
+          }
+        },
+        {
+          'class'     : 'button-themeforest',
+          'html'      : <strong>'Buy this theme'</strong>,
+          'callback'  : function(url, object, anchor) {
+            title = $(anchor).attr('alt').split('|');
+            window.location.href = title[1];
+          }
+        }
+      ]
+    });
+  });
+&lt;/script&gt;
+</pre>
+
+<pre>
+&lt;a href="assets/17.jpg" class="<strong>themeforest</strong>" rel="<strong>group3</strong>" alt="http://themeforest.net/item/freshface-html-css/full_screen_preview/109603|http://themeforest.net/item/freshface-html-css/109603"&gt;&lt;img src="assets/m17.jpg" alt=""/&gt;&lt;/a&gt;
+&lt;a href="assets/18.jpg" class="<strong>themeforest</strong>" rel="<strong>group3</strong>" alt="http://themeforest.net/item/perfect-box-wordpress/full_screen_preview/101974|http://themeforest.net/item/perfect-box-wordpress/101974"&gt;&lt;img src="assets/m18.jpg" alt=""/&gt;&lt;/a&gt;
+</pre>
+
+
+
+
+
+
+
+
+    <h3 id="help31">Shake effect</h3>
+    <p>
+    <a href="examples/ajax-shake.html?lightbox[width]=350&amp;lightbox[height]=170" class="lightbox">Shake Effect</a>
+    </p>
+    
+<pre>
+&lt;a href="examples/ajax-html.html?<strong>lightbox[width]</strong>=350&amp;<strong>lightbox[height]</strong>=170" <strong>class="lightbox"</strong>&gt;Shake Effect&lt;/a&gt;
+
+jQuery.lightbox().shake();
+</pre>
+
+
+
+
+    
+
+
+    <h3 id="help32">Login Box</h3>
+    <p>
+    <a href="examples/ajax-login.html?lightbox[width]=396&amp;lightbox[height]=120&amp;lightbox[modal]=true" class="lightbox">Login Box</a>
+    </p>
+<pre>
+&lt;a href="examples/ajax-login.html?<strong>lightbox[width]</strong>=396&amp;<strong>lightbox[height]</strong>=120&amp;<strong>lightbox[modal]</strong>=true" <strong>class="lightbox"</strong>&gt;Login Box&lt;/a&gt;
+</pre>
+
+
+
+
+
+    <h3 id="help33">Open Lightbox via Javascript</h3>
+    <p>
+    <input type="submit" class="button" id="lbsingle" value="Open single image"/>
+    <input type="submit" class="button" id="lbgallery" value="Open gallery"/>
+    </p>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+      
+        $("#lbsingle").click(function() {
+          $.lightbox("assets/4.jpg", {
+            'width'       : 610,
+            'height'      : 458,
+            'autoresize'  : false
+          });
+          return false;
+        });
+
+        $("#lbgallery").click(function() {
+          $.lightbox(["assets/4.jpg", "assets/3.jpg", "assets/6.jpg"]);
+          return false;
+        });
+
+      });
+    </script>
+    
+<pre>
+&lt;input type="submit" class="button" id="<strong>lbsingle</strong>" value="Open single image"/&gt;
+&lt;input type="submit" class="button" id="<strong>lbgallery</strong>" value="Open gallery"/&gt;
+</pre>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($){
+  
+    $("<strong>#lbsingle</strong>").click(function() {
+      $.lightbox("assets/4.jpg", {
+        'width'       : 610,
+        'height'      : 458,
+        'autoresize'  : false
+      });
+      return false;
+    });
+
+    $("<strong>#lbgallery</strong>").click(function() {
+      $.lightbox(["assets/4.jpg", "assets/3.jpg", "assets/6.jpg"]);
+      return false;
+    });
+
+  });
+&lt;/script&gt;
+</pre>
+    
+
+
+    <h3 id="help34">Events</h3>
+
+    <p>
+    <input type="submit" class="button" id="lbevents" value="Click Me"/>
+    </p>
+<pre>
+&lt;input type="submit" class="button" id="<strong>lbevents</strong>" value="Click Me"/&gt;
+</pre>
+
+<pre>
+$("<strong>#lbevents</strong>").click(function() {
+  $.lightbox("assets/2.jpg", {
+    <strong>'onOpen'</strong>  : function() {$("#console").append("&lt;p&gt;Event 'onOpen' fired.&lt;/p&gt;");},
+    <strong>'onClose'</strong> : function() {$("#console").append("&lt;p&gt;Event 'onClose' fired.&lt;/p&gt;");}
+  }, function() {
+    $("#console").append("&lt;p&gt;'callback' function fired.&lt;/p&gt;");
+  });
+  
+  return false;
+});
+</pre>
+    <p><strong>console:</strong></p>
+<pre id="console" style="max-height:100px; overflow:auto;"><p>Events fired:</p></pre>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        
+        $("#lbevents").click(function() {
+          $.lightbox("assets/2.jpg", {
+            'onOpen'  : function() {$("#console").append("<p>Event 'onOpen' fired.</p>").scrollTop(10000);},
+            'onClose' : function() {$("#console").append("<p>Event 'onClose' fired.</p>").scrollTop(10000);}
+          }, function() {
+            $("#console").append("<p>'callback' function fired.</p><p>----------------------</p>").scrollTop(1000);
+          });
+          
+          return false;
+        });
+
+      });
+    </script>
+
+
+    <h3 id="help35">Show HTML via javascript</h3>
+    <p>
+      <input type="submit" class="button" id="lbhtml" value="Create a div 'on the fly'"/>
+    </p>
+
+<pre>
+&lt;input type="submit" class="button" id="<strong>lbhtml</strong>" value="Create a div 'on the fly'"/&gt;
+</pre>
+
+<pre>
+$("<strong>#lbhtml</strong>").click(function() {
+  var html = $("&lt;div class='center'&gt;&lt;h1&gt;Wow! Amazing!&lt;/h1&gt;&lt;p&gt;Yes, now Lightbox Evolution supports DOM elements created on the fly.&lt;/p&gt;&lt;/div&gt;");
+
+  $.lightbox(html, {
+    width   : 350,
+    height  : 150
+  });
+  
+  return false;
+});
+</pre>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        
+        $("#lbhtml").click(function() {
+          var html = $("<div class='center'><h1>Wow! Amazing!</h1><p>Yes, now Lightbox Evolution supports DOM elements created on the fly.</p></div>");
+
+          $.lightbox(html, {
+            width   : 350,
+            height  : 150
+          });
+          
+          return false;
+        });
+
+      });
+    </script>
+
+
+
+
+    <h2 id="help5">Frequently Asked Questions <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>
+        <strong>Can I use this script on my client's website?</strong>
+        <p>Yes. Your license includes the rights to use the script on any one website at a time. If you'd like to use the script as part of a service, please consider purchasing an Extended License.</p>
+      </li>
+      
+      
+      
+      <li>
+        <strong>Can I make modifications to this script?</strong>
+        <p>Feel free to make any modifications you need. Also feel free to blog about it and show your friends, but please do not redistribute the script with your changes. </p>
+      </li>
+      
+      
+      
+      
+      <li>
+        <strong>Why the script doesn't work?</strong>
+        <p>Make sure you don't have multiple versions of jquery in your page. Look at the source view in your browser to see what jscripts you are loading.</p>
+        <p>For example:</p>
+<pre>
+&lt;script src="crazy_path/<strong>jquery.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="crazy_path/<strong>jquery.min.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/<strong>jquery.min.js</strong>"&gt;&lt;/script&gt;
+</pre>
+        <p><strong>jquery.js</strong> and <strong>jquery.min.js</strong> are the same script. Delete the last one if you can. Keep only one.</p>
+      </li>
+
+
+
+      <li>
+        <strong>The shadow overlay doesn't stretch to cover full browser window.</strong>
+        <p> Remove the default margin and padding from the body tag. Add body{ margin: 0; padding: 0; } to your stylesheet.</p>
+      </li>
+
+
+
+
+      <li>
+        <strong>How to automatically start Lightbox on page load?</strong>
+        <p>Simply add the following code:</p>
+      </li>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function(){
+  
+    jQuery.lightbox("image.jpg");
+
+  });
+&lt;/script&gt;
+</pre>
+
+
+
+
+
+      <li>
+        <strong>Why Flash objects appear through overlay?</strong>
+        <p>By default Flash will overlay any HTML content. This can be prevented by setting the 'wmode' param and embed attribute to 'transparent'.</p>
+        <p>For more information from <a href="http://kb2.adobe.com/cps/155/tn_15523.html">Adobe Support</a></p>
+<pre>
+AC_FL_RunContent( 'codebase', 'http...', 'pluginspage', 'http...',  <strong>'wmode', 'transparent'</strong>, 'width', '99', 'height', '99', 'src', 'images/home', 'quality', 'high' );
+</pre>
+
+<pre>
+var so = new SWFObject("home.swf", "home", "99", "99", "9", "#222222");
+so.addParam("allowfullscreen", "true");
+so.addParam("allowScriptAccess", "always");
+<strong>so.addParam("wmode","transparent");</strong>
+</pre>
+
+<pre>
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http..." width="999" height="999"&gt;
+  &lt;param name="movie"   value="images/home.swf" /&gt;
+  &lt;param name="quality" value="high" /&gt;
+  <strong>&lt;param name="wmode"   value="transparent" /&gt;</strong>
+  &lt;embed src="images/home.swf" <strong>wmode="transparent"</strong> width="999" height="999" quality="high" pluginspage="http..." type="application/x-shockwave-flash"&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</pre>
+
+      </li>
+
+
+
+
+      <li>
+        <strong>Lightbox is positioned incorrectly or behaving strangely in Internet Explorer</strong>
+        <p>This is likely a doctype issue. This plugin requires a valid doctype and rendering in quirks mode is not supported.
+         Make sure you are using the full doctype declaration to insure rendering in standards mode.</p>
+         
+         <p>This abbreviated doctype renders the document in quirks mode for Internet Explorer:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+</pre>
+       <p>The doctype with URI renders in standards mode for all browsers:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+</pre>
+      </li>
+      
+      
+      <li>
+        <strong>How can I open Lightbox from inside a Flash movie?</strong>
+        <p>In your Flash movie you need to use getURL to call your custom callback function, like so:</p>
+
+<pre>
+getURL("javascript:jQuery.lightbox('image.jpg')");
+</pre>
+
+      </li>
+
+      <li>
+        <strong>How can I open Lightbox in parent window from inside an iframe?</strong>
+        <p>First thing you need to do is install the script in your parent window, but don't initialize it. Don't use jQuery(document).ready, instead, add the code below:</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+  function frameload(iframe) {
+    var doc = iframe.contentWindow || iframe.contentDocument;
+    if (doc.document) { doc = doc.document; };
+    
+    jQuery('.lightbox', doc.body).lightbox();
+  };
+&lt;/script&gt;
+</pre>
+        <p>Insert <strong>onload="frameload(this);"</strong> in your iframe markup.</p>
+
+<pre>
+&lt;<strong>iframe</strong> src="iframe_child.html" <strong>onload="frameload(this);"</strong> width="500" height="500"&gt;&lt;/iframe&gt;     
+</pre>
+        <p>When you click an image in the child page, the lightbox will be displayed in your parent page. Remember to remove the script in your child page to avoid any problem.</p>
+        
+      </li>
+
+      <li>
+        <strong>Any plans for making it available for Wordpress?</strong>
+        <p><a href="http://codecanyon.net/item/lightbox-evolution-for-wordpress/119478">Click !</a></p>
+      </li>
+
+      <li>
+        <strong>How I can use JW Player to play MP4 files?</strong>
+      <p>Use this code:</p>
+
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($) {
+    $('<strong>.videobox</strong>').live('click', function(ev) {
+      
+      var video = $(this).attr('href');
+      
+      $.lightbox('http://www.yourdomain.com/player.swf', {
+        force: 'flash',
+        flashvars: 'file='+video+'&amp;autostart=true&amp;stretching=fill'
+      });
+      
+      ev.preventDefault();
+    
+    });
+  });
+&lt;/script&gt;
+</pre>
+      <p>Use the class "videobox" and point the link to the mp4 file:</p>
+<pre>
+&lt;a href="http://content.bitsontherun.com/videos/uMp5r6eZ-380099.mp4" class="<strong>videobox</strong>"&gt;OPEN VIDEO&lt;/a&gt;
+</pre>
+      </li>
+
+    </ol>
+
+    <h2 id="help9">Support Notes <a href="#wrapper" class="top">Back to top</a></h2>
+
+    <p>To be able to help solve a problem quickly, please read the entries below. I will do my best to assist you. I provide a full range of technical support except:</p>
+    <ol>
+      <li>I don't support 3rd-party code (external plugins, javascripts, flash players, etc.). In those cases you have to contact the authors.</li>
+      <li>I don't support errors provoked by the strong modification of the original packages.</li>
+      <li>I don't customize the packages in personal way.</li>
+      <li>If you sure that your improvement ideas will be helpful to others, please don't hesitate to share it with me. Most likely that it will became a free package update.</li>
+    </ol>
+    <p>If you have a more general question relating to scripts on CodeCanyon, you might consider visiting the <a href="http://codecanyon.net/forums/topic/codecanyon/65">forums</a> and asking your question in the "Item Discussion" section. Once again, thank you so much for purchasing this plugin.</p>
+
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Jul 2010</p>
+    </div>
+    
+  </div><!--/wrapper-->
+</body>
+</html>

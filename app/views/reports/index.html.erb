@@ -1,0 +1,135 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2>Charts</h2>
+
+        <p>Real time overview</p>
+
+      </div>
+      <!-- /.masthead-text -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+</div> <!-- /#masthead -->
+
+
+
+
+<div id="content">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div id="reviews-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="checkins-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="events-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="tweets-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="twitter-followers-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="facebook-followers-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+      <div id="facebook-likes-chart" class="chart-holder"></div>
+      <!-- /#line-chart -->
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        function prepare_data(label, created_at, data) {
+            dt = []
+            for (var i = 0; i < created_at.length; i++) {
+                dt.push([created_at[i], parseFloat((data[i]).toFixed(3))]);
+            }
+
+            return [
+                {
+                    data:dt,
+                    label:label
+                }
+            ];
+        }
+
+        function prepare_barchart_data(label, created_at, data) {
+            var bar_data = [];
+
+            var d_pr = [];
+            for (var i = 0; i < created_at.length; i++) {
+                d_pr.push([i, data.positive_reviews[i]])
+            }
+
+            var d_nr = [];
+            for (var i = 0; i < created_at.length; i++) {
+                d_nr.push([i, data.neutral_reviews[i]])
+            }
+
+            var d_gr = [];
+            for (var i = 0; i < created_at.length; i++) {
+                d_gr.push([i, data.negative_reviews[i]])
+            }
+
+            bar_data.push({
+                data:d_pr,
+                label:'Positive Reviews',
+                bars:{
+                    barWidth:0.15,
+                    order:1,
+                    fillColor:"#00AA00"
+                }
+            });
+
+            bar_data.push({
+                data:d_nr,
+                label:'Neutral Reviews',
+                bars:{
+                    barWidth:0.15,
+                    order:2,
+                    fillColor:"#999999"
+                }
+            });
+
+            bar_data.push({
+                data:d_gr,
+                label:'Negative Reviews',
+                bars:{
+                    barWidth:0.15,
+                    order:3,
+                    fillColor:"#FF0000"
+                }
+            });
+
+            return bar_data;
+        }
+
+        $.ajax({
+            url:"/reports.json",
+        }).done(function (data) {
+                    var reviews_data = prepare_barchart_data("Review", data.created_at, data)
+                    var checkins_data = prepare_data("Checkin", data.created_at, data.checkins)
+                    var events_data = prepare_data("Events", data.created_at, data.events)
+                    var tweets_data = prepare_data("Tweets", data.created_at, data.tweets)
+                    var twitter_followers_data = prepare_data("Twitter Followers", data.created_at, data.twitter_followers)
+                    var facebook_followers_data = prepare_data("Facebook Followers", data.created_at, data.facebook_followers)
+                    var facebook_likes_data = prepare_data("Facebook Likes", data.created_at, data.facebook_likes)
+
+                    Charts.vertical('#reviews-chart', reviews_data);
+                    Charts.line('#checkins-chart', checkins_data);
+                    Charts.line('#events-chart', events_data);
+                    Charts.line('#tweets-chart', tweets_data);
+                    Charts.line('#twitter-followers-chart', twitter_followers_data);
+                    Charts.line('#facebook-followers-chart', facebook_followers_data);
+                    Charts.line('#facebook-likes-chart', facebook_likes_data);
+                });
+    });
+</script>

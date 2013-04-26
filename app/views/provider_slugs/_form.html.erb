@@ -1,0 +1,25 @@
+<div id="masthead">
+
+  <div class="container">
+
+    <div class="masthead-pad">
+
+      <div class="masthead-text">
+        <h2><%= t(:Slugs) %></h2>
+
+<%= simple_form_for(@provider_slug) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+	<%= f.select :content_provider_id, ContentProvider.all.collect {|cp| [ cp.name, cp.id ] } %>
+	
+  </div>
+    	<%= f.input :slug, :label => t(:slug), :input_html => {:style => 'width: 250px'} %>
+    
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

@@ -1,0 +1,43 @@
+
+workers
+
+done:
+
+aggregate.rb, takes org_id from rabbit, calculates aggregate results and writes to DB
+apphera_geo.rb, takes org_id from rabbit, writes lat and long to DB
+apphera_tweet_engine_rabbit -> writes tweets to rabbit queue
+pending_review_writer.rb -> grabs reviews from queue and writes to DB
+pending_competitors_writer -> writes comps
+german_months.rb helper to get German months
+google_slug.rb get's the slugs for review providers
+proxy_list.rb gets a list of proxies from bigproxy 
+
+
+work in progress:
+
+facebook_likes.rb gets the likes count for a given homepage. TODO: needs to connect to queue
+facebook_twitter.rb scans homepage for fb and twitter links. TODO: needs to connect to queue
+foursquare.rb gets FSq for given org. TODO: needs to connect to queue, queue needs to send org_id and lat and long
+fresh_proxy.rb selects new proxy. TODO: needs to use the ruby gem for getting random DB rows
+proxy_test.rb tests proxies for different content providers TODO: make it work
+score_tasks.rb needs way more tasks, needs to be organized in modules
+select_proxy.rb old proxy selector
+
+
+
+Sequence:
+
+2 New customer signup (used for a new customer who signs up)
+ -  geo
+ -  competitorsGermany
+ -  googleSlug
+
+3 Daily crawl
+ - crawls content providers for reviews
+
+4 Weekly crawl
+
+5 Aggregate
+
+6 New (should be used when new competitors are added!)
+ - GoogleSlug

@@ -1,0 +1,16 @@
+  <div class="well">
+      <div id="comments">
+<%= div_for organization do %>
+    <span class="dateandoptions">
+        <%= link_to ' ' +t(:delete), organization, confirm: 'Are you sure?', method: :delete, :class => "icon-remove" %>
+      <br/>
+  </span>
+    <p><b><%= organization.name %></b></p>
+      <%= organization.street %> <br/>
+      <%= organization.postalcode + " " + (organization.city.present? ? organization.city : '') %>   <br/>
+      <%= organization.phone1 %>  <br/>
+    <a href="<%= organization.url %>"> <%= organization.url %> </a>   <br/>
+    <%= link_to ' ' + t(:edit), edit_organization_path(organization), :class => "icon-edit" %>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,203 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+          
+  copyright_apphera: "Copyright 2012 by Apphera, Inc. All rights reserved."
+  application_appheradashboard: "Open Source Social Media Monitoring"  
+  task_explanation: "Erklärung"  
+  hello: "Hola mundo"
+  bunny_host: "Bunny Host (RabbitMQ)"
+  bunny_user: "Bunny Usuario"
+  bunny_password: "Bunny Clave"
+  twitter_consumer_key: "Twitter Consumer Key"
+  twitter_consumer_secret: "Twitter Consumer Secret"
+  twitter_oauth_token: "Twitter oAuth Token"
+  twitter_oauth_token_secret: "Twitter oAuth Token Secret"
+  facebook_api_key: "Facebook API Key"
+  facebook_api_secret: "Facebook API Secret"
+  foursquare_client_id: "Foursquare Client ID"
+  foursquare_api_secret: "Foursquare API Secret"
+  bing_api_key: "Bing API Key"
+  google_api_key: "Google API Key"
+  bigproxy: "Bigproxy Key"
+  edit_form: "Editar"
+  please_add_location: "Por favor añada una sucursal o filial."
+  account_change_success: "Su cuenta ha sido cambiado con efecto."
+  account_create_success: "La Cuenta ha sido establecido con efecto - Por favor añada filales ahora."
+  organization_create_success: "Su filial o sucursal ha sido añadido con efecto. Puede tardar hasta 48 horas hasta que el sistema demostrará los primeros datos."
+  organization_update_success: "Su filial ha sido cambiado con efecto."
+  unknown_keyword: "Este Keyword pertenece a otra filial."
+  keyword_create_success: "El Keyword ha sido añadido con efecto"
+  accounts_new: "Por favor cree una cuenta de empresa. En el siguiente paso Vd. puedo añadir sucursales o filiales"
+  # menues
+  customer_firma: "Cliente"
+  menue_locations_and_venues: "Sucursales y Filiales"
+  menue_customer_user_settings: "Configuraciónes de Usuario"
+  menue_customer_api_keys_and_settings: "API Keys y Configuraciónes"
+  application_home: "Página principal"
+  application_searchengines: "Buscadores"
+  application_twitter_tracking: "Twitter Tracking"
+  application_reviews: "Valoraciónes"
+  application_influencers: "Influenciadores"
+  application_tabelle: "Tabla"
+  application_map: "Mapa"
+  application_analysis: "Análisis"
+  application_comparison: "Comparaciónes"
+  application_reviewtracking: "Seguimiento de valoraciónes"
+  application_keywords: "Keywords (Entradas)"
+  application_competitor: "Competidores"
+ 
+  # Forms
+ 
+  accounts_form_firma: "Empresa" 
+  accounts_form_contactperson: "Persona de contacto"
+  accounts_form_firstname: "Nombre"
+  accounts_form_lastname: "Apellido"
+  form_save: "Guardar"
+  form_back: "Atrás"
+  form_show: "Demostrar"
+  distance: "Distancia"
+  remove: "Quitar"
+  
+  
+  new_location_and_venue: "Añadir nueva sucursal o filial"
+  name: "Nombre y Apellido"
+  street: "Calle"
+  street_and_number: "Calle y número"
+  street_additions: "Calle (otra información)"
+  postalcode: "Código postal"
+  city: "Ciudad"
+  phone: "Teléfono"
+  mobile_phone: "Teléfono móvil"
+  category: "Categoría"
+  web_url: "Web Url"
+  fb_example: "Por ejemplo http://facebook.com/apphera"
+  fb_page: "Página Facebook"
+  tw_example: "Por ejemplo http://twitter.com/apphera"
+  tw_page: "Página Twitter"
+  save: "Guardar"
+  
+  
+  
+  # organization
+  organization_created: "Empresa ha sido creado con efecto "
+  organization_delete: "Quitar empresa"
+  organization_edit: "Editar empresa"
+  
+  your_competitors_headline: "Sus competidores"
+  add_competitor: "Añadir nuevo competidor"
+  
+  
+  
+  
+  my_account: "Mi Cuenta"
+  company: "Mi empresa"
+  firstname: "Nombre"
+  lastname: "Apellido"
+  phone: "Teléfono"
+  edit: "Editar"
+  my_locations_and_venues: "Sucursales y filiales"
+  add_venue: "Añadir nueva sucursal o filial"
+  
+  aggregate_results: "Resumen de resultados"
+  
+  
+  
+  
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "El formulario es inválido"
+      models:
+        account:
+          attributes:
+            name:
+              blank: "El nombre de compañía no se puede dejar basillo"
+        user:
+          attributes:
+            email:
+              blank: " - Hay que entrar datos en la casilla de correo electrónico"
+              taken: " - Por favor elija Vd. otra dirección de correo electrónico"
+            password:
+              blank: " - Hay que entrar una clave"
+              confirmation: " - Los dos claves deben conincidir."
+        views:
+          pagination:
+              first: "Primera"
+              last: "Última"
+              previous: "&lt; Atrás"
+              next: "Adelante &gt;"
+              truncate: "..."      
+
+  analysis_headline: "Analisis"   
+  average_competitor_reviews: "Promedio de los evaloraciónes de todos competidores"  
+  competitor_analysis_explaination: "Este gráfico le demostra el promedio de los evaloraciónes de sus competidores. Su propio promedio es:"
+  explanation_of_graphic: "Explicación del gráfico"  
+  your_review_average: "Su promedio de evaloraciónes"   
+  location: "Locación"
+  reviews: "Evaloraciónes"
+  review_average: "Promedio de evaloraciónes"   
+  foursquare_tip_text: "Foursquare facilita a sus usuarios de recomender una locación. Estos recomendaciónes se llaman 'Foursquare Tip'. Si Vd. tiene muchos usuarios de Foursquare en su locación, pero su locación no esta recomendado como Foursquare Tip, entonces le recomendamos mirar en detaille los evaloraciónes sobre su empresa para aprender porque los usuarios no lo recomenden."
+   
+  organizations_map: "Locaciónes de competidores"  
+  
+  
+  
+  home_dashboard_tests: "Test"
+  home_dashboard_name:	"Nombre y apellido"
+  home_dashboard_erklaerung: "Explicación"
+  
+  test_not_tested: "Todavía no ha sido examinado "
+  test_not_complete: "No es completo"
+  test_already_notified: "Avisado"
+  test_in_progress: "En elaboración"
+  test_completed: "Completo"
+  
+  reviews_index_bewertungen: "Evaloraciónes"
+  reviews_index_lokation: "Locación"
+  reviews_index_webseite: "Página web"	
+  reviews_index_reviewer: "Reviewer"	
+  reviews_index_review_datum: "Dato"
+  reviews_index_text: "Contenido"	
+  reviews_index_bewertung: "Evaloración"
+  
+  keywords_explanation: "Por favor añado una nueva entrada (Keyword). Recomendamos formular las entradas de la misma manera como un usuario tipicamente le  buscaría en un buscador."
+  keywords_index_keyword: "Keyword"	
+  or: "o"	
+  in_the: "en el/la"
+  keyword_results: "Keywords"
+  remove_the_keyword_confirmation: "¿Esta Vd. seguro que quiere quitar esta entrada?"
+  save_keyword: "Añadir nueva entrada (keyword)"
+  keyword_cant_be_saved: "La entrada no se puede guardar."
+  keyword: "Entrada"
+  add_keyword: "Añadir entrada"
+  abbort: "Cancelar"
+  system_settings_header: "Configuraciónes del API del sistema"
+  
+  bewertungen_for: "Evaloraciónes para"
+  website: "Página web"
+  reviewer: "Reviewer"	
+  review_date: "Dato de la evaloración"	 
+  review_text: "Contenido"
+  review_rating: "Evaloración"
+  
+  twitter_keywords: "Twitter Keywords"
+  twitter_keywords_index: "Twitter Keyword Index"		
+  editing_twitter_keyword: "Editar entrada (keyword)"
+  new_twitter_keyword: "Añada una nueva entrada para Twitter (Twitter Keyword)"
+  edit: "Editar"
+  show: "Demostrar"
+  delete: "Borrar"
+  twitter_keyword_name: "Keyword Name"
+  confirm_delete: "¿Esta Vd. seguro que quiere borrarlo?"
+  
+  account_edit: "Editar cuenta"
+  please_allow_24h: "Muchas gracias! Por favor permita Vd. hasta 24 horas hasta que añadimos el competidor al sistema."
+  
+
+  
+  
+  
+     
+

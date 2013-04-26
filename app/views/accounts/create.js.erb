@@ -1,0 +1,16 @@
+/* Insert a notice between the last comment and the comment form */
+$("#account-notice").html('<div class="flash notice"><%= escape_javascript(flash.discard(:notice)) %></div>');
+
+/* Replace the count of comments */
+$("#comments_count").html("<%= pluralize(Comment.count, 'Comment') %>");
+
+/* Add the new comment to the bottom of the comments list */
+$("#accounts").append("<%= escape_javascript(render(@account)) %>");
+
+/* Highlight the new comment */
+$("#account<%= @account.id %>").effect("highlight", {}, 2000);
+
+/* Reset the comment form */
+$("#new_account")[0].reset();
+
+$('#comment-notice').fadeOut(2000);
