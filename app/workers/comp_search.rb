@@ -4,9 +4,7 @@ class CompSearch
   def perform(org)
     #!ruby19
     # encoding: utf-8
-    require_relative File.dirname(__FILE__) + '/crawler_modules'
-    include CrawlerModules
-    require 'bunny'
+    
     require 'httparty'
     @org = Organization.find org
     base_uri =  "https://api.apphera.com/api/v1/geocomps?cat=1144&token=k5w4aQVp2H2qigKnXBzs&lat=#{@org.latitude}&#{@org.longitude}"
