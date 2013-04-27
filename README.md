@@ -21,73 +21,10 @@ This is the "community" edition which contains basically most of the main compon
 * Youtube tracking (coming soon)
 * 50+ SEO tasks (coming soon)
 
-## Installation
-This solution has been tested EXTENSIVELY with Ubuntu 12.04 LTS. I feel it is a great choice for a Linux platform and developing and testing on one platform let's us find issues way faster than dealing with countless pitfalls. Never less it should run fine on CentOS and other platforms as well. 
+## Installation & FAQ
 
-### Step 1   
-The first step to get going is to copy the initial install script on your machine. For simplicity let's just use SCP  
-`scp apphera_ubuntu.sh root@YOURSERVER.COM:/home/`
-
-### Step 2
-!IMPORTANT - WE WILL UPGRADE THIS SCRIPT WITHIN THE NEXT FEW DAYS. IT IS ONLY USEFUL FOR A PREVIOUS VERSION
-Ssh into your server, and chmod +x the apphera_ubuntu.sh script and execute it ./apphera_ubuntu.sh 
-
-### Step 3
-a)  
-Edit the /etc/apt/sources.list file and add at the end:  `deb http://www.rabbitmq.com/debian/ testing main`  
-b)  
-`sudo wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc`  
-c)  
-`sudo apt-key add rabbitmq-signing-key-public.asc`  
-d)  
-`apt-get update`  
-e) 
-`sudo apt-get install rabbitmq-server`  
-f)  
-`sudo rabbitmq-plugins enable rabbitmq_management`  
-g)  
-`chmod +x apphera_setup.sh`  
-j)  
-`./apphera_setup.sh`
-
-You are all done! Now you should check if all services are installed correctly:
-
-`sudo service redis-server restart`  
-`sudo service rabbitmq-server restart`  
-
-If that all succeeds you need to start a background worker. For production environment they will be running in the background. 
-Just install apt-get install screen and start a screen session (which never ends) and run bundle exec sidekiq in the main directory of this platform  
-
-You are ready to give it a shot. In production you want to use unicorn with nginx or other webserver but for now webrick will do:
-When in the home directory type  
-
-`rails s -e production`  
-You should now see the webserver starting up. 
-
-at http://YOURSERVER:3000   you can see the website with signup etc.  
-at http://YOURSERVER:55672  You see the message queue server which is password protected for right now just as test/test
-
-
-Now you can go ahead and find out what the world of social media thinks about you and your competitors. Have fun!
-
-
-
-
-
-
-#### Some things to know about installation
-
-If you don't want to run the automated init scripts or want to use a different database you can do the following:  
-
-1. edit config/database.yml to set your database. PLEASE DO NOT REUSE EXISTING DATABASE NAMES AS THE INIT SCRIPT WILL WIPE IT OUT. 
-then issue:  
-`rake db:create`  
-`rake db:schema:load`  
-`rake db:seed`  
-
-Now you should be able to start the application on the command line via:  
-`rail s -e production`
-
+For questions, documentation and discussions please use our main website:
+<a href="http://www.apphera.com/open-source-social-media-monitoring">http://www.apphera.com/open-source-social-media-monitoring</a>
 
 
 ## Licensing
