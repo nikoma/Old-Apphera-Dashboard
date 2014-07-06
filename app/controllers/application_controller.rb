@@ -96,7 +96,9 @@ end
   def set_comps
     begin
       org_id = cookies[:chosen_org].to_i
-      @org = Organization.find(org_id) unless org_id.nil?
+      # Example of how to secure scope
+      @org = current_user.account.organizations.where(id: org_id).first unless org_id.nil?
+      #@org = Organization.find(org_id) unless org_id.nil?
       @comps = @org.organizations #TODO: scope security - now you could use cookie of someone else
     rescue
     end

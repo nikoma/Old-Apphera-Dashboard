@@ -1,6 +1,9 @@
 # Apphera
 ## The open source Internet, social media monitoring and social engagement platform  
 
+## This application is being re-written at this time and should be available by July 15th 2014
+## For installation service & development please contact us at http://www.apphera.com or send me an email at manek -> at <- apphera.com
+
 
 Apphera is a complete platform, covering the full range of activities you need to cover when planning any kind of social media monitoring, social engagement platform, reputation management or SEO related activities. 
 
