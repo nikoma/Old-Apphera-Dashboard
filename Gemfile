@@ -3,7 +3,9 @@ gem 'rails', '3.2.12'
 
 group :assets do
   gem 'sass-rails'
-  gem 'therubyracer', :require => 'v8'
+
+  gem 'therubyracer', :require => 'v8', platform: :ruby
+  gem 'therubyrhino', platform: :jruby
   gem "less-rails"
   gem 'less-rails-bootstrap'
   gem 'coffee-rails'
@@ -34,7 +36,8 @@ gem "flot-rails"
 gem 'rabl'
 gem 'jquery-rails' ,'2.1.4'
 gem "unicorn", ">= 4.3.1", :group => :production
-gem "pg"
+gem "pg", platform: :ruby
+gem "activerecord-jdbcpostgresql-adapter", platform: :jruby
 gem 'activerecord-postgres-hstore'
 gem "devise"
 gem 'omniauth'
@@ -51,13 +54,11 @@ gem 'geocoder'
 gem "inherited_resources"
 gem 'randumb'
 gem 'kaminari'
-gem 'tire'
 gem 'paperclip'  # /usr/local/Cellar/imagemagick/6.7.7-6/bin
 gem 'gmaps4rails'
 gem 'jquery-turbolinks'
 gem 'gon'
 gem "friendly_id", "~> 4.0.1"
-gem 'capistrano'
 gem 'sidekiq'
 gem 'stripe'
 gem 'rails3-jquery-autocomplete'
@@ -68,5 +69,4 @@ gem 'faker'
 gem 'awesome_nested_set'
 gem 'acts_as_commentable_with_threading'
 gem 'foursquare2'
-gem 'god'
 gem 'foreman'
