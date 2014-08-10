@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails social-media-monitoring-open-source: development" uuid="6c389b83-9f06-4f36-b6b0-f7bee0adc10f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails social-media-monitoring-open-source: production" uuid="09a7a97a-df4c-4708-82e6-455488a73cbb">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
