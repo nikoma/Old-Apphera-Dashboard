@@ -1,4 +1,5 @@
 # Apphera
+## This is the old version. Please use [Apphera Core](https://github.com/nikoma/apphera-core) 
 ## The open source Internet, social media monitoring and social engagement platform  
 
 [Apphera API Documentation](https://git.apphera.com/root/apphera-documentation/wikis/home)
@@ -9,7 +10,15 @@ Apphera is a complete platform, covering the full range of activities you need t
 
 This is the "community" edition which contains basically most of the main component but we have paid much attention to the fact that you might not want to roll it out on 10+ servers but ideally on one machine. 
 
+
+## This is the old version. Please use [Apphera Core](https://github.com/nikoma/apphera-core) 
+
+
+
 ### Features
+
+
+
 
 * Tracking of online reviews (Qype, Yelp, Pointoo, Hotels.com, Tripadvisor and many more)
 * Local and global competitor analysis
@@ -43,6 +52,10 @@ A commercial license to Apphera provides customers the legal means both to modif
 Apphera remains the premier open source social media monitoring and engagement project and development for both Apphera and its components follows the open source model. Apphera provides ongoing commitment and contributions to open source. Apphera's commercial licensing option provides customers with the best possible choice - the innovation and creativity of the open source model, and the protections and flexibility available with traditional, commercial software.  
 
 ## Contributing
+
+
+## This is the old version. Please use [Apphera Core](https://github.com/nikoma/apphera-core) 
+
 
 To get started, <a href="https://www.clahub.com/agreements/nikoma/social-media-monitoring-open-source">sign the Contributor License Agreement</a>.
 
